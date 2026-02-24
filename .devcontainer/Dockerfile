@@ -1,9 +1,13 @@
 # .devcontainer/Dockerfile
 FROM mcr.microsoft.com/devcontainers/python:3.11
 
-# 1. Install Node.js (Current LTS) for n8n and Genkit
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get install -y nodejs
+# 1. Install System Dependencies & Node.js
+RUN apt-get update && apt-get install -y \
+    curl \
+    ca-certificates \
+    zstd \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
 
 # 2. Install Ollama CLI
 RUN curl -fsSL https://ollama.com/install.sh | sh
