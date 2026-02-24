@@ -2,83 +2,58 @@
 **Persona**: Supportive Facilitator (Empathetic, clear, enterprise-focused)
 
 ## 🎯 The Objective
-Welcome to the final session! In this lab, we build a **Sovereign Knowledge RAG** (Retrieval-Augmented Generation) pipeline. You will learn to ingest sensitive corporate documents into a local vector store and query them using a local LLM, ensuring 100% data privacy.
+In this final lab, you build the **Sovereign Knowledge RAG** pipeline. You will ingest the 2026 Corporate Policy into a local vector store (ChromaDB) and use a local embedding model (Ollama) to perform semantically grounded queries via Gemini.
 
 ---
 
 ## ⚙️ 1. Environment Setup
-Copy and paste this block to prepare your local RAG stack.
+Standardize your environment with these core RAG dependencies.
 
 ```bash
-# 1. Create and Activate Virtual Environment
-python3 -m venv .venv
-source .venv/bin/activate
+# 1. Install RAG Stack
+pip install chromadb ollama google-generativeai langchain pypdf
 
-# 2. Install RAG Architecture Components
-pip install chromadb ollama pypdf langchain-text-splitters
-
-# 3. Pull Sovereign Models
+# 2. Pull Embedding Model
 ollama pull nomic-embed-text
-ollama pull llama3.2:1b
-
-# 4. Verify Document Presence
-ls -F data/
-# Expected: corporate_policy.pdf
 ```
 
 ---
 
 ## 🛠️ 2. Step-by-Step Execution
-Follow these commands to build and query your knowledge vault.
 
-### Phase A: Knowledge Ingestion
-We will chunk our policy document and index it into ChromaDB.
+### Phase A: Ingestion & Vectorization
+We will transform the markdown policy into a persistent vector database.
 
 ```bash
-# Execute the Vault Builder
-python3 logic/vault_builder.py
+# Execute the Vault Manager (Ingests & Tests)
+python3 logic/vault_manager.py
 ```
 
-### Phase B: Query Verification
-The script will automatically perform a test query. Confirm the grounded response based on the policy context.
+### Phase B: Groundedness Test
+The system is designed to refuse answers not explicitly found in the vault.
 
 ```bash
-# Verify the persistent Chroma indices
-ls -d chroma_db/
+# Verify 'I do not have the authority' response for:
+# "Can I get a subscription for Netflix?"
 ```
 
 ---
 
-## 📈 [INTEGRATOR] Proof of Work
-**Focus**: *Local RAG semantic search.*
+## 🏗️ [INTEGRATOR / ARCHITECT] Evidence
 
-Successfully running `vault_builder.py` retrieves specific clauses. Below is your target proof:
+### 🔒 Ingestion Success
 ```text
+[1/3] Reading policy from corporate_policy_2026.md...
+[2/3] Chunking text...
 [3/3] Indexing in ChromaDB...
-✅ Vault updated with 3 entries.
-
---- QUERYING VAULT: What is the maximum limit for technology expenses? ---
-
-[RETRIEVED CONTEXT]
-Clause 1: TECHNOLOGY: All server expenses must be approved if over $10,000.
-
-[SOVEREIGN ANSWER]
-The maximum limit for technology expenses requiring standard manager approval is $10,000.
+✅ Vault updated with 4 entries.
 ```
 
----
-
-## 🏗️ [ARCHITECT] Proof of Work
-**Focus**: *Groundedness and Data Sovereignty.*
-
-As an Architect, you ensure the model only answers from the **Retrieved Context**.
-
-```python
-# ARCHITECT EVIDENCE: Groundedness Prompt
-prompt = f"Using ONLY the following context, answer the question: {context}\n\nQuestion: {question}"
-```
-Target Result:
+### 🎯 Groundedness Proof
 ```text
-✅ ChromaDB Persistence: Verified.
-✅ Local Execution: 100% (No external API calls used).
+--- QUERY: Can I get a subscription for Netflix? ---
+[VAULT CONTEXT]: AI Tooling & Subscriptions... Individual LLM subscriptions...
+
+[SOVEREIGN RESPONSE]:
+I do not have the authority to answer based on current policy.
 ```

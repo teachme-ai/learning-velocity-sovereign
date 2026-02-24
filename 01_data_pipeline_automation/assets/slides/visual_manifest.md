@@ -176,6 +176,13 @@ A central AI brain crystalline core in the foreground uses a teal tractor beam t
 from one specific gold-highlighted cell. Cyber-Sovereign theme, dark mode, 1920x1080.
 ```
 
+#### Prompt C — User Custom Iteration (Nano Banana)
+> Added per user request: "Private Intelligence: The Local Vault"
+
+```
+A high-tech digital vault with glowing hexagonal honeycombs. A central AI brain is pulling a specific "policy" document from a cell using a teal tractor beam. Title: "Private Intelligence: The Local Vault". Cyber-Sovereign theme.
+```
+
 **Output:** `04_sovereign_knowledge_rag/assets/diagrams/session_04_local_vault.png`
 
 

@@ -150,20 +150,7 @@ Deep charcoal background. Electric teal and neon cyan accents. High-tech interfa
         'output':      '04_sovereign_knowledge_rag/assets/diagrams/session_04_local_vault.png',
 
         'slide_prompt': """
-SLIDE INFOGRAPHIC — Cyber-Sovereign RAG Theme.
-Layout: Immersive 3D interior of a futuristic data vault.
-Main visual: A vast "Library Vault" constructed from glowing hexagonal glass cells stacked vertically into infinity.
-Each cell contains a minimalist holographic "Digital Book" icon. 
-The cells pulse with soft blue light.
-
-Central feature: A stylized "AI Brain" core (crystalline structure) at the bottom-center.
-The brain is firing an "Electric Teal (#00e5cc) Tractor Beam" upwards, targeting a single specific hexagonal cell.
-The targeted cell is highlighted in bright gold, and bits of glowing data (binary/cubes) are being pulled down the beam into the brain.
-
-Title: "Private Intelligence: The Local Vault" (Elegant, futuristic sans-serif).
-Theme: Dark Mode, Cyber-Sovereign.
-Palette: Deep Midnight (#05070a), Electric Teal (#00e5cc), Soft Blue, Golden highlight.
-Quality: Cinematic 4K, ray-traced materials, depth of field. 1920×1080.
+A high-tech digital vault with glowing hexagonal honeycombs. A central AI brain is pulling a specific "policy" document from a cell using a teal tractor beam. Title: "Private Intelligence: The Local Vault". Cyber-Sovereign theme.
 """.strip(),
 
         'imagen_prompt': """

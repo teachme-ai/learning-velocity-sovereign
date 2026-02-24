@@ -1,4 +1,6 @@
 chromadb
 ollama
+google-generativeai
+langchain
 pypdf
 langchain-text-splitters
