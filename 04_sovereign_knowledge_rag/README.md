@@ -9,6 +9,17 @@ This session explores the architecture of **Retrieval-Augmented Generation (RAG)
 - [ ] **LO3**: Mitigate hallucinations through "Groundedness" checks.
 
 ## [INTEGRATOR] Lab
+
+### The Lesson: Semantic vs. Keyword Search
+Traditional **Keyword Search** is like looking for a needle in a haystack by matching colors. If you search for *"money for a hotel"*, the computer only looks for those exact words. If the policy uses the term *"Travel Reimbursement"*, a keyword search will fail.
+
+**Semantic Search** (Vector Search) understands the **intent**. It knows that *"money for a hotel"* is semantically related to *"Travel Reimbursement"*. By converting text into mathematical vectors, we can find answers based on meaning, not just spelling.
+
+### The Tool: NotebookLM vs. Sovereign Vault
+- **NotebookLM**: A powerful tool that handles this automatically in the cloud. It's great for personal research but often hides the "how" from the developer.
+- **Sovereign Vault**: Our local ChromaDB implementation gives the **Enterprise** full control. You decide which embedding model to use, where the data is stored, and exactly how the retrieval logic is tuned.
+
+### Tasks
 - **Local Vector Store**: Spin up a local ChromaDB instance or use a file-based Qdrant store.
 - **Document Ingestion**: Implement a script to chunk and embed technical policy PDFs.
 - **Semantic Query**: Connect a local LLM to the vector store to answer domain-specific questions.
