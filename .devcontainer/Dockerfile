@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:3.11
+FROM mcr.microsoft.com/devcontainers/python:3.11-bookworm
 
 # 1. Install critical system tools
 RUN apt-get update && apt-get install -y zstd curl gnupg && rm -rf /var/lib/apt/lists/*
