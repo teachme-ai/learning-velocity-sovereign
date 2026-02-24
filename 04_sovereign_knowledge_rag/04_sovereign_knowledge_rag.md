@@ -1,59 +1,100 @@
-# Lab 04: Sovereign Knowledge RAG — The Local Vault
+# Lab 04: Sovereign Knowledge (RAG)
 **Persona**: Supportive Facilitator (Empathetic, clear, enterprise-focused)
 
 ## 🎯 The Objective
-In this final lab, you build the **Sovereign Knowledge RAG** pipeline. You will ingest the 2026 Corporate Policy into a local vector store (ChromaDB) and use a local embedding model (Ollama) to perform semantically grounded queries via Gemini.
+Modern AI models are powerful, but they lack awareness of *your* internal company documents. In this lab, we build a **Sovereign Knowledge Base** using Retrieval-Augmented Generation (RAG). 
+
+You will construct a pipeline that ingests a corporate travel policy, generates local mathematical representations (embeddings) using Ollama, and securely stores them in a local FAISS vector database. Finally, we query this local database to answer policy questions definitively without sending data to the cloud.
 
 ---
 
 ## ⚙️ 1. Environment Setup
-Standardize your environment with these core RAG dependencies.
+
+Copy and paste this block to prepare your RAG environment.
 
 ```bash
-# 1. Install RAG Stack
-pip install chromadb ollama google-generativeai langchain pypdf
+# 1. Ensure the directories exist
+mkdir -p 04_sovereign_knowledge_rag/data
+mkdir -p 04_sovereign_knowledge_rag/logic
 
-# 2. Pull Embedding Model
-ollama pull nomic-embed-text
+# 2. View the Dummy Travel Policy
+cat 04_sovereign_knowledge_rag/data/travel_policy.txt
+
+# 3. View the Langchain Injection Script
+cat 04_sovereign_knowledge_rag/logic/ingest_and_query.py
+
+# 4. Verify Local Models are available
+curl -s http://localhost:11434/api/tags | grep nomic-embed-text
 ```
 
 ---
 
 ## 🛠️ 2. Step-by-Step Execution
 
-### Phase A: Ingestion & Vectorization
-We will transform the markdown policy into a persistent vector database.
+Follow these commands to launch the data pipeline.
+
+### Phase A: Ingestion and Vector Search
+Execute the script to load the text, generate embeddings on your local GPU, store them in the `db/` folder, and perform an automated query.
 
 ```bash
-# Execute the Vault Manager (Ingests & Tests)
-python3 logic/vault_manager.py
+# Run the RAG workflow
+python3 04_sovereign_knowledge_rag/logic/ingest_and_query.py
 ```
 
-### Phase B: Groundedness Test
-The system is designed to refuse answers not explicitly found in the vault.
+### Phase B: Verification
+Confirm that the vector store was successfully created.
 
 ```bash
-# Verify 'I do not have the authority' response for:
-# "Can I get a subscription for Netflix?"
+# Look for the FAISS database index files
+ls -l 04_sovereign_knowledge_rag/db/
 ```
 
 ---
 
-## 🏗️ [INTEGRATOR / ARCHITECT] Evidence
+## 📈 [INTEGRATOR] Proof of Work
+**Focus**: *Local Vectorization and Retrieval.*
 
-### 🔒 Ingestion Success
+A successful execution confirms the policy document was ingested and queried. Below is your target terminal proof:
+
 ```text
-[1/3] Reading policy from corporate_policy_2026.md...
-[2/3] Chunking text...
-[3/3] Indexing in ChromaDB...
-✅ Vault updated with 4 entries.
+--- Sovereign Knowledge: RAG Pipeline ---
+[STEP 1] Loading document...
+ [OK] Loaded 1 document(s).
+ [OK] Split into 3 chunks.
+[STEP 2] Generating Local Embeddings & Storing with FAISS...
+ [OK] Vector store initialized at /db.
+
+[STEP 3] Executing Query: 'What is the limit for daily meal expenses?'
+
+--- AI Response ---
+Based on the provided context, the limit for daily meal expenses is $50 per day for domestic travel and $75 per day for international travel.
+
+--- Pipeline Complete ---
 ```
 
-### 🎯 Groundedness Proof
-```text
---- QUERY: Can I get a subscription for Netflix? ---
-[VAULT CONTEXT]: AI Tooling & Subscriptions... Individual LLM subscriptions...
+---
 
-[SOVEREIGN RESPONSE]:
-I do not have the authority to answer based on current policy.
+## 🏗️ [ARCHITECT] Proof of Work
+**Focus**: *Embedding Modality and Local LLM Chaining.*
+
+The true sovereign power lies in the LangChain orchestration.
+
+```python
+# ARCHITECT EVIDENCE: Local Embedding Engine
+# Use Nomic Embeddings from local Ollama
+embeddings = OllamaEmbeddings(
+    model="nomic-embed-text:latest",
+    base_url="http://localhost:11434"
+)
+
+# ARCHITECT EVIDENCE: Local Generation Engine
+# Use Qwen or Llama 3.2 for the generation step
+llm = OllamaLLM(
+    model="llama3.2:1b",
+    base_url="http://localhost:11434",
+    temperature=0
+)
 ```
+
+**Target Result**:
+By verifying these imports and instantiation blocks, we mathematically prove that both the initial vectorization and final sequence generation never left the host machine.

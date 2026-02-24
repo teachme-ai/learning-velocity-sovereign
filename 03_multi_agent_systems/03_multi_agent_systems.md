@@ -63,8 +63,15 @@ Successful committee orchestration results in a tiered deliberation. Below is yo
  [OK] Strategy draft complete.
 
 [STEP 3] Executive Critic reviewing report...
- [OK] Tone: Exceptionally professional.
- [OK] Advice: Clear recommendations provided.
+ [OK] Tone: Exceptionally professional and balanced.
+ [OK] Advice: Includes clear, prioritized recommendations.
+
+--- Final Approved Boardroom Report ---
+
+**Boardroom Audit Summary**
+Analysis indicates 3 high-priority policy violations requiring immediate remediation.
+
+*Tone Verified: Professional.*
 ```
 
 ---

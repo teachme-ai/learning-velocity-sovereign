@@ -58,17 +58,42 @@ head -n 5 data/flagged_expenses.csv
 Successfully running `cleaner.py` results in a hybrid summary. Below is your target output:
 ```text
 ════════════════════════════════════════════════════════════
-  PHASE 1 — Deterministic Rules (Pydantic + Thresholds)
+  PHASE 1 — Deterministic Rules
 ════════════════════════════════════════════════════════════
-[INFO]  Validated 15 rows | Verified schema integrity.
-[INFO]  Threshold flag: 4 rows exceeding $10,000.00 ceiling.
+[INFO]  Loading  → /Users/khalidirfan/projects/Ai Bootcamps/01_data_pipeline_automation/data/corporate_expenses.csv
+[INFO]  Validated 15 rows | Rejected 0 invalid rows
+[INFO]  Threshold flag: 4 rows > $10,000.00
 
 ════════════════════════════════════════════════════════════
-  PHASE 2 — Probabilistic Intelligence (llama3.2)
+  PHASE 2 — Probabilistic Intelligence  (llama3.2)
 ════════════════════════════════════════════════════════════
-[LLM]   Running categorisation...
+[LLM]   Running llama3.2 categorisation on 15 rows...
   ✅  TXN-001    | $    499.00 | Policy-Compliant
-  🚨  TXN-003    | $ 12,500.00 | Flagged: High Value
+  ⚠️  TXN-002    | $  3,200.00 | Needs Review
+  ✅  TXN-003    | $ 12,500.00 | Policy-Compliant
+  ✅  TXN-004    | $    980.00 | Policy-Compliant
+  ✅  TXN-005    | $  2,200.00 | Policy-Compliant
+  ✅  TXN-006    | $ 18,750.00 | Policy-Compliant
+  ✅  TXN-007    | $  8,900.00 | Policy-Compliant
+  ✅  TXN-008    | $  1,100.00 | Policy-Compliant
+  ✅  TXN-009    | $ 45,000.00 | Policy-Compliant
+  ✅  TXN-010    | $ 32,000.00 | Policy-Compliant
+  ✅  TXN-011    | $  1,850.00 | Policy-Compliant
+  ✅  TXN-012    | $    750.00 | Policy-Compliant
+  ✅  TXN-013    | $  3,400.00 | Policy-Compliant
+  ✅  TXN-014    | $  6,200.00 | Policy-Compliant
+  ✅  TXN-015    | $    920.00 | Policy-Compliant
+
+[INFO]  Saved hybrid audit → /Users/khalidirfan/projects/Ai Bootcamps/01_data_pipeline_automation/data/flagged_expenses.csv
+
+════════════════════════════════════════════════════════════
+  HYBRID AUDIT SUMMARY
+════════════════════════════════════════════════════════════
+transaction_id       date  amount_usd                                          rule_flag     llm_category                                                                                                                                  llm_reason
+       TXN-003 2024-01-10     12500.0 amount_usd $12,500.00 exceeds threshold $10,000.00 Policy-Compliant                                              Typical office equipment and furniture expenses are generally compliant with company policies.
+       TXN-006 2024-01-18     18750.0 amount_usd $18,750.00 exceeds threshold $10,000.00 Policy-Compliant                                                  AWS reserved instances are a standard and approved IT expense under most company policies.
+       TXN-009 2024-01-25     45000.0 amount_usd $45,000.00 exceeds threshold $10,000.00 Policy-Compliant Generally, providing an international relocation allowance to employees is a common business practice in certain industries and situations.
+       TXN-010 2024-02-01     32000.0 amount_usd $32,000.00 exceeds threshold $10,000.00 Policy-Compliant                                                  Purchased in accordance with company's approved hardware policy for data science projects.
 ```
 
 ---

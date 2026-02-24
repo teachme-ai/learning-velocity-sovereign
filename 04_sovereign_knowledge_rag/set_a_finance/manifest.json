@@ -1,0 +1,34 @@
+{
+    "api": [
+        {
+            "url": "http://localhost:8000/query",
+            "name": "query_policy",
+            "description": "Submit a query against the automated corporate travel and expense policies.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "The specific question about the corporate policy."
+                    }
+                },
+                "required": [
+                    "query"
+                ]
+            }
+        }
+    ],
+    "gateway": "http://localhost:8000/query",
+    "identifier": "sovereign-audit-standards",
+    "meta": {
+        "title": "Sovereign Audit Standards",
+        "description": "Query corporate policies using a local FAISS RAG pipeline.",
+        "tags": [
+            "audit",
+            "policy",
+            "rag"
+        ],
+        "avatar": "🛡️"
+    },
+    "version": "1.0.0"
+}
