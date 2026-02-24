@@ -1,0 +1,19 @@
+{
+    "name": "genkit-audit-committee",
+    "version": "1.0.0",
+    "description": "Session 03 — Sovereign Audit Committee multi-agent flow powered by Firebase Genkit",
+    "type": "module",
+    "scripts": {
+        "dev": "tsx --watch src/index.ts",
+        "start": "tsx src/index.ts"
+    },
+    "dependencies": {
+        "@genkit-ai/google-genai": "^1.8.0",
+        "genkit": "^1.8.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "tsx": "^4.0.0",
+        "typescript": "^5.0.0"
+    }
+}

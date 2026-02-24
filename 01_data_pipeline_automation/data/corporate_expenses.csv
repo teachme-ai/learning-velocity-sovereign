@@ -1,0 +1,16 @@
+transaction_id,date,employee_id,department,category,description,amount_usd,currency,approved_by
+TXN-001,2024-01-05,EMP-042,Engineering,Software,Annual IDE license renewal,499.00,USD,mgr-chen
+TXN-002,2024-01-08,EMP-017,Marketing,Travel,Flight to Dubai summit,3200.00,USD,mgr-park
+TXN-003,2024-01-10,EMP-099,Finance,Equipment,Ergonomic workstation setup,12500.00,USD,mgr-ali
+TXN-004,2024-01-12,EMP-055,Sales,Entertainment,Client dinner - 8 people,980.00,USD,mgr-jones
+TXN-005,2024-01-15,EMP-033,HR,Training,Leadership bootcamp registration,2200.00,USD,mgr-chen
+TXN-006,2024-01-18,EMP-077,Engineering,Cloud,AWS reserved instance (1yr),18750.00,USD,mgr-ali
+TXN-007,2024-01-20,EMP-011,Legal,Consulting,External legal review - contract,8900.00,USD,mgr-park
+TXN-008,2024-01-22,EMP-044,Marketing,Software,Annual CRM subscription,1100.00,USD,mgr-jones
+TXN-009,2024-01-25,EMP-088,Operations,Travel,International relocation allowance,45000.00,USD,cfo-wright
+TXN-010,2024-02-01,EMP-022,Engineering,Equipment,GPU server for ML training,32000.00,USD,cto-hassan
+TXN-011,2024-02-03,EMP-065,Sales,Travel,Domestic sales trip - 3 cities,1850.00,USD,mgr-jones
+TXN-012,2024-02-07,EMP-031,Finance,Software,Accounting platform upgrade,750.00,USD,mgr-ali
+TXN-013,2024-02-10,EMP-090,Marketing,Advertising,Sponsored LinkedIn campaign,3400.00,USD,mgr-park
+TXN-014,2024-02-14,EMP-019,HR,Equipment,Video conferencing hardware x5,6200.00,USD,mgr-chen
+TXN-015,2024-02-18,EMP-073,Engineering,Software,Monitoring tool annual plan,920.00,USD,mgr-ali

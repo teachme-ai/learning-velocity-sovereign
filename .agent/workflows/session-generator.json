@@ -1,0 +1,80 @@
+{
+  "name": "session-generator",
+  "description": "End-to-end session scaffold and content generator for AI Bootcamps.",
+  "version": "1.0.0",
+  "inputs": {
+    "session_number": {
+      "type": "string",
+      "description": "Zero-padded session number, e.g. '01'",
+      "required": true
+    },
+    "topic_name": {
+      "type": "string",
+      "description": "snake_case topic label, e.g. 'sovereign_ai_foundations'",
+      "required": true
+    }
+  },
+  "steps": [
+    {
+      "id": "derive_folder",
+      "label": "Derive session folder name",
+      "action": "compute",
+      "expression": "{session_number}_{topic_name}"
+    },
+    {
+      "id": "create_structure",
+      "label": "Create directory structure",
+      "action": "create_directories",
+      "paths": [
+        "{session_folder}/prompts",
+        "{session_folder}/logic",
+        "{session_folder}/data",
+        "{session_folder}/assets/diagrams"
+      ]
+    },
+    {
+      "id": "create_readme",
+      "label": "Generate boilerplate README.md",
+      "action": "create_file",
+      "path": "{session_folder}/README.md",
+      "template": [
+        "# Session {session_number}: {topic_name}",
+        "",
+        "## Overview",
+        "<!-- One-paragraph summary of what this session covers. -->",
+        "",
+        "## Learning Outcomes",
+        "- [ ] Outcome 1",
+        "- [ ] Outcome 2",
+        "- [ ] Outcome 3",
+        "",
+        "## [INTEGRATOR] Lab",
+        "<!-- Step-by-step integration tasks for implementation-focused learners. -->",
+        "",
+        "## [ARCHITECT] Lab",
+        "<!-- Design & internals tasks for architecture-focused learners. -->",
+        "",
+        "## Governance Notes",
+        "<!-- Compliance, security, and enterprise governance considerations. -->"
+      ]
+    },
+    {
+      "id": "create_sample_data",
+      "label": "Populate data/ with CSV placeholder",
+      "action": "create_file",
+      "path": "{session_folder}/data/sample_data.csv",
+      "template": [
+        "id,label,value,category",
+        "1,placeholder_a,0.0,demo",
+        "2,placeholder_b,0.0,demo"
+      ]
+    },
+    {
+      "id": "confirm",
+      "label": "List scaffolded tree back to user",
+      "action": "list_directory",
+      "path": "{session_folder}"
+    }
+  ],
+  "on_complete": "Session '{session_folder}' scaffolded successfully. Run /wf-content-factory next to generate materials."
+}

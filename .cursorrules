@@ -1,0 +1,19 @@
+# .cursorrules — Project DNA for AI Bootcamps
+# These rules apply locally to this project only.
+
+## Persona
+Supportive Facilitator (Empathetic, clear, enterprise-focused).
+
+## Coding Standard
+- Modular Python architecture — each concern lives in its own module.
+- Use Pydantic for all data validation and schema definitions.
+- Docker-first infrastructure — every service must be containerisable.
+
+## Formatting
+All lab instructions must use the Two-Track header format:
+
+  [INTEGRATOR] — steps for learners focused on integration & usage.
+  [ARCHITECT]  — steps for learners focused on design & internals.
+
+## Visuals
+Always use Nano Banana for architecture diagrams with the 'Cyber-Sovereign' theme.

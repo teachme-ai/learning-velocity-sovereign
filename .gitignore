@@ -1,0 +1,11 @@
+.env
+*.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+lib/
+output/
+verification_output/
+final_courseware/
+node_modules/
