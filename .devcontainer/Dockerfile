@@ -11,4 +11,4 @@ RUN curl -fsSL https://ollama.com/install.sh | sh
 RUN npm install -g genkit
 
 # 4. Install base AI libraries
-RUN pip install pandas pydantic google-generativeai chromadb langchain
+RUN pip install pandas pydantic google-generativeai chromadb langchain ollama
