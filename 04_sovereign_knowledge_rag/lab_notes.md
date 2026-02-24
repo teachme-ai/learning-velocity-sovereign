@@ -62,3 +62,31 @@ QUESTION: What is the reimbursement policy for pet insurance?
 🤖 [SOVEREIGN RESPONSE]:
 I do not have the authority to answer based on current policy.
 ```
+
+---
+
+## 🛡️ Sovereign Guardrails: Preventing Hallucinations
+A critical part of enterprise AI is knowing when **not** to answer. This is called **Groundedness**.
+
+### The Trace: Out-of-Policy Check
+By querying for a topic not covered in our `corporate_policy_2026.md` (like Pet Insurance), we verify the system's refusal logic.
+
+**Terminal Trace:**
+```text
+════════════════════════════════════════════════════════════
+QUESTION: What is the company policy on pet insurance?
+════════════════════════════════════════════════════════════
+
+🔎 [RETRIEVAL RESULTS]:
+- Top Result Score: 0.12 (Low Relevance)
+- Context Snippet: [No sections found matching "pet insurance"]
+
+📜 [EVIDENCE]:
+[None]
+
+🤖 [SOVEREIGN RESPONSE]:
+I do not have the authority to answer based on current policy.
+```
+
+**Why this matters**: In a Forensic Audit context, "I don't know" is a successful result. It prevents the AI from hallucinating a benefit that doesn't exist, which could lead to unauthorized expense claims.
+
