@@ -1,6 +1,6 @@
 chromadb
-ollama
-google-generativeai
+sentence-transformers
 langchain
+google-generativeai
 pypdf
 langchain-text-splitters
