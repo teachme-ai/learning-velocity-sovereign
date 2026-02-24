@@ -30,4 +30,4 @@ RUN pip install --no-cache-dir \
 ENV PYTHONUNBUFFERED=1
 ENV NODE_ENV=development
 
-WORKDIR /workspaces/Ai-Bootcamps
+WORKDIR /workspaces/learning-velocity-sovereign
