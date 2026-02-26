@@ -113,3 +113,6 @@ Target Result:
 Rejected Row: INVALID-001 | Error: amount_usd cannot be negative
 [GOVERNANCE RESULT] System prevented invalid ingestion.
 ```
+
+---
+**[Back to Curriculum Hub](../README.md) | ~~Previous Lab~~ | [Next Lab: Session 02](../02_executive_narrative_engine/02_executive_narrative_engine.md)**

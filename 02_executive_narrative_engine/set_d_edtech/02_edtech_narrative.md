@@ -23,3 +23,6 @@ Learning Velocity Memo successfully generated and saved to: /tmp/edtech_output/v
 # [VALIDATE]
 python3 02_executive_narrative_engine/set_d_edtech/logic/velocity_memo_gen.py
 # Confirm LLM triggers and writes memo logic explicitly for the faulty module codes.
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 01](../../01_data_pipeline_automation/set_d_edtech/01_edtech_pipeline.md) | [Next Lab: Session 03](../../03_multi_agent_systems/set_d_edtech/03_edtech_swarm.md)**

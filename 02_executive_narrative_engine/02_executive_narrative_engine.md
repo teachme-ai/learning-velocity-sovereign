@@ -84,3 +84,6 @@ Target Result:
 [INFO] Generating Executive Board Memo...
 [OK] Response validated and saved to 'executive_memo.md'.
 ```
+
+---
+**[Back to Curriculum Hub](../README.md) | [Previous Lab: Session 01](../01_data_pipeline_automation/01_data_pipeline_automation.md) | [Next Lab: Session 03](../03_multi_agent_systems/set_a_finance/03_finance_swarm.md)**

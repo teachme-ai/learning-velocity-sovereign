@@ -56,3 +56,6 @@ async def healthcare_agent_swarm(input: SwarmInput) -> SwarmOutput:
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/swarm.py
 # Confirm: Clinical Analyst → Compliance Auditor → Hospital Reporter, report saved to /tmp/healthcare_output/integrated_report.md
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 02](../../02_executive_narrative_engine/set_b_healthcare/02_healthcare_narrative.md) | [Next Lab: Session 04](../../04_sovereign_knowledge_rag/set_b_healthcare/04_healthcare_rag.md)**

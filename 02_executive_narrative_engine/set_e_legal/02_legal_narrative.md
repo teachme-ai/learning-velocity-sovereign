@@ -23,3 +23,6 @@ Contract Due Diligence successfully generated and saved to: /tmp/legal_output/du
 # [VALIDATE]
 python3 02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py
 # Confirm local LLM queries the severity map correctly.
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 01](../../01_data_pipeline_automation/set_e_legal/01_legal_pipeline.md) | [Next Lab: Session 03](../../03_multi_agent_systems/set_e_legal/03_legal_swarm.md)**

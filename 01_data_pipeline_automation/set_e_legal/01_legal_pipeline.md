@@ -25,3 +25,6 @@ Extraction mapped to /tmp/legal_output/scanned_clauses.json---
 # [VALIDATE]
 python3 01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py
 # Verify unstructured clauses map directly to high severity dictionaries.
+
+---
+**[Back to Curriculum Hub](../../README.md) | ~~Previous Lab~~ | [Next Lab: Session 02](../../02_executive_narrative_engine/set_e_legal/02_legal_narrative.md)**

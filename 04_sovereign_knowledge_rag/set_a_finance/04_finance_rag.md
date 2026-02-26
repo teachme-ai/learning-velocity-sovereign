@@ -80,3 +80,6 @@ Answer saved to /tmp/finance_output/rag_answer.md
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/ingest_and_query.py
 # Confirm: 3 chunks indexed, grounded answer cites $50/day meal limit
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 03](../../03_multi_agent_systems/set_a_finance/03_finance_swarm.md) | [Next Lab: Session 05](../../05_advanced_ui_lobechat/05_advanced_ui_lobechat.md)**

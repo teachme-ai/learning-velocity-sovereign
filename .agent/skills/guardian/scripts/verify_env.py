@@ -156,6 +156,64 @@ def check_fastapi() -> tuple[bool, str]:
     except Exception as e:
         return False, f"FastAPI API Bridge unreachable on port 8000: {e}"
 
+# ── Step 2.6: Check Trace Quality (Session 06) ────────────────────────────────
+import glob
+import subprocess
+import time
+
+def check_trace(domain_key: str) -> tuple[str, str, str]:
+    """Check if the latest trace for this domain is well-formed and correlates to the Swarm."""
+    norm_key = domain_key.lower().replace(" ", "_").replace("-", "_")
+    trace_dir = os.path.join(ROOT, "06_observability", "audit_logs", norm_key)
+    
+    # Auto-generate trace if directory is missing or empty
+    if not os.path.exists(trace_dir) or not glob.glob(os.path.join(trace_dir, "*.json")):
+        try:
+            # Trigger swarm to generate trace payload
+            cmd = f'curl -s -X POST http://localhost:8000/chat -H "Content-Type: application/json" -d "{{\\"domain\\": \\"{domain_key}\\", \\"query\\": \\"Audit\\", \\"mode\\": \\"swarm\\"}}"'
+            subprocess.run(cmd, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            time.sleep(2)  # Give API time to flush trace
+        except Exception:
+            pass # Continue to fail below if it still didn't generate
+
+    if not os.path.exists(trace_dir):
+        return "FAIL", f"No trace directory found at {trace_dir}", ""
+        
+    trace_files = glob.glob(os.path.join(trace_dir, "*.json"))
+    if not trace_files:
+        return "FAIL", f"No trace JSON files found in {trace_dir}", ""
+        
+    latest_trace = max(trace_files, key=os.path.getmtime)
+    
+    # Deriving swarm endpoint name expectations
+    expected_swarm_name = f"{norm_key}_agent_swarm"
+    
+    try:
+        with open(latest_trace, "r") as f:
+            data = json.load(f)
+            
+            if not isinstance(data, dict) or "spans" not in data:
+                return "FAIL", "Trace missing 'spans' object.", ""
+                
+            spans = data["spans"]
+            if not spans:
+                return "FAIL", "Trace has no tracked spans.", ""
+                
+            # Verify the top-level swarm flow execution was captured successfully
+            swarm_flow_found = False
+            for span_id, span_data in spans.items():
+                attrs = span_data.get("attributes", {})
+                if attrs.get("genkit:name") == expected_swarm_name and attrs.get("genkit:state") == "success":
+                    swarm_flow_found = True
+                    break
+                    
+            if swarm_flow_found:
+                return "PASS", f"Trace verified: {expected_swarm_name} completed successfully.", ""
+            else:
+                return "FAIL", f"Trace incomplete: missing 'success' state for '{expected_swarm_name}'.", ""
+    except Exception as e:
+        return "FAIL", f"Error reading trace: {e}", ""
+
 
 # Known environment-constraint messages — treated as CONDITIONAL PASS (not a code bug)
 ENV_CONSTRAINT_SIGNALS = [
@@ -178,9 +236,10 @@ def smoke_test(label: str, rel_path: str, expected_fragment: str | None) -> tupl
 
     python_bin = GENKIT_PYTHON if os.path.exists(GENKIT_PYTHON) else sys.executable
     try:
+        # Run with a generous timeout—local LLM processing can take 2+ minutes
         result = subprocess.run(
             [python_bin, abs_path],
-            capture_output=True, text=True, timeout=TIMEOUT, cwd=ROOT
+            capture_output=True, text=True, timeout=300, cwd=ROOT
         )
         output = (result.stdout + result.stderr).strip()
 
@@ -237,6 +296,13 @@ def run_guardian():
             icon = "✅" if status == "PASS" else "❌"
             print(f" {icon} [{status}] {summary}")
             results.append((domain, label, status, summary, captured))
+            
+        # Session 06 Trace verification
+        print("    Running: Session 06 — Trace Quality ...", end="", flush=True)
+        status, summary, captured = check_trace(domain)
+        icon = "✅" if status == "PASS" else "❌"
+        print(f" {icon} [{status}] {summary}")
+        results.append((domain, "Session 06 — Trace Quality", status, summary, captured))
 
     # ── Write CODESPACE_STATUS.md ─────────────────────────────────────────────
     passed = sum(1 for _, _, s, _, _ in results if s == "PASS")

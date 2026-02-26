@@ -56,3 +56,6 @@ async def supply_chain_agent_swarm(input: SwarmInput) -> SwarmOutput:
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/swarm.py
 # Confirm: All agents complete, report saved to /tmp/supply_chain_output/integrated_report.md
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 02](../../02_executive_narrative_engine/set_c_supply_chain/02_supply_chain_narrative.md) | [Next Lab: Session 04](../../04_sovereign_knowledge_rag/set_c_supply_chain/04_supply_chain_rag.md)**

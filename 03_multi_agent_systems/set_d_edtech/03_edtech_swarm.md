@@ -56,3 +56,6 @@ async def edtech_agent_swarm(input: SwarmInput) -> SwarmOutput:
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/swarm.py
 # Confirm: All agents complete, report saved to /tmp/edtech_output/integrated_report.md
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 02](../../02_executive_narrative_engine/set_d_edtech/02_edtech_narrative.md) | [Next Lab: Session 04](../../04_sovereign_knowledge_rag/set_d_edtech/04_edtech_rag.md)**

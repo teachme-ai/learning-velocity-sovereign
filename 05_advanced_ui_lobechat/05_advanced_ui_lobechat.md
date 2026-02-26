@@ -88,3 +88,6 @@ The ultimate architect verification is proving how LobeChat's LLM interprets the
 ```json
   "description_for_model": "This plugin routes the user's question to one of five professional AI agent swarms... The available domains are: finance, healthcare, supply_chain, edtech, legal."
 ```
+
+---
+**[Back to Curriculum Hub](../README.md)**

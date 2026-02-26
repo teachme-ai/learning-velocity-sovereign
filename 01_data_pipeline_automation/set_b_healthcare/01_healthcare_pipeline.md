@@ -26,3 +26,6 @@ Cleaned output saved to /tmp/healthcare_output/scrubbed_billing.csv---
 # [VALIDATE]
 python3 01_data_pipeline_automation/set_b_healthcare/logic/scrubber.py
 # Check that the file was processed, flags correctly added, and output generated.
+
+---
+**[Back to Curriculum Hub](../../README.md) | ~~Previous Lab~~ | [Next Lab: Session 02](../../02_executive_narrative_engine/set_b_healthcare/02_healthcare_narrative.md)**

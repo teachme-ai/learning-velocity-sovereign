@@ -1,0 +1,116 @@
+{
+  "traceId": "a02176e8f4ba320400b4492739273a1a",
+  "spans": {
+    "efb70c776b1e1928": {
+      "spanId": "efb70c776b1e1928",
+      "traceId": "a02176e8f4ba320400b4492739273a1a",
+      "startTime": 1772101375077.714,
+      "endTime": 1772101385069.648,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "model",
+        "genkit:name": "ollama/llama3.2:1b",
+        "genkit:input": "{\"messages\":[{\"role\":\"system\",\"content\":[{\"text\":\"You are the Paralegal Agent. Be concise, analytical, and under 200 words.\"}]},{\"role\":\"user\",\"content\":[{\"text\":\"Analyze this risk-mapped contract data:\\n{\\n  \\\"summary\\\": {\\n    \\\"LOW\\\": 19,\\n    \\\"MEDIUM\\\": 3,\\n    \\\"HIGH\\\": 8\\n  },\\n  \\\"clauses\\\": [\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"UNLIMITED_LIABILITY\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\",\\n      \\\"risk_assessment\\\": \\\"MEDIUM\\\",\\n      \\\"tags\\\": [\\n        \\\"AT_WILL_TERMINATION\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n  \\nSummarise the HIGH and MEDIUM liability markers found.\"}]}],\"config\":{},\"tools\":[],\"output\":{}}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:state": "success",
+        "genkit:output": "{\"message\":{\"role\":\"model\",\"content\":[{\"text\":\"Based on the risk-assessed clauses, the high-liability marker is:\\n\\n* \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\" (Clause 4)\\n\\nThis clause indicates that Party A has unlimited liability for any damages, which could result in significant financial losses to one party. This risk is classified as HIGH due to the potential severity and unpredictability of such claims.\\n\\nThe medium-liability marker is:\\n\\n* \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\" (Clause 5)\\n\\nThis clause suggests that Party A's termination rights may not be absolute, and the vendor has flexibility in terminating the contract. While this could lead to uncertainty for Party A, it is classified as MEDIUM due to its moderate nature compared to other high-liability risks.\"}]},\"latencyMs\":9990.607875000933,\"usage\":{\"inputTokens\":434.0,\"outputTokens\":178.0,\"totalTokens\":612.0,\"inputCharacters\":1668.0,\"outputCharacters\":877.0,\"inputImages\":0.0,\"outputImages\":0.0,\"inputVideos\":0.0,\"outputVideos\":0.0,\"inputAudioFiles\":0.0,\"outputAudioFiles\":0.0}}"
+      },
+      "displayName": "ollama/llama3.2:1b",
+      "spanKind": "INTERNAL",
+      "parentSpanId": "ec2616ad51608856",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    },
+    "50bcbc91f1c0b73c": {
+      "spanId": "50bcbc91f1c0b73c",
+      "traceId": "a02176e8f4ba320400b4492739273a1a",
+      "startTime": 1772101385088.338,
+      "endTime": 1772101400511.581,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "model",
+        "genkit:name": "ollama/llama3.2:1b",
+        "genkit:input": "{\"messages\":[{\"role\":\"system\",\"content\":[{\"text\":\"You are the Compliance Auditor. Be concise, analytical, and under 200 words.\"}]},{\"role\":\"user\",\"content\":[{\"text\":\"The Paralegal flagged these liability markers:\\n\\nBased on the risk-assessed clauses, the high-liability marker is:\\n\\n* \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\" (Clause 4)\\n\\nThis clause indicates that Party A has unlimited liability for any damages, which could result in significant financial losses to one party. This risk is classified as HIGH due to the potential severity and unpredictability of such claims.\\n\\nThe medium-liability marker is:\\n\\n* \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\" (Clause 5)\\n\\nThis clause suggests that Party A's termination rights may not be absolute, and the vendor has flexibility in terminating the contract. While this could lead to uncertainty for Party A, it is classified as MEDIUM due to its moderate nature compared to other high-liability risks.\\n\\nCross-check against standard M&A law. State the operational risk level.\"}]}],\"config\":{},\"tools\":[],\"output\":{}}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:state": "success",
+        "genkit:output": "{\"message\":{\"role\":\"model\",\"content\":[{\"text\":\"Based on standard M&A law, I would classify the high-liability marker as follows:\\n\\n* \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\" (Clause 4)\\n\\t+ Operational Risk Level: HIGH\\n\\nThis clause indicates that Party A has unlimited liability for any damages, which could result in significant financial losses to one party. This is a classic example of an uncertain and potentially catastrophic loss, making it the highest operational risk level.\\n\\nThe medium-liability marker is classified as MEDIUM due to its moderate nature compared to other high-liability risks.\"}]},\"latencyMs\":15423.033750001196,\"usage\":{\"inputTokens\":242.0,\"outputTokens\":125.0,\"totalTokens\":367.0,\"inputCharacters\":1074.0,\"outputCharacters\":640.0,\"inputImages\":0.0,\"outputImages\":0.0,\"inputVideos\":0.0,\"outputVideos\":0.0,\"inputAudioFiles\":0.0,\"outputAudioFiles\":0.0}}"
+      },
+      "displayName": "ollama/llama3.2:1b",
+      "spanKind": "INTERNAL",
+      "parentSpanId": "ec2616ad51608856",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    },
+    "f80d61e2fec39ff5": {
+      "spanId": "f80d61e2fec39ff5",
+      "traceId": "a02176e8f4ba320400b4492739273a1a",
+      "startTime": 1772101400516.688,
+      "endTime": 1772101413245.858,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "model",
+        "genkit:name": "ollama/llama3.2:1b",
+        "genkit:input": "{\"messages\":[{\"role\":\"system\",\"content\":[{\"text\":\"You are the Counsel Reporter. Be concise, analytical, and under 200 words.\"}]},{\"role\":\"user\",\"content\":[{\"text\":\"Based on the Compliance Auditor's findings:\\n\\nBased on standard M&A law, I would classify the high-liability marker as follows:\\n\\n* \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\" (Clause 4)\\n\\t+ Operational Risk Level: HIGH\\n\\nThis clause indicates that Party A has unlimited liability for any damages, which could result in significant financial losses to one party. This is a classic example of an uncertain and potentially catastrophic loss, making it the highest operational risk level.\\n\\nThe medium-liability marker is classified as MEDIUM due to its moderate nature compared to other high-liability risks.\\n\\nWrite a 2-paragraph Contract Due Diligence Brief recommending renegotiation actions.\"}]}],\"config\":{},\"tools\":[],\"output\":{}}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:state": "success",
+        "genkit:output": "{\"message\":{\"role\":\"model\",\"content\":[{\"text\":\"**Contract Due Diligence Brief**\\n\\nBased on the Compliance Auditor's findings, the Classification of Party A under Clause 4 is HIGH due to unlimited liability for indirect, punitive, or consequential damages resulting from this agreement.\\n\\nGiven the high-liability nature of this clause, we strongly recommend renegotiating with Party A to address these concerns. Specifically, we suggest revisiting Clause 4 and exploring options to limit their liability, such as clarifying scope, establishing caps on potential losses, or introducing a \\\"binding dispute resolution\\\" mechanism. Additionally, we recommend reviewing the agreement's overall risk management framework to ensure it is robust and effectively mitigates operational risks.\\n\\nBy renegotiating these clauses, we can help mitigate the high-risk nature of this agreement and reduce the likelihood of catastrophic losses for one party.\"}]},\"latencyMs\":12729.126374999396,\"usage\":{\"inputTokens\":191.0,\"outputTokens\":159.0,\"totalTokens\":350.0,\"inputCharacters\":845.0,\"outputCharacters\":889.0,\"inputImages\":0.0,\"outputImages\":0.0,\"inputVideos\":0.0,\"outputVideos\":0.0,\"inputAudioFiles\":0.0,\"outputAudioFiles\":0.0}}"
+      },
+      "displayName": "ollama/llama3.2:1b",
+      "spanKind": "INTERNAL",
+      "parentSpanId": "ec2616ad51608856",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    },
+    "ec2616ad51608856": {
+      "spanId": "ec2616ad51608856",
+      "traceId": "a02176e8f4ba320400b4492739273a1a",
+      "startTime": 1772101375020.983,
+      "endTime": 1772101413247.249,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "flow",
+        "genkit:name": "legal_agent_swarm",
+        "genkit:input": "{\"json_data\":\"{\\n  \\\"summary\\\": {\\n    \\\"LOW\\\": 19,\\n    \\\"MEDIUM\\\": 3,\\n    \\\"HIGH\\\": 8\\n  },\\n  \\\"clauses\\\": [\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"UNLIMITED_LIABILITY\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\",\\n      \\\"risk_assessment\\\": \\\"MEDIUM\\\",\\n      \\\"tags\\\": [\\n        \\\"AT_WILL_TERMINATION\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Non-compete restrictions shall persist globally for a term of no less than 15 years.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"EXCESSIVE_NON_COMPETE\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Non-compete restrictions shall persist globally for a term of no less than 15 years.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"EXCESSIVE_NON_COMPETE\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\",\\n      \\\"risk_assessment\\\": \\\"MEDIUM\\\",\\n      \\\"tags\\\": [\\n        \\\"AT_WILL_TERMINATION\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"UNLIMITED_LIABILITY\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Non-compete restrictions shall persist globally for a term of no less than 15 years.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"EXCESSIVE_NON_COMPETE\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Non-compete restrictions shall persist globally for a term of no less than 15 years.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"EXCESSIVE_NON_COMPETE\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"UNLIMITED_LIABILITY\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Non-compete restrictions shall persist globally for a term of no less than 15 years.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"EXCESSIVE_NON_COMPETE\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\",\\n      \\\"risk_assessment\\\": \\\"MEDIUM\\\",\\n      \\\"tags\\\": [\\n        \\\"AT_WILL_TERMINATION\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    }\\n  ]\\n}\"}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}",
+        "genkit:metadata:flow:name": "legal_agent_swarm",
+        "genkit:state": "success",
+        "genkit:output": "{\"report\":\"**Contract Due Diligence Brief**\\n\\nBased on the Compliance Auditor's findings, the Classification of Party A under Clause 4 is HIGH due to unlimited liability for indirect, punitive, or consequential damages resulting from this agreement.\\n\\nGiven the high-liability nature of this clause, we strongly recommend renegotiating with Party A to address these concerns. Specifically, we suggest revisiting Clause 4 and exploring options to limit their liability, such as clarifying scope, establishing caps on potential losses, or introducing a \\\"binding dispute resolution\\\" mechanism. Additionally, we recommend reviewing the agreement's overall risk management framework to ensure it is robust and effectively mitigates operational risks.\\n\\nBy renegotiating these clauses, we can help mitigate the high-risk nature of this agreement and reduce the likelihood of catastrophic losses for one party.\"}"
+      },
+      "displayName": "legal_agent_swarm",
+      "spanKind": "INTERNAL",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    }
+  },
+  "displayName": "legal_agent_swarm",
+  "startTime": 1772101375020.983,
+  "endTime": 1772101413247.249
+}

@@ -97,31 +97,57 @@ app.add_middleware(
 
 # ── Custom Trace Exporter for Session 06 ──────────────────────────────────────
 import json
+import contextvars
 from opentelemetry.sdk.trace.export import SpanExporter, SpanExportResult
 from opentelemetry.sdk.trace import ReadableSpan
 from genkit.core.trace.default_exporter import extract_span_data
 from genkit.core.tracing import add_custom_exporter
 
+# Thread-safe context variable to track the active domain for this API request
+ACTIVE_DOMAIN = contextvars.ContextVar("active_domain", default="unknown")
+
+TRACE_DOMAIN_MAP = {}
+TRACE_FILE_MAP = {}
+
 class DomainTraceExporter(SpanExporter):
     def export(self, spans: list[ReadableSpan]) -> SpanExportResult:
         try:
+            import datetime
             for span in spans:
                 data = extract_span_data(span)
                 trace_id = data["traceId"]
                 
-                # Determine domain by inspecting span names
-                domain = "unknown"
-                for s_id, s_data in data["spans"].items():
-                    name = s_data.get("displayName", "").lower()
-                    if "finance" in name: domain = "finance"
-                    elif "healthcare" in name: domain = "healthcare"
-                    elif "supply_chain" in name: domain = "supply_chain"
-                    elif "edtech" in name: domain = "edtech"
-                    elif "legal" in name: domain = "legal"
-                
-                out_dir = ROOT / "06_observability" / "traces" / domain
+                # Derive domain from trace ID or span attributes
+                domain = TRACE_DOMAIN_MAP.get(trace_id, "unknown")
+                if domain == "unknown":
+                    path_str = data.get("attributes", {}).get("genkit:path", "")
+                    name_str = data.get("attributes", {}).get("genkit:name", "")
+                    for d in ["finance", "healthcare", "supply_chain", "edtech", "legal"]:
+                        if d in path_str or d in name_str:
+                            domain = d
+                            TRACE_DOMAIN_MAP[trace_id] = domain
+                            break
+                            
+                out_dir = ROOT / "06_observability" / "audit_logs" / domain
                 out_dir.mkdir(parents=True, exist_ok=True)
-                filepath = out_dir / f"{trace_id}.json"
+                
+                if trace_id not in TRACE_FILE_MAP:
+                    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
+                    TRACE_FILE_MAP[trace_id] = out_dir / f"trace_{timestamp}.json"
+                elif domain != "unknown" and "unknown" in str(TRACE_FILE_MAP[trace_id]):
+                    # Correct an earlier initialization to 'unknown' if we just learned the domain
+                    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
+                    old_path = TRACE_FILE_MAP[trace_id]
+                    TRACE_FILE_MAP[trace_id] = out_dir / f"trace_{timestamp}.json"
+                    if old_path.exists():
+                        try:
+                            # Move existing data to the correct location
+                            import shutil
+                            shutil.move(str(old_path), str(TRACE_FILE_MAP[trace_id]))
+                        except Exception:
+                            pass
+                
+                filepath = TRACE_FILE_MAP[trace_id]
                 
                 existing_data = {"traceId": trace_id, "spans": {}}
                 if filepath.exists():
@@ -278,6 +304,9 @@ async def chat(req: ChatRequest):
             detail=f"Unknown domain '{req.domain}'. Valid: {list(DOMAIN_CONFIG.keys())}",
         )
 
+    # Set the ContextVar so the asynchronous trace exporter knows where to write
+    token = ACTIVE_DOMAIN.set(domain_key)
+
     cfg = DOMAIN_CONFIG[domain_key]
 
     try:
@@ -300,6 +329,8 @@ async def chat(req: ChatRequest):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Agent error: {str(e)}")
+    finally:
+        ACTIVE_DOMAIN.reset(token)
 
 
 # ── Entrypoint ────────────────────────────────────────────────────────────────

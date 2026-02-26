@@ -23,3 +23,6 @@ Logistics Risk Memo successfully generated and saved to: /tmp/supply_chain_outpu
 # [VALIDATE]
 python3 02_executive_narrative_engine/set_c_supply_chain/logic/risk_memo_gen.py
 # Check that the logic correctly aggregates anomalies and queries Local Ollama.
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 01](../../01_data_pipeline_automation/set_c_supply_chain/01_supply_chain_pipeline.md) | [Next Lab: Session 03](../../03_multi_agent_systems/set_c_supply_chain/03_supply_chain_swarm.md)**

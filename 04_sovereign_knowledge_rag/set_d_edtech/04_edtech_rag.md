@@ -49,3 +49,6 @@ Answer saved to /tmp/edtech_output/rag_answer.md
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/ingest_and_query.py
 # Confirm: chunks indexed, answer cites LMS score range policy
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 03](../../03_multi_agent_systems/set_d_edtech/03_edtech_swarm.md) | [Next Lab: Session 05](../../05_advanced_ui_lobechat/05_advanced_ui_lobechat.md)**

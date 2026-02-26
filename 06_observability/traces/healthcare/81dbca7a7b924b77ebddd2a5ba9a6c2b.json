@@ -1,0 +1,35 @@
+{
+  "traceId": "81dbca7a7b924b77ebddd2a5ba9a6c2b",
+  "spans": {
+    "91ffacec69fbcbe3": {
+      "spanId": "91ffacec69fbcbe3",
+      "traceId": "81dbca7a7b924b77ebddd2a5ba9a6c2b",
+      "startTime": 1772100899030.383,
+      "endTime": 1772100928413.429,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "flow",
+        "genkit:name": "healthcare_agent_swarm",
+        "genkit:input": "{\"csv_data\":\"patient_id,admission_date,diagnosis_code,treatment_cost,insurance_provider,flag_reason\\nP-10001,2025-01-05,J01.90,850.00,BlueCross,MALFORMED_ICD_CODE\\nP-10002,2025-01-08,K21.0,1200.00,Aetna,MALFORMED_ICD_CODE\\nP-10003,2025-01-11,M79.3,450.00,United,MALFORMED_ICD_CODE\\nP-10004,2025-01-15,J01.90,920.00,BlueCross,MALFORMED_ICD_CODE\\nP-10005,2025-01-18,Z00.00,0.00,Medicaid,MALFORMED_ICD_CODE | INVALID_COST\\nP-10006,2025-01-20,I10,15500.00,Cigna,\\nP-10007,2025-01-22,K21.0,3200.00,Aetna,MALFORMED_ICD_CODE\\nP-10008,2025-01-25,INVALID_CODE,1100.00,United,MALFORMED_ICD_CODE\\nP-10009,2025-01-28,C34.10,48000.00,BlueCross,MALFORMED_ICD_CODE\\nP-10010,2025-02-01,Z00.00,350.00,United,MALFORMED_ICD_CODE\\nP-10011,2025-02-04,M79.3,980.00,Cigna,MALFORMED_ICD_CODE\\nP-10012,2025-02-06,J01.90,-200.00,Aetna,MALFORMED_ICD_CODE | INVALID_COST\\nP-10013,2025-02-10,K21.0,2800.00,BlueCross,MALFORMED_ICD_CODE\\nP-10014,2025-02-12,I10,6100.00,Medicaid,\\nP-10015,2026-12-31,Z00.00,400.00,United,FUTURE_ADMISSION_DATE | MALFORMED_ICD_CODE\\n\"}",
+        "genkit:path": "/{healthcare_agent_swarm,t:action,s:flow}",
+        "genkit:qualifiedPath": "/{healthcare_agent_swarm,t:action,s:flow}",
+        "genkit:metadata:flow:name": "healthcare_agent_swarm",
+        "genkit:state": "success",
+        "genkit:output": "{\"report\":\"**Confidential**\\n\\nTo: Hospital Administration\\n\\nAs part of our ongoing commitment to maintaining the confidentiality and security of patient data, we have identified several concerns regarding the Billing Analysis Report. Specifically, there are potential risks associated with malformed ICD-10 codes (P-10001 to P-10008), negative amounts (P-10001 to P-10005), and future admission date billed amounts (P-10001 to P-10005). To address these concerns, we recommend reviewing and updating ICD-10 codes within 30 days to ensure compliance with HIPAA guidelines.\\n\\nWe also suggest establishing a procedure for managing future admission date billed amounts to prevent disputes or regulatory issues. Furthermore, it is essential to verify the accuracy of patient billing data before releasing it for payment to prevent potential errors or disputes. These recommendations are designed to mitigate risks and ensure compliance with HIPAA standards, ultimately protecting patient confidentiality and maintaining the trust of our patients and community partners.\"}"
+      },
+      "displayName": "healthcare_agent_swarm",
+      "spanKind": "INTERNAL",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    }
+  },
+  "displayName": "healthcare_agent_swarm",
+  "startTime": 1772100899030.383,
+  "endTime": 1772100928413.429
+}

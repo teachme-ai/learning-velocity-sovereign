@@ -66,3 +66,6 @@ ai.run_main(main())
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/swarm.py
 # Confirm: All 3 agents process sequentially, Final Report saved to /tmp/finance_output/integrated_report.md
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 02](../../02_executive_narrative_engine/set_a_finance/02_finance_narrative.md) | [Next Lab: Session 04](../../04_sovereign_knowledge_rag/set_a_finance/04_finance_rag.md)**

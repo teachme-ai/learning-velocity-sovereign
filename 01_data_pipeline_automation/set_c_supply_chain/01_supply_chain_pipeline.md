@@ -25,3 +25,6 @@ Validated output saved to /tmp/supply_chain_output/scrubbed_inventory.csv---
 # [VALIDATE]
 python3 01_data_pipeline_automation/set_c_supply_chain/logic/inventory_validator.py
 # Verify flags properly classify supply anomalies and outputs scrubbed inventory.
+
+---
+**[Back to Curriculum Hub](../../README.md) | ~~Previous Lab~~ | [Next Lab: Session 02](../../02_executive_narrative_engine/set_c_supply_chain/02_supply_chain_narrative.md)**

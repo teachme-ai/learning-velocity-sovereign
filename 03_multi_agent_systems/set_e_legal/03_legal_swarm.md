@@ -56,3 +56,6 @@ async def legal_agent_swarm(input: SwarmInput) -> SwarmOutput:
 # [VALIDATE]
 # /tmp/genkit_env/bin/python3 logic/swarm.py
 # Confirm: All agents complete, report saved to /tmp/legal_output/integrated_report.md
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 02](../../02_executive_narrative_engine/set_e_legal/02_legal_narrative.md) | [Next Lab: Session 04](../../04_sovereign_knowledge_rag/set_e_legal/04_legal_rag.md)**

@@ -23,3 +23,6 @@ Compliance Report successfully generated and saved to: /tmp/healthcare_output/co
 # [VALIDATE]
 python3 02_executive_narrative_engine/set_b_healthcare/logic/compliance_gen.py
 # Verify proxy connects and report generated successfully.
+
+---
+**[Back to Curriculum Hub](../../README.md) | [Previous Lab: Session 01](../../01_data_pipeline_automation/set_b_healthcare/01_healthcare_pipeline.md) | [Next Lab: Session 03](../../03_multi_agent_systems/set_b_healthcare/03_healthcare_swarm.md)**
