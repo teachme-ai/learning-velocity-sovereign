@@ -1,0 +1,11 @@
+# Session 04: Sovereign Knowledge RAG — Dependencies
+
+# Core Genkit SDK + Ollama plugin
+genkit>=0.5.1
+genkit-plugin-ollama>=0.5.1
+
+# Vector store
+chromadb>=1.5.1
+
+# Data validation
+pydantic>=2.0.0

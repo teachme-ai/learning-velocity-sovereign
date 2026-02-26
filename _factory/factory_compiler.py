@@ -14,7 +14,7 @@ class FactoryCompiler:
         
         self.industry = self.manifest.get('industry', 'Generic AI')
         self.slug = self.industry.lower().replace(' ', '_').replace('&', 'and')
-        self.build_dir = os.path.join('builds', self.slug)
+        self.build_dir = os.path.join('dist', self.slug)
         self.template_dir = os.path.join('_factory', 'templates')
         
         self.env = Environment(loader=FileSystemLoader(self.template_dir))

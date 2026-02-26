@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Sovereign Industry Agents",
+    "name_for_model": "sovereign_industry_agents",
+    "description_for_human": "Query enterprise-grade AI agents across 5 sovereign industry domains — all running 100% locally with Ollama. No cloud APIs. No data leakage.",
+    "description_for_model": "This plugin routes the user's question to one of five professional AI agent swarms, each backed by a domain-specific knowledge base (RAG). The available domains are:\n\n• finance — Corporate expense policy, travel limit queries, investment flags\n• healthcare — HIPAA billing compliance, ICD-10 validation, claim audit\n• supply_chain — Warehouse SOPs, SKU validation, inventory anomalies\n• edtech — Academic integrity policy, LMS anomaly investigation\n• legal — M&A due diligence, contract risk classification, liability review\n\nTo use this tool, pass the 'domain' (one of the five above) and the 'query' as your question. The 'mode' parameter can be 'rag' (knowledge retrieval, default) or 'swarm' (multi-agent analysis on live data).",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:8000/openapi.json"
+    },
+    "logo_url": "http://localhost:8000/logo.png",
+    "contact_email": "sovereign@local.ai",
+    "legal_info_url": "http://localhost:8000"
+}

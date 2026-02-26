@@ -1,0 +1,12 @@
+industry: "AI for Global Finance"
+use_cases:
+  - "Risk Modeling & Liquidity Prediction"
+  - "Quantitative Sentiment Swarms"
+  - "Sovereign Trade Execution Agents"
+  - "Automated ESG Disclosure Tracing"
+tracks:
+  - "base"
+  - "integrated"
+  - "architect"
+session_count: 8
+tone: "Strategic & Analytical"

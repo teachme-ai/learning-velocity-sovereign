@@ -1,29 +1,37 @@
-transaction_id, date, employee_id, department, category, description, amount_usd)
-desired_columns = ['transaction_id', 'date', 'employee_id', 'department', 'category', 'description', 'amount_usd']
+transaction_id', 'date', 'employee_id', 'department', 'category', 'description', 'amount_usd']
 
-# Filter the DataFrame to get only the desired columns
-data = df[desired_columns]
+# Read the CSV file into a DataFrame
+df = pd.read_csv(filename, header=None)
 
-# Print the first few rows of the filtered DataFrame
-print(data.head())
+# Print the first few rows of the DataFrame
+print("Initial DataFrame:")
+print(df.head())
 
+# Remove leading/trailing whitespaces from each column name and description
+columns[2:] = columns[2:].apply(lambda x: x.strip() if x.strip() else '')
+
+# Replace '$' with 'R' in 'amount_usd'
+df['amount_usd'] = df['amount_usd'].str.replace('$', 'R')
+
+# Set the index as transaction_id for easier analysis
+df.set_index('transaction_id', inplace=True)
+
+# Group by department and calculate total amount spent by each department
+department_total_amount_spent = df.groupby('department')['amount_usd'].sum()
+
+# Print some results
+print("\nDepartment Total Amount Spent:")
+print(department_total_amount_spent)
 ```
 
-This code:
+In this code:
 
-1. Imports pandas as `pd`.
-2. Sets the path to your csv file.
-3. Reads the csv file into a pandas DataFrame called `df`.
-4. Prints the first few rows of the DataFrame to verify it has the desired data.
-5. Extracts only the specified columns from the DataFrame using list comprehension and assigns them to a new variable `data`.
-6. Prints the first few rows of the filtered DataFrame.
+1.  We read the CSV file into a pandas DataFrame using `pd.read_csv()`.
+2.  We print the first few rows of the DataFrame to verify it's as expected.
+3.  We remove leading/trailing whitespaces from each column name and description using the `strip()` method.
+4.  We replace '$' with 'R' in the 'amount_usd' column because your original data has '$', not 'R'.
+5.  We set the index to transaction_id for easier analysis.
+6.  We group by department and calculate total amount spent by each department using the `groupby()` method.
+7.  Finally, we print some results.
 
-Please note that if there are duplicate values for certain keys (like `transaction_id` or `employee_id`), they will be included in the output. If you only want unique records, consider removing duplicates using the `drop_duplicates()` method:
-
-```python
-data = data.drop_duplicates()
-```
-
-Also, make sure to replace `'retail_data.csv'` with your actual csv file path.
-
-If you are dealing with large files or need more control over the filtering process, consider using pandas' vectorized operations instead of list comprehension.
+This is a basic example of how you can process your CSV file in Python. The code focuses on loading the data into a DataFrame, manipulating it for better understanding, and performing some basic analysis. You may need to adjust this code based on specific requirements or additional functionality you want to implement.

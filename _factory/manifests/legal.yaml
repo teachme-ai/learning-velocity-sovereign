@@ -1,0 +1,12 @@
+industry: "AI for Sovereign Legal Chambers"
+use_cases:
+  - "Automated Discovery & Document Review"
+  - "Case Law Precedent Analysis"
+  - "Contractual Risk Assessment Swarms"
+  - "PII Masking for Court Filings"
+tracks:
+  - "base"
+  - "integrated"
+  - "architect"
+session_count: 8
+tone: "Formal & Precise"
