@@ -1,0 +1,29 @@
+transaction_id, date, employee_id, department, category, description, amount_usd)
+desired_columns = ['transaction_id', 'date', 'employee_id', 'department', 'category', 'description', 'amount_usd']
+
+# Filter the DataFrame to get only the desired columns
+data = df[desired_columns]
+
+# Print the first few rows of the filtered DataFrame
+print(data.head())
+
+```
+
+This code:
+
+1. Imports pandas as `pd`.
+2. Sets the path to your csv file.
+3. Reads the csv file into a pandas DataFrame called `df`.
+4. Prints the first few rows of the DataFrame to verify it has the desired data.
+5. Extracts only the specified columns from the DataFrame using list comprehension and assigns them to a new variable `data`.
+6. Prints the first few rows of the filtered DataFrame.
+
+Please note that if there are duplicate values for certain keys (like `transaction_id` or `employee_id`), they will be included in the output. If you only want unique records, consider removing duplicates using the `drop_duplicates()` method:
+
+```python
+data = data.drop_duplicates()
+```
+
+Also, make sure to replace `'retail_data.csv'` with your actual csv file path.
+
+If you are dealing with large files or need more control over the filtering process, consider using pandas' vectorized operations instead of list comprehension.

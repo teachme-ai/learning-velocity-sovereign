@@ -1,0 +1,20 @@
+industry: "Sustainability & ESG"
+tracks:
+  - base
+  - integrated
+  - architect
+sessions:
+  - 01_data_pipeline_automation
+  - 02_executive_narrative_engine
+  - 03_multi_agent_systems
+  - 04_sovereign_knowledge_rag
+  - 05_advanced_ui_lobechat
+  - 06_observability
+  - 07_sovereign_security
+  - 08_grand_capstone
+use_cases:
+  - "Automated Carbon Footprint Audit"
+  - "CSR Report Narrative Generation"
+  - "ESG Compliance Verification Swarm"
+  - "Sovereign Supply Chain RAG"
+  - "PII Protection for Whistleblower Data"

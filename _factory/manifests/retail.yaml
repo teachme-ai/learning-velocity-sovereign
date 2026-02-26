@@ -1,0 +1,9 @@
+industry: "AI in Retail & E-commerce"
+tracks:
+  - base
+  - integrated
+  - architect
+use_cases:
+  - "Personalized Recommendation Engine"
+  - "Inventory Stock Forecasting"
+  - "Automated Customer Support Swarm"

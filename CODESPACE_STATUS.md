@@ -1,9 +1,9 @@
 # CODESPACE_STATUS.md
 
-> Generated: 2026-02-26 16:54:35
+> Generated: 2026-02-26 17:07:54
 > Mode: Full Matrix (--all)
 
-## Overall: ⚠️  14/20 PASSED
+## Overall: ⚠️  10/20 PASSED
 
 ## Environment
 
@@ -47,16 +47,16 @@
 |:---|:---:|:---|
 | Session 01 — Data Pipeline | ✅ `[PASS]` | Clean exit · output verified |
 | Session 02 — Narrative Engine | ✅ `[PASS]` | Clean exit · output verified |
-| Session 03 — Multi-Agent Swarm | ✅ `[PASS]` | Clean exit · output verified |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace JSON files found in /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/edtech |
+| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Script not found: 03_multi_agent_systems/set_d_edtech/logic/swarm.py |
+| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace directory found at /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/edtech |
 ### Legal
 
 | Test | Result | Detail |
 |:---|:---:|:---|
-| Session 01 — Data Pipeline | ✅ `[PASS]` | Clean exit · output verified |
-| Session 02 — Narrative Engine | ✅ `[PASS]` | Clean exit · output verified |
-| Session 03 — Multi-Agent Swarm | ✅ `[PASS]` | Clean exit · output verified |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace JSON files found in /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/legal |
+| Session 01 — Data Pipeline | ❌ `[FAIL]` | Script not found: 01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py |
+| Session 02 — Narrative Engine | ❌ `[FAIL]` | Script not found: 02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py |
+| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Script not found: 03_multi_agent_systems/set_e_legal/logic/swarm.py |
+| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace directory found at /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/legal |
 
 ---
 
@@ -90,9 +90,29 @@ Run Session 01's cleaner.py first to generate it.
 
 ```
 
+### [EdTech] Session 03 — Multi-Agent Swarm
+```
+Script not found: 03_multi_agent_systems/set_d_edtech/logic/swarm.py
+```
+
 ### [EdTech] Session 06 — Trace Quality
 ```
 
+```
+
+### [Legal] Session 01 — Data Pipeline
+```
+Script not found: 01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py
+```
+
+### [Legal] Session 02 — Narrative Engine
+```
+Script not found: 02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py
+```
+
+### [Legal] Session 03 — Multi-Agent Swarm
+```
+Script not found: 03_multi_agent_systems/set_e_legal/logic/swarm.py
 ```
 
 ### [Legal] Session 06 — Trace Quality
