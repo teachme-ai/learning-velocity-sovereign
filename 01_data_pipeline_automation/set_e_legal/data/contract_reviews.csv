@@ -1,0 +1,16 @@
+contract_id,review_date,contract_type,contract_value_usd,reviewing_party
+CTR-001,2025-01-08,NDA,0.00,Khalid & Partners
+CTR-002,2025-01-10,SaaS Agreement,55000.00,Legal AI Corp
+CTR-003,2025-01-12,Vendor MSA,120000.00,Khalid & Partners
+CTR-004,2025-01-15,NDA,-500.00,External LLP
+CTR-005,2025-01-18,Employment,85000.00,Legal AI Corp
+CTR-006,2025-01-22,Acquisition,5500000.00,Khalid & Partners
+CTR-007,2025-01-24,SaaS Agreement,18000.00,External LLP
+CTR-008,2025-01-27,,25000.00,Legal AI Corp
+CTR-009,2025-01-30,Vendor MSA,2200000.00,Khalid & Partners
+CTR-010,2025-02-03,NDA,0.00,External LLP
+CTR-011,2025-02-06,Employment,92000.00,Legal AI Corp
+CTR-012,2025-02-10,SaaS Agreement,48000.00,Legal AI Corp
+CTR-013,2025-02-13,Vendor MSA,310000.00,External LLP
+CTR-014,2025-02-17,Acquisition,8800000.00,Khalid & Partners
+CTR-015,2026-12-01,NDA,0.00,Legal AI Corp

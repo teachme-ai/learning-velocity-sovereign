@@ -1,0 +1,169 @@
+<svg class="rich-terminal" viewBox="0 0 1238 733.1999999999999" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generated with Rich https://www.textualize.io -->
+    <style>
+
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Regular"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Bold"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff") format("woff");
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-676934109-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-676934109-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-676934109-r1 { fill: #d9d9d9 }
+.terminal-676934109-r2 { fill: #fd971f }
+.terminal-676934109-r3 { fill: #d9d9d9;font-weight: bold }
+.terminal-676934109-r4 { fill: #98e024 }
+    </style>
+
+    <defs>
+    <clipPath id="terminal-676934109-clip-terminal">
+      <rect x="0" y="0" width="1219.0" height="682.1999999999999" />
+    </clipPath>
+    <clipPath id="terminal-676934109-line-0">
+    <rect x="0" y="1.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-1">
+    <rect x="0" y="25.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-2">
+    <rect x="0" y="50.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-3">
+    <rect x="0" y="74.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-4">
+    <rect x="0" y="99.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-5">
+    <rect x="0" y="123.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-6">
+    <rect x="0" y="147.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-7">
+    <rect x="0" y="172.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-8">
+    <rect x="0" y="196.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-9">
+    <rect x="0" y="221.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-10">
+    <rect x="0" y="245.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-11">
+    <rect x="0" y="269.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-12">
+    <rect x="0" y="294.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-13">
+    <rect x="0" y="318.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-14">
+    <rect x="0" y="343.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-15">
+    <rect x="0" y="367.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-16">
+    <rect x="0" y="391.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-17">
+    <rect x="0" y="416.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-18">
+    <rect x="0" y="440.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-19">
+    <rect x="0" y="465.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-20">
+    <rect x="0" y="489.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-21">
+    <rect x="0" y="513.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-22">
+    <rect x="0" y="538.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-23">
+    <rect x="0" y="562.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-24">
+    <rect x="0" y="587.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-25">
+    <rect x="0" y="611.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-676934109-line-26">
+    <rect x="0" y="635.9" width="1220" height="24.65"/>
+            </clipPath>
+    </defs>
+
+    <rect fill="#0c0c0c" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1236" height="731.2" rx="8"/><text class="terminal-676934109-title" fill="#d9d9d9" text-anchor="middle" x="618" y="27">Session&#160;03:&#160;Multi-Agent&#160;Systems&#160;(EdTech)</text>
+            <g transform="translate(26,22)">
+            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
+            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
+            <circle cx="44" cy="0" r="7" fill="#28c840"/>
+            </g>
+        
+    <g transform="translate(9, 41)" clip-path="url(#terminal-676934109-clip-terminal)">
+    
+    <g class="terminal-676934109-matrix">
+    <text class="terminal-676934109-r1" x="0" y="20" textLength="805.2" clip-path="url(#terminal-676934109-line-0)">Warning:&#160;Genkit&#160;Python&#160;SDK&#160;not&#160;found.&#160;Running&#160;fallback&#160;Swarm&#160;mode.</text><text class="terminal-676934109-r1" x="1220" y="20" textLength="12.2" clip-path="url(#terminal-676934109-line-0)">
+</text><text class="terminal-676934109-r1" x="0" y="44.4" textLength="414.8" clip-path="url(#terminal-676934109-line-1)">Starting&#160;EdTech&#160;Triple-Agent&#160;Swarm</text><text class="terminal-676934109-r2" x="414.8" y="44.4" textLength="36.6" clip-path="url(#terminal-676934109-line-1)">...</text><text class="terminal-676934109-r1" x="1220" y="44.4" textLength="12.2" clip-path="url(#terminal-676934109-line-1)">
+</text><text class="terminal-676934109-r1" x="1220" y="68.8" textLength="12.2" clip-path="url(#terminal-676934109-line-2)">
+</text><text class="terminal-676934109-r3" x="0" y="93.2" textLength="12.2" clip-path="url(#terminal-676934109-line-3)">[</text><text class="terminal-676934109-r1" x="12.2" y="93.2" textLength="317.2" clip-path="url(#terminal-676934109-line-3)">Agent:&#160;Pedagogical&#160;Analyst</text><text class="terminal-676934109-r3" x="329.4" y="93.2" textLength="12.2" clip-path="url(#terminal-676934109-line-3)">]</text><text class="terminal-676934109-r1" x="341.6" y="93.2" textLength="134.2" clip-path="url(#terminal-676934109-line-3)">&#160;processing</text><text class="terminal-676934109-r2" x="475.8" y="93.2" textLength="36.6" clip-path="url(#terminal-676934109-line-3)">...</text><text class="terminal-676934109-r1" x="1220" y="93.2" textLength="12.2" clip-path="url(#terminal-676934109-line-3)">
+</text><text class="terminal-676934109-r1" x="1220" y="117.6" textLength="12.2" clip-path="url(#terminal-676934109-line-4)">
+</text><text class="terminal-676934109-r3" x="0" y="142" textLength="12.2" clip-path="url(#terminal-676934109-line-5)">[</text><text class="terminal-676934109-r1" x="12.2" y="142" textLength="280.6" clip-path="url(#terminal-676934109-line-5)">Agent:&#160;Academic&#160;Auditor</text><text class="terminal-676934109-r3" x="292.8" y="142" textLength="12.2" clip-path="url(#terminal-676934109-line-5)">]</text><text class="terminal-676934109-r1" x="305" y="142" textLength="134.2" clip-path="url(#terminal-676934109-line-5)">&#160;processing</text><text class="terminal-676934109-r2" x="439.2" y="142" textLength="36.6" clip-path="url(#terminal-676934109-line-5)">...</text><text class="terminal-676934109-r1" x="1220" y="142" textLength="12.2" clip-path="url(#terminal-676934109-line-5)">
+</text><text class="terminal-676934109-r1" x="1220" y="166.4" textLength="12.2" clip-path="url(#terminal-676934109-line-6)">
+</text><text class="terminal-676934109-r3" x="0" y="190.8" textLength="12.2" clip-path="url(#terminal-676934109-line-7)">[</text><text class="terminal-676934109-r1" x="12.2" y="190.8" textLength="280.6" clip-path="url(#terminal-676934109-line-7)">Agent:&#160;Faculty&#160;Reporter</text><text class="terminal-676934109-r3" x="292.8" y="190.8" textLength="12.2" clip-path="url(#terminal-676934109-line-7)">]</text><text class="terminal-676934109-r1" x="305" y="190.8" textLength="134.2" clip-path="url(#terminal-676934109-line-7)">&#160;processing</text><text class="terminal-676934109-r2" x="439.2" y="190.8" textLength="36.6" clip-path="url(#terminal-676934109-line-7)">...</text><text class="terminal-676934109-r1" x="1220" y="190.8" textLength="12.2" clip-path="url(#terminal-676934109-line-7)">
+</text><text class="terminal-676934109-r1" x="1220" y="215.2" textLength="12.2" clip-path="url(#terminal-676934109-line-8)">
+</text><text class="terminal-676934109-r1" x="0" y="239.6" textLength="378.2" clip-path="url(#terminal-676934109-line-9)">---&#160;Final&#160;Integrated&#160;Report&#160;---</text><text class="terminal-676934109-r1" x="1220" y="239.6" textLength="12.2" clip-path="url(#terminal-676934109-line-9)">
+</text><text class="terminal-676934109-r1" x="0" y="264" textLength="646.6" clip-path="url(#terminal-676934109-line-10)">**Executive&#160;Brief:&#160;Learning&#160;Decay&#160;and&#160;LMS&#160;Integrity**</text><text class="terminal-676934109-r1" x="1220" y="264" textLength="12.2" clip-path="url(#terminal-676934109-line-10)">
+</text><text class="terminal-676934109-r1" x="1220" y="288.4" textLength="12.2" clip-path="url(#terminal-676934109-line-11)">
+</text><text class="terminal-676934109-r1" x="0" y="312.8" textLength="1171.2" clip-path="url(#terminal-676934109-line-12)">As&#160;educators,&#160;we&#160;are&#160;constantly&#160;striving&#160;to&#160;create&#160;an&#160;optimal&#160;learning&#160;environment&#160;that&#160;fosters&#160;</text><text class="terminal-676934109-r1" x="1220" y="312.8" textLength="12.2" clip-path="url(#terminal-676934109-line-12)">
+</text><text class="terminal-676934109-r1" x="0" y="337.2" textLength="1195.6" clip-path="url(#terminal-676934109-line-13)">academic&#160;success&#160;and&#160;promotes&#160;student&#160;engagement.&#160;However,&#160;the&#160;ever-evolving&#160;nature&#160;of&#160;technology&#160;</text><text class="terminal-676934109-r1" x="1220" y="337.2" textLength="12.2" clip-path="url(#terminal-676934109-line-13)">
+</text><text class="terminal-676934109-r1" x="0" y="361.6" textLength="1171.2" clip-path="url(#terminal-676934109-line-14)">and&#160;the&#160;increasing&#160;complexity&#160;of&#160;online&#160;courses&#160;pose&#160;significant&#160;challenges&#160;in&#160;maintaining&#160;high&#160;</text><text class="terminal-676934109-r1" x="1220" y="361.6" textLength="12.2" clip-path="url(#terminal-676934109-line-14)">
+</text><text class="terminal-676934109-r1" x="0" y="386" textLength="1195.6" clip-path="url(#terminal-676934109-line-15)">levels&#160;of&#160;integrity&#160;and&#160;academic&#160;rigor.&#160;One&#160;critical&#160;aspect&#160;of&#160;this&#160;struggle&#160;is&#160;the&#160;phenomenon&#160;of&#160;</text><text class="terminal-676934109-r1" x="1220" y="386" textLength="12.2" clip-path="url(#terminal-676934109-line-15)">
+</text><text class="terminal-676934109-r4" x="0" y="410.4" textLength="207.4" clip-path="url(#terminal-676934109-line-16)">&quot;learning&#160;decay,&quot;</text><text class="terminal-676934109-r1" x="207.4" y="410.4" textLength="1000.4" clip-path="url(#terminal-676934109-line-16)">&#160;where&#160;students&#x27;&#160;understanding&#160;and&#160;retention&#160;of&#160;course&#160;material&#160;decline&#160;over&#160;time&#160;</text><text class="terminal-676934109-r1" x="1220" y="410.4" textLength="12.2" clip-path="url(#terminal-676934109-line-16)">
+</text><text class="terminal-676934109-r1" x="0" y="434.8" textLength="1220" clip-path="url(#terminal-676934109-line-17)">due&#160;to&#160;various&#160;factors&#160;such&#160;as&#160;lack&#160;of&#160;practice,&#160;inadequate&#160;feedback,&#160;and&#160;insufficient&#160;opportunities</text><text class="terminal-676934109-r1" x="1220" y="434.8" textLength="12.2" clip-path="url(#terminal-676934109-line-17)">
+</text><text class="terminal-676934109-r1" x="0" y="459.2" textLength="244" clip-path="url(#terminal-676934109-line-18)">for&#160;self-reflection.</text><text class="terminal-676934109-r1" x="1220" y="459.2" textLength="12.2" clip-path="url(#terminal-676934109-line-18)">
+</text><text class="terminal-676934109-r1" x="1220" y="483.6" textLength="12.2" clip-path="url(#terminal-676934109-line-19)">
+</text><text class="terminal-676934109-r1" x="0" y="508" textLength="1183.4" clip-path="url(#terminal-676934109-line-20)">To&#160;mitigate&#160;these&#160;risks,&#160;it&#160;is&#160;essential&#160;that&#160;we&#160;prioritize&#160;LMS&#160;integrity&#160;by&#160;implementing&#160;robust&#160;</text><text class="terminal-676934109-r1" x="1220" y="508" textLength="12.2" clip-path="url(#terminal-676934109-line-20)">
+</text><text class="terminal-676934109-r1" x="0" y="532.4" textLength="1159" clip-path="url(#terminal-676934109-line-21)">security&#160;measures,&#160;providing&#160;clear&#160;guidelines&#160;and&#160;support,&#160;and&#160;fostering&#160;a&#160;culture&#160;of&#160;academic&#160;</text><text class="terminal-676934109-r1" x="1220" y="532.4" textLength="12.2" clip-path="url(#terminal-676934109-line-21)">
+</text><text class="terminal-676934109-r1" x="0" y="556.8" textLength="1183.4" clip-path="url(#terminal-676934109-line-22)">honesty.&#160;By&#160;doing&#160;so,&#160;we&#160;can&#160;help&#160;students&#160;develop&#160;the&#160;skills&#160;and&#160;habits&#160;necessary&#160;to&#160;succeed&#160;in&#160;</text><text class="terminal-676934109-r1" x="1220" y="556.8" textLength="12.2" clip-path="url(#terminal-676934109-line-22)">
+</text><text class="terminal-676934109-r1" x="0" y="581.2" textLength="1207.8" clip-path="url(#terminal-676934109-line-23)">online&#160;courses&#160;while&#160;maintaining&#160;high&#160;levels&#160;of&#160;integrity&#160;and&#160;academic&#160;rigor.&#160;Furthermore,&#160;regular&#160;</text><text class="terminal-676934109-r1" x="1220" y="581.2" textLength="12.2" clip-path="url(#terminal-676934109-line-23)">
+</text><text class="terminal-676934109-r1" x="0" y="605.6" textLength="1183.4" clip-path="url(#terminal-676934109-line-24)">monitoring&#160;of&#160;student&#160;behavior&#160;and&#160;log&#160;data&#160;can&#160;provide&#160;valuable&#160;insights&#160;into&#160;potential&#160;issues,&#160;</text><text class="terminal-676934109-r1" x="1220" y="605.6" textLength="12.2" clip-path="url(#terminal-676934109-line-24)">
+</text><text class="terminal-676934109-r1" x="0" y="630" textLength="1220" clip-path="url(#terminal-676934109-line-25)">enabling&#160;us&#160;to&#160;proactively&#160;address&#160;concerns&#160;and&#160;prevent&#160;academic&#160;dishonesty.&#160;By&#160;adopting&#160;a&#160;proactive</text><text class="terminal-676934109-r1" x="1220" y="630" textLength="12.2" clip-path="url(#terminal-676934109-line-25)">
+</text><text class="terminal-676934109-r1" x="0" y="654.4" textLength="1146.8" clip-path="url(#terminal-676934109-line-26)">approach&#160;to&#160;learning&#160;decay&#160;and&#160;LMS&#160;integrity,&#160;we&#160;can&#160;create&#160;a&#160;more&#160;inclusive,&#160;supportive,&#160;and&#160;</text><text class="terminal-676934109-r1" x="1220" y="654.4" textLength="12.2" clip-path="url(#terminal-676934109-line-26)">
+</text><text class="terminal-676934109-r1" x="0" y="678.8" textLength="585.6" clip-path="url(#terminal-676934109-line-27)">effective&#160;learning&#160;environment&#160;for&#160;all&#160;students.</text><text class="terminal-676934109-r1" x="1220" y="678.8" textLength="12.2" clip-path="url(#terminal-676934109-line-27)">
+</text>
+    </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+M&A DUE DILIGENCE CHECKLIST — Global Legal Counsel Standards
+
+SECTION 1: CONTRACT RISK CLASSIFICATION
+All contracts under M&A review must be classified by risk tier:
+- LOW: Standard boilerplate terms, capped liabilities, mutual exit rights
+- MEDIUM: Non-standard payment schedules, narrow IP ownership clauses
+- HIGH: Uncapped liability clauses, perpetual exclusivity, one-sided termination rights
+
+SECTION 2: UNCAPPED LIABILITY
+Any contract clause that does not specify an upper limit on damages is classified as HIGH risk. Uncapped liability exposes the acquiring entity to potentially unlimited financial harm. This clause must be renegotiated to a cap equal to the contract value or regulatory maximum before signing.
+
+SECTION 3: TERMINATION CLAUSES
+Termination-without-cause clauses with fewer than 90 days' notice are considered HIGH risk. Industry standard for enterprise contracts is 90–180 days. Unilateral termination rights held by the counterparty with fewer than 30 days' notice require immediate escalation to General Counsel.
+
+SECTION 4: INTELLECTUAL PROPERTY OWNERSHIP
+All IP created during the contract term must be expressly assigned to the contracting entity. Clauses that grant joint ownership or retain vendor IP rights create post-acquisition conflicts and are flagged as MEDIUM–HIGH risk.
+
+SECTION 5: GOVERNING LAW AND JURISDICTION
+Contracts governed by foreign jurisdictions (outside the acquiring entity's home country) require review by licensed local counsel before signing. Arbitration clauses specifying international venues are classified as MEDIUM risk.
+
+SECTION 6: CHANGE OF CONTROL PROVISIONS
+Any clause that permits the counterparty to terminate or renegotiate upon a change of control event directly impacts the M&A transaction value. All such clauses are HIGH priority for renegotiation or consent procurement.
+
+SECTION 7: REMEDIATION PROTOCOL
+High-risk clauses identified during due diligence trigger a mandatory renegotiation phase. If renegotiation is rejected by the counterparty, the deal team must present an adjusted valuation model reflecting the residual legal risk before the acquisition can proceed.

@@ -1,0 +1,24 @@
+HIPAA BILLING COMPLIANCE GUIDE — Hospital Finance Authority
+
+SECTION 1: COVERED ENTITIES
+All healthcare providers submitting claims to Medicare, Medicaid, or private insurers are considered Covered Entities under HIPAA. This includes hospitals, clinics, and independent practitioners.
+
+SECTION 2: VALID ICD-10 CODES
+ICD-10 codes follow a structured format: one alphabetical character followed by two numeric digits (e.g., E11, J01, F32). Any code deviating from this pattern (e.g., 123, XX9) is flagged as malformed and must be reviewed by a certified medical coder before submission.
+
+SECTION 3: BILLING AMOUNT THRESHOLDS
+All billing amounts must be positive. Negative billing amounts are a data integrity violation and indicate either a refund not properly categorized or a system entry error. Such records must be quarantined for manual review before submission.
+
+SECTION 4: PII ANONYMIZATION REQUIREMENTS
+Patient names, Social Security Numbers, and direct contact information must be anonymized or pseudonymized before any data is transmitted outside the clinical network. All exported billing datasets must contain only anonymized IDs (e.g., PAT-001, not "John Smith").
+
+SECTION 5: AUDIT TRAILS
+Any billing record flagged during validation must generate an audit trail entry. The audit trail must record: the original record ID, the flag reason, the timestamp, and the reviewing staff ID.
+
+SECTION 6: CLAIM SUBMISSION DEADLINES
+Medicare claims must be submitted within 12 months of the service date. Late submissions are automatically rejected. Medicaid submission windows vary by state but are typically 90–180 days.
+
+SECTION 7: COMMON VIOLATIONS AND REMEDIATION
+- Upcoding: Billing for a higher-level service than provided. Remediation: mandatory code review.
+- Unbundling: Billing separately for services that should be bundled. Remediation: code consolidation.
+- Duplicate Billing: Submitting the same claim twice. Remediation: claim deduplication audit.

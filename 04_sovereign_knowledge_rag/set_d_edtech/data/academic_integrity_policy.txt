@@ -1,0 +1,22 @@
+ACADEMIC INTEGRITY AND LEARNING MANAGEMENT POLICY — District Education Authority
+
+SECTION 1: DATA INTEGRITY IN LEARNING MANAGEMENT SYSTEMS
+All Learning Management System (LMS) records must reflect actual student activity. Records with impossible values — such as time_spent < 0 or score > 100 — are classified as data anomalies and must be investigated before they are included in any performance report.
+
+SECTION 2: VALID SCORE RANGES
+Module scores are measured on a scale of 0–100. Any score exceeding 100 indicates either an LMS configuration error (e.g., extra credit not being handled correctly) or deliberate grade manipulation. Scores below 0 are invalid by definition.
+
+SECTION 3: TIME SPENT VALIDATION
+Time spent on a module must be a positive integer representing minutes. Negative values suggest a clock synchronization error in the LMS. Values exceeding 480 minutes (8 hours) for a single session must be flagged as outliers and reviewed by the academic director.
+
+SECTION 4: LEARNING DECAY DEFINITION
+Learning decay occurs when a student's performance on later modules in a course sequence is significantly lower than their performance on earlier modules. A decay pattern is flagged when any student's average score drops more than 20 percentage points across three consecutive modules.
+
+SECTION 5: ACADEMIC DISHONESTY PROTOCOL
+When an anomaly cannot be attributed to an LMS bug, an academic misconduct review is triggered. The student is notified, the module is locked, and the Academic Integrity Committee convenes within 10 business days to review the case.
+
+SECTION 6: DATA REPORTING STANDARDS
+All quarterly student performance reports must be generated from clean, validated data only. Flagged records must be excluded until resolved. The Registrar is responsible for maintaining the audit trail of all flags and resolutions.
+
+SECTION 7: LMS VENDOR OBLIGATION
+Any verified LMS bug causing data anomalies must be reported to the vendor within 5 business days. The vendor is contractually obligated to provide a root cause analysis and remediation plan within 30 days.

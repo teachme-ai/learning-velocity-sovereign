@@ -2,7 +2,7 @@
 **Persona**: Supportive Facilitator (Empathetic, clear, enterprise-focused)
 
 ## 🎯 The Objective
-In this final capstone lab, we bring our enterprise AI architecture to life with a comprehensive User Interface. We will deploy **LobeChat**, configuring it as a fully sovereign, open-source AI playground that securely connects directly to our local Ollama models. 
+In this final capstone lab, we bring our enterprise AI architecture to life with a comprehensive User Interface. We will deploy **LobeChat**, configuring it as a fully sovereign, open-source AI playground that securely connects directly to our local Ollama models and our backend **Sovereign Agent API**.
 
 This bridges the gap between terminal-based engineering and executive-friendly interactivity.
 
@@ -10,7 +10,7 @@ This bridges the gap between terminal-based engineering and executive-friendly i
 
 ## ⚙️ 1. Environment Setup
 
-Copy and paste this block to prepare your Dockerized LobeChat environment. 
+Copy and paste this block to prepare your Dockerized LobeChat environment.
 *Note: This step requires Docker Desktop to be running on your host system.*
 
 ```bash
@@ -24,9 +24,25 @@ cat docker-compose.yml
 
 ---
 
-## 🛠️ 2. Step-by-Step Execution
+## 🛠️ 2. Start the API Bridge
 
-Follow these commands to launch your sovereign interface and verify the connections.
+Our Genkit backend agents (from Sessions 03 and 04) are exposed through a unified FastAPI router.
+
+```bash
+# Start the Sovereign API Bridge on Port 8000
+python3 -m uvicorn logic.multi_domain_api:app --host 0.0.0.0 --port 8000
+```
+
+Verify your agents are listening:
+```bash
+curl -s http://localhost:8000/health | jq
+```
+
+---
+
+## 🛠️ 3. Deploy LobeChat
+
+Follow these commands to launch your sovereign ui interface.
 
 ### Phase A: Deployment
 Spin up the LobeChat Docker container in the background.
@@ -39,52 +55,36 @@ docker compose up -d
 docker ps | grep sovereign-lobechat
 ```
 
-### Phase B: Connection Verification
-Confirm that the Docker container can successfully tunnel into your host machine's Ollama instance.
+### Phase B: Register the Sovereign Agents Plugin
+Open your browser to `http://localhost:3200`.
 
-```bash
-# Check the host Ollama connection (from outside the container)
-curl -s http://localhost:11434/api/tags | head -c 200
+LobeChat will automatically detect your local Ollama models (`llama3.2` and `qwen2.5-coder`). Next, we add our 5 custom industry agents as an external tool.
 
-# Access the LobeChat web server directly
-curl -s -o /dev/null -w "%{http_code}" http://localhost:3200/chat
-# Expected output: 200
-```
+1. In LobeChat, navigate to **Plugins** (the puzzle piece icon).
+2. Click **Install Custom Plugin**.
+3. In the Plugin URL field, enter the URL to our local manifest:
+   `http://localhost:8000/manifest.json` (or your Codespace preview URL appended with `/manifest.json`).
+4. Click **Install**.
+
+You will now see the `Sovereign Industry Agents` plugin active. You can now prompt LobeChat to "Ask the Finance agent about travel limits" or "Check the Legal risk of uncapped liabilities," and it will automatically invoke our local Genkit backend!
 
 ---
 
 ## 📈 [INTEGRATOR] Proof of Work
-**Focus**: *Sovereign Deployment and Container orchestration.*
+**Focus**: *Local API routing and validation.*
 
-A successful execution confirms the `lobehub/lobe-chat` container is running and listening on Port 3200, completely detached from external cloud providers.
+The API Bridge successfully routes queries across all 5 Sovereign Industry domains.
 
-Below is your target terminal proof:
-```text
-docker ps | grep sovereign-lobechat
-
-CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS          PORTS                                                                              NAMES
-f930389af307   lobehub/lobe-chat   "/bin/node /app/star…"   5 minutes ago    Up 5 minutes    0.0.0.0:3200->3200/tcp, [::]:3200->3200/tcp                                        sovereign-lobechat
-```
+Below is the verification output from your API router:
+![Session 05 API Verification](proof/lobby_test.svg)
 
 ---
 
 ## 🏗️ [ARCHITECT] Proof of Work
-**Focus**: *Local Model Tunneling.*
+**Focus**: *Plugin Orchestration & Prompt Routing.*
 
-The ultimate architect verification is proving that LobeChat can *see* the local LLMs. The `docker-compose.yml` bridges this gap using `host.docker.internal`.
+The ultimate architect verification is proving how LobeChat's LLM interprets the `manifest.json`. By examining the manifest, we see the `description_for_model` perfectly guides LobeChat to select the right domain parameter based on natural language intent.
 
-```yaml
-# ARCHITECT EVIDENCE: Sovereign Configuration Block
-      # ── SOVEREIGN CONFIGURATION ──
-      # Disable cloud provider integrations
-      - OPENAI_API_KEY=
-      - ACCESS_CODE=sovereign2026
-
-      # ── OLLAMA INTEGRATION ──
-      # Enable the Ollama provider
-      - OLLAMA_PROXY_URL=http://host.docker.internal:11434/v1
+```json
+  "description_for_model": "This plugin routes the user's question to one of five professional AI agent swarms... The available domains are: finance, healthcare, supply_chain, edtech, legal."
 ```
-
-**Target Result**:
-Open your browser to `http://localhost:3200`. 
-Click on the Model Selection dropdown in the chat bar. You should see `llama3.2` and `qwen2.5-coder` available for immediate, sovereign use!

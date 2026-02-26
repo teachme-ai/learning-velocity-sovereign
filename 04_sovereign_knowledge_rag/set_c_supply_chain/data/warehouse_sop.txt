@@ -1,0 +1,24 @@
+WAREHOUSE STANDARD OPERATING PROCEDURES (SOP) — Global Logistics Authority
+
+SECTION 1: STOCK QUANTITY VALIDATION
+All inventory records must carry a non-negative stock quantity. A qty < 0 indicates a data corruption event or an unconfirmed shipment and triggers an automatic stockout alert. The Warehouse Manager must reconcile the discrepancy within 48 hours.
+
+SECTION 2: SKU FORMAT STANDARDS
+All Stock-Keeping Units (SKUs) must follow the format: PREFIX-NUMBERS (e.g., WH-9942, SK-0021). SKUs that do not meet this standard (e.g., "XXXX", "12345", missing prefix) are classified as malformed and the associated inventory cannot be committed to a shipment order.
+
+SECTION 3: UNIT PRICE INTEGRITY
+Unit prices must be positive and non-zero. A price ≤ 0 suggests either a data entry error or an unauthorized price override. All such records are flagged for Finance Team review before a purchase order can be approved.
+
+SECTION 4: RESTOCK DATE REQUIREMENTS
+All items must have a valid last_restock_date. Items with null or blank restock dates cannot be fully audited and must be physically counted before the next quarterly report.
+
+SECTION 5: SUPPLIER LEAD TIMES
+Standard supplier lead times range from 3 to 14 business days. Items running below their safety stock level AND with a lead time exceeding 14 days must be escalated immediately to the Procurement Director for emergency sourcing.
+
+SECTION 6: STOCKOUT PREVENTION PROTOCOL
+- Safety Stock Level: 15% of average monthly demand
+- Reorder Point: Safety Stock + (Average Daily Usage × Lead Time)
+- Emergency Reorder: Triggered when quantity drops below safety stock and no active PO exists
+
+SECTION 7: AUDIT AND RECONCILIATION
+Quarterly physical audits are mandatory. Discrepancies between system records and physical counts exceeding 2% of total SKU value must be reported to the CFO within 72 hours of discovery.
