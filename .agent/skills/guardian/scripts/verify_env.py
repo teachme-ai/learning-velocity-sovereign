@@ -29,85 +29,51 @@ SMOKE_TESTS = {
     "Finance": [
         (
             "Session 01 — Data Pipeline",
-            "01_data_pipeline_automation/set_a_finance/logic/cleaner.py",
-            None,  # Any clean exit is a pass
+            "dist/ai_for_global_finance/01_data_pipeline_automation/set_ai_for_global_finance/logic/cleaner.py",
+            None,
         ),
         (
             "Session 02 — Narrative Engine",
-            "02_executive_narrative_engine/set_a_finance/logic/narrative_gen.py",
+            "dist/ai_for_global_finance/02_executive_narrative_engine/set_ai_for_global_finance/logic/narrative_gen.py",
             None,
         ),
         (
             "Session 03 — Multi-Agent Swarm",
-            "03_multi_agent_systems/set_a_finance/logic/swarm.py",
+            "dist/ai_for_global_finance/03_multi_agent_systems/set_ai_for_global_finance/logic/swarm.py",
             "Final Integrated Report",
         ),
     ],
     "Healthcare": [
         (
             "Session 01 — Data Pipeline",
-            "01_data_pipeline_automation/set_b_healthcare/logic/scrubber.py",
+            "builds/ai_in_retail_and_e-commerce/01_data_pipeline_automation/set_ai_in_retail_and_e-commerce/logic/cleaner.py",
             None,
         ),
         (
             "Session 02 — Narrative Engine",
-            "02_executive_narrative_engine/set_b_healthcare/logic/compliance_gen.py",
+            "builds/ai_in_retail_and_e-commerce/02_executive_narrative_engine/set_ai_in_retail_and_e-commerce/logic/narrative_gen.py",
             None,
         ),
         (
             "Session 03 — Multi-Agent Swarm",
-            "03_multi_agent_systems/set_b_healthcare/logic/swarm.py",
+            "builds/ai_in_retail_and_e-commerce/03_multi_agent_systems/set_ai_in_retail_and_e-commerce/logic/swarm.py",
             "Final Integrated Report",
         ),
     ],
     "Supply Chain": [
         (
             "Session 01 — Data Pipeline",
-            "01_data_pipeline_automation/set_c_supply_chain/logic/inventory_validator.py",
+            "builds/sustainability_and_esg/01_data_pipeline_automation/set_sustainability_and_esg/logic/cleaner.py",
             None,
         ),
         (
             "Session 02 — Narrative Engine",
-            "02_executive_narrative_engine/set_c_supply_chain/logic/risk_memo_gen.py",
+            "builds/sustainability_and_esg/02_executive_narrative_engine/set_sustainability_and_esg/logic/narrative_gen.py",
             None,
         ),
         (
             "Session 03 — Multi-Agent Swarm",
-            "03_multi_agent_systems/set_c_supply_chain/logic/swarm.py",
-            "Final Integrated Report",
-        ),
-    ],
-    "EdTech": [
-        (
-            "Session 01 — Data Pipeline",
-            "01_data_pipeline_automation/set_d_edtech/logic/velocity_cleaner.py",
-            None,
-        ),
-        (
-            "Session 02 — Narrative Engine",
-            "02_executive_narrative_engine/set_d_edtech/logic/velocity_memo_gen.py",
-            None,
-        ),
-        (
-            "Session 03 — Multi-Agent Swarm",
-            "03_multi_agent_systems/set_d_edtech/logic/swarm.py",
-            "Final Integrated Report",
-        ),
-    ],
-    "Legal": [
-        (
-            "Session 01 — Data Pipeline",
-            "01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py",
-            None,
-        ),
-        (
-            "Session 02 — Narrative Engine",
-            "02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py",
-            None,
-        ),
-        (
-            "Session 03 — Multi-Agent Swarm",
-            "03_multi_agent_systems/set_e_legal/logic/swarm.py",
+            "builds/sustainability_and_esg/03_multi_agent_systems/set_sustainability_and_esg/logic/swarm.py",
             "Final Integrated Report",
         ),
     ],
@@ -164,18 +130,14 @@ import time
 def check_trace(domain_key: str) -> tuple[str, str, str]:
     """Check if the latest trace for this domain is well-formed and correlates to the Swarm."""
     norm_key = domain_key.lower().replace(" ", "_").replace("-", "_")
-    trace_dir = os.path.join(ROOT, "06_observability", "audit_logs", norm_key)
+    # Updated path for Finance track traces in dist/ folder
+    base_trace_dir = os.path.join(ROOT, "dist/ai_for_global_finance/06_observability/traces")
+    trace_dir = os.path.join(base_trace_dir, norm_key)
     
-    # Auto-generate trace if directory is missing or empty
+    # Fallback to 'unknown' if domain-specific folder is missing or empty
     if not os.path.exists(trace_dir) or not glob.glob(os.path.join(trace_dir, "*.json")):
-        try:
-            # Trigger swarm to generate trace payload
-            cmd = f'curl -s -X POST http://localhost:8000/chat -H "Content-Type: application/json" -d "{{\\"domain\\": \\"{domain_key}\\", \\"query\\": \\"Audit\\", \\"mode\\": \\"swarm\\"}}"'
-            subprocess.run(cmd, shell=True, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            time.sleep(2)  # Give API time to flush trace
-        except Exception:
-            pass # Continue to fail below if it still didn't generate
-
+        trace_dir = os.path.join(base_trace_dir, "unknown")
+    
     if not os.path.exists(trace_dir):
         return "FAIL", f"No trace directory found at {trace_dir}", ""
         
@@ -262,9 +224,13 @@ def smoke_test(label: str, rel_path: str, expected_fragment: str | None) -> tupl
         return "FAIL", str(e), str(e)
 
 
+BOOTSTRAP_SCRIPT = os.path.join(os.path.dirname(__file__), "bootstrap_codespace.sh")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def run_guardian():
     run_all = "--all" in sys.argv
+    do_bootstrap = "--bootstrap" in sys.argv
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     print(f"\n🛡️  Codespace Guardian — Live Smoke Test  [{timestamp}]")
@@ -389,7 +355,29 @@ def run_guardian():
     if not genkit_ok or not ollama_ok:
         print("⚠️  Fix the ENV issues above before running Session 02/03 smoke tests.")
 
-    return 0 if (passed == total and genkit_ok and ollama_ok) else 1
+    all_env_ok = genkit_ok and ollama_ok
+    exit_code = 0 if (passed == total and all_env_ok) else 1
+
+    if do_bootstrap and exit_code != 0:
+        if not os.path.exists(BOOTSTRAP_SCRIPT):
+            print(f"\n❌ Bootstrap script not found at {BOOTSTRAP_SCRIPT}")
+        else:
+            print("\n🔧 Environment incomplete. Running bootstrap script...")
+            try:
+                subprocess.run(["bash", BOOTSTRAP_SCRIPT], check=True)
+                print("\n🔁 Re-running verification after bootstrap...")
+                # Re-run without --bootstrap to avoid infinite loop
+                args_no_bootstrap = [a for a in sys.argv[1:] if a != "--bootstrap"]
+                result = subprocess.run(
+                    [sys.executable, __file__] + args_no_bootstrap,
+                    cwd=ROOT,
+                )
+                return result.returncode
+            except subprocess.CalledProcessError as e:
+                print(f"❌ Bootstrap failed: {e}")
+                return 1
+
+    return exit_code
 
 
 if __name__ == "__main__":

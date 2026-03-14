@@ -1,9 +1,9 @@
 # CODESPACE_STATUS.md
 
-> Generated: 2026-02-26 17:07:54
+> Generated: 2026-02-27 00:41:26
 > Mode: Full Matrix (--all)
 
-## Overall: ⚠️  10/20 PASSED
+## Overall: ⚠️  2/12 PASSED
 
 ## Environment
 
@@ -21,42 +21,26 @@
 
 | Test | Result | Detail |
 |:---|:---:|:---|
-| Session 01 — Data Pipeline | ✅ `[PASS]` | Clean exit · output verified |
+| Session 01 — Data Pipeline | ❌ `[FAIL]` | Exit code 1 |
 | Session 02 — Narrative Engine | ⚠️ `[CONDITIONAL_PASS]` | Requires env setup: Run Session 01 |
-| Session 03 — Multi-Agent Swarm | ✅ `[PASS]` | Clean exit · output verified |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace JSON files found in /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/finance |
+| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Expected 'Final Integrated Report' not found in output |
+| Session 06 — Trace Quality | ❌ `[FAIL]` | Trace incomplete: missing 'success' state for 'finance_agent_swarm'. |
 ### Healthcare
 
 | Test | Result | Detail |
 |:---|:---:|:---|
-| Session 01 — Data Pipeline | ✅ `[PASS]` | Clean exit · output verified |
-| Session 02 — Narrative Engine | ✅ `[PASS]` | Clean exit · output verified |
-| Session 03 — Multi-Agent Swarm | ✅ `[PASS]` | Clean exit · output verified |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace JSON files found in /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/healthcare |
+| Session 01 — Data Pipeline | ❌ `[FAIL]` | Exit code 1 |
+| Session 02 — Narrative Engine | ⚠️ `[CONDITIONAL_PASS]` | Requires env setup: Run Session 01 |
+| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Expected 'Final Integrated Report' not found in output |
+| Session 06 — Trace Quality | ✅ `[PASS]` | Trace verified: healthcare_agent_swarm completed successfully. |
 ### Supply Chain
 
 | Test | Result | Detail |
 |:---|:---:|:---|
-| Session 01 — Data Pipeline | ✅ `[PASS]` | Clean exit · output verified |
-| Session 02 — Narrative Engine | ✅ `[PASS]` | Clean exit · output verified |
-| Session 03 — Multi-Agent Swarm | ✅ `[PASS]` | Clean exit · output verified |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace JSON files found in /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/supply_chain |
-### EdTech
-
-| Test | Result | Detail |
-|:---|:---:|:---|
-| Session 01 — Data Pipeline | ✅ `[PASS]` | Clean exit · output verified |
-| Session 02 — Narrative Engine | ✅ `[PASS]` | Clean exit · output verified |
-| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Script not found: 03_multi_agent_systems/set_d_edtech/logic/swarm.py |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace directory found at /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/edtech |
-### Legal
-
-| Test | Result | Detail |
-|:---|:---:|:---|
-| Session 01 — Data Pipeline | ❌ `[FAIL]` | Script not found: 01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py |
-| Session 02 — Narrative Engine | ❌ `[FAIL]` | Script not found: 02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py |
-| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Script not found: 03_multi_agent_systems/set_e_legal/logic/swarm.py |
-| Session 06 — Trace Quality | ❌ `[FAIL]` | No trace directory found at /Users/khalidirfan/projects/Ai Bootcamps/06_observability/audit_logs/legal |
+| Session 01 — Data Pipeline | ❌ `[FAIL]` | Timed out after 120s |
+| Session 02 — Narrative Engine | ⚠️ `[CONDITIONAL_PASS]` | Requires env setup: Run Session 01 |
+| Session 03 — Multi-Agent Swarm | ❌ `[FAIL]` | Expected 'Final Integrated Report' not found in output |
+| Session 06 — Trace Quality | ✅ `[PASS]` | Trace verified: supply_chain_agent_swarm completed successfully. |
 
 ---
 
@@ -64,9 +48,25 @@
 
 ### [Finance] Session 02 — Narrative Engine
 ```
-executive_narrative_engine/01_data_pipeline_automation/data/flagged_expenses.csv
+01_data_pipeline_automation/data/flagged_expenses.csv
 [ERROR] Flagged expenses CSV not found at:
-  /Users/khalidirfan/projects/Ai Bootcamps/02_executive_narrative_engine/01_data_pipeline_automation/data/flagged_expenses.csv
+  /Users/khalidirfan/projects/Ai Bootcamps/dist/ai_for_global_finance/02_executive_narrative_engine/01_data_pipeline_automation/data/flagged_expenses.csv
+Run Session 01's cleaner.py first to generate it.
+```
+
+### [Healthcare] Session 02 — Narrative Engine
+```
+pipeline_automation/data/flagged_expenses.csv
+[ERROR] Flagged expenses CSV not found at:
+  /Users/khalidirfan/projects/Ai Bootcamps/builds/ai_in_retail_and_e-commerce/02_executive_narrative_engine/01_data_pipeline_automation/data/flagged_expenses.csv
+Run Session 01's cleaner.py first to generate it.
+```
+
+### [Supply Chain] Session 02 — Narrative Engine
+```
+data_pipeline_automation/data/flagged_expenses.csv
+[ERROR] Flagged expenses CSV not found at:
+  /Users/khalidirfan/projects/Ai Bootcamps/builds/sustainability_and_esg/02_executive_narrative_engine/01_data_pipeline_automation/data/flagged_expenses.csv
 Run Session 01's cleaner.py first to generate it.
 ```
 
@@ -75,49 +75,62 @@ Run Session 01's cleaner.py first to generate it.
 
 ## ❌ Failure Details
 
+### [Finance] Session 01 — Data Pipeline
+```
+/01_data_pipeline_automation/set_ai_for_global_finance/logic/cleaner.py", line 143, in flag_high_value
+    flagged = df[df["amount_usd"] > threshold].copy()
+                 ~~^^^^^^^^^^^^^^
+  File "/private/tmp/genkit_env/lib/python3.13/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/private/tmp/genkit_env/lib/python3.13/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'amount_usd'
+```
+
+### [Finance] Session 03 — Multi-Agent Swarm
+```
+" shadows an attribute in parent "BaseModel"
+  class PromptInputConfig(BaseModel):
+/private/tmp/genkit_env/lib/python3.13/site-packages/dotpromptz/typing.py:256: UserWarning: Field name "schema" in "PromptOutputConfig" shadows an attribute in parent "BaseModel"
+  class PromptOutputConfig(BaseModel):
+```
+
 ### [Finance] Session 06 — Trace Quality
 ```
 
 ```
 
-### [Healthcare] Session 06 — Trace Quality
+### [Healthcare] Session 01 — Data Pipeline
+```
+ta_pipeline_automation/set_ai_in_retail_and_e-commerce/logic/cleaner.py", line 143, in flag_high_value
+    flagged = df[df["amount_usd"] > threshold].copy()
+                 ~~^^^^^^^^^^^^^^
+  File "/private/tmp/genkit_env/lib/python3.13/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/private/tmp/genkit_env/lib/python3.13/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'amount_usd'
 ```
 
+### [Healthcare] Session 03 — Multi-Agent Swarm
+```
+" shadows an attribute in parent "BaseModel"
+  class PromptInputConfig(BaseModel):
+/private/tmp/genkit_env/lib/python3.13/site-packages/dotpromptz/typing.py:256: UserWarning: Field name "schema" in "PromptOutputConfig" shadows an attribute in parent "BaseModel"
+  class PromptOutputConfig(BaseModel):
 ```
 
-### [Supply Chain] Session 06 — Trace Quality
+### [Supply Chain] Session 01 — Data Pipeline
+```
+Process killed — exceeded timeout.
 ```
 
+### [Supply Chain] Session 03 — Multi-Agent Swarm
 ```
-
-### [EdTech] Session 03 — Multi-Agent Swarm
-```
-Script not found: 03_multi_agent_systems/set_d_edtech/logic/swarm.py
-```
-
-### [EdTech] Session 06 — Trace Quality
-```
-
-```
-
-### [Legal] Session 01 — Data Pipeline
-```
-Script not found: 01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py
-```
-
-### [Legal] Session 02 — Narrative Engine
-```
-Script not found: 02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py
-```
-
-### [Legal] Session 03 — Multi-Agent Swarm
-```
-Script not found: 03_multi_agent_systems/set_e_legal/logic/swarm.py
-```
-
-### [Legal] Session 06 — Trace Quality
-```
-
+" shadows an attribute in parent "BaseModel"
+  class PromptInputConfig(BaseModel):
+/private/tmp/genkit_env/lib/python3.13/site-packages/dotpromptz/typing.py:256: UserWarning: Field name "schema" in "PromptOutputConfig" shadows an attribute in parent "BaseModel"
+  class PromptOutputConfig(BaseModel):
 ```
 
 ---

@@ -5,103 +5,113 @@ import subprocess
 import time
 import sys
 import json
-import ollama
 
-# Add sibling directory to path to import compiler if needed
+# Add sibling directory to path to import compiler logic
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-# For this lab, we'll call the compiler via subprocess to keep the UI responsive
 
-st.set_page_config(page_title="AI Curriculum Factory | Control Tower", layout="wide")
+st.set_page_config(page_title="AI Curriculum Factory | Control Tower", layout="wide", page_icon="🛡️")
 
-st.title("🛡️ Curriculum Factory | Control Tower")
+st.title("🛡️ Curriculum Factory | Mission Control")
 st.markdown("---")
 
-# Sidebar for Manifest Input
-st.sidebar.header("📋 Build Configuration")
-industry = st.sidebar.text_input("Target Industry", "AI for Sovereign Legal Chambers")
+# Sidebar: Mission Configuration
+st.sidebar.header("🚀 Mission Configuration")
+industry = st.sidebar.text_input("Target Industry", "AI for Cyber-Security")
+engine_mode = st.sidebar.selectbox("LLM Engine", ["Local (Ollama)", "Turbo (Gemini)"], index=0)
+mode_val = "cloud" if "Turbo" in engine_mode else "local"
+
 tracks = st.sidebar.multiselect("Active Tracks", ["Base", "Integrated", "Architect"], default=["Base", "Integrated", "Architect"])
-session_count = st.sidebar.slider("Session Count", 1, 8, 8)
-
-if st.sidebar.button("🚀 Launch Build"):
-    st.session_state['build_active'] = True
-    st.session_state['status'] = {
-        "🧬 Data Synth": "RUNNING",
-        "✍️ Context Refiner": "WAITING",
-        "🛡️ PII Scrubber": "WAITING",
-        "⚔️ The Guardian": "WAITING"
-    }
-    
-    # Save temp manifest
-    manifest_data = {
-        "industry": industry,
-        "tracks": [t.lower() for t in tracks],
-        "session_count": session_count
-    }
-    with open("_factory/manifests/temp_build.yaml", 'w') as f:
-        yaml.dump(manifest_data, f)
-        
-    st.info(f"Initiating build for {industry}...")
-
-# Tabs
-tab1, tab2 = st.tabs(["🏗️ Build Status", "🧬 Industry DNA (2011-2026)"])
-
-with tab1:
-    if st.session_state.get('build_active'):
-        st.subheader("Live Agent Status")
-        cols = st.columns(4)
-        
-        # Mocking real-time updates for the demo
-        status_placeholders = [col.empty() for col in cols]
-        
-        # Step 1: LLM Context & Data Synth
-        status_placeholders[0].metric("🧬 Data Synth", "RUNNING", delta="Synthesizing...")
-        time.sleep(2)
-        status_placeholders[0].metric("🧬 Data Synth", "COMPLETED", delta="50 Rows")
-        
-        # Step 2: Context Refinement
-        st.session_state['status']["✍️ Context Refiner"] = "RUNNING"
-        status_placeholders[1].metric("✍️ Context Refiner", "RUNNING", delta="Refining Manuals...")
-        time.sleep(3)
-        status_placeholders[1].metric("✍️ Context Refiner", "COMPLETED", delta="20+ Files")
-        
-        # Step 3: Security
-        st.session_state['status']["🛡️ PII Scrubber"] = "RUNNING"
-        status_placeholders[2].metric("🛡️ PII Scrubber", "RUNNING", delta="Masking PII...")
-        time.sleep(2)
-        status_placeholders[2].metric("🛡️ PII Scrubber", "COMPLETED", delta="Secured")
-        
-        # Step 4: Guardian
-        st.session_state['status']["⚔️ The Guardian"] = "RUNNING"
-        status_placeholders[3].metric("⚔️ The Guardian", "RUNNING", delta="Validating...")
-        time.sleep(2)
-        status_placeholders[3].metric("⚔️ The Guardian", "PASS", delta="Build Healthy")
-        
-        st.success(f"🌟 Build for '{industry}' is complete!")
-        st.balloons()
-        
-        slug = industry.lower().replace(' ', '_').replace('&', 'and')
-        st.markdown(f"**Output Directory:** `builds/{slug}/`")
-        
-    else:
-        st.info("Configure the sidebar and click 'Launch Build' to begin.")
-
-with tab2:
-    st.subheader(f"Evolution of AI in {industry}")
-    if st.button("Generate DNA Timeline"):
-        with st.spinner("Analyzing historical adoption patterns..."):
-            prompt = f"""
-            Generate a concise 2011-2026 timeline of AI evolution in the {industry} industry.
-            Focus on key milestones in automation, local LLMs, and sovereign privacy.
-            Return as a markdown table with columns: Year, Milestone, Impact.
-            """
-            try:
-                response = ollama.chat(model='llama3.2:1b', messages=[
-                    {'role': 'user', 'content': prompt}
-                ])
-                st.markdown(response['message']['content'])
-            except Exception as e:
-                st.error(f"Failed to generate timeline: {e}")
 
 st.sidebar.markdown("---")
+st.sidebar.header("⚔️ Build Guardian")
+dist_dir = "dist"
+if os.path.exists(dist_dir):
+    builds = [d for d in os.listdir(dist_dir) if os.path.isdir(os.path.join(dist_dir, d))]
+    selected_build = st.sidebar.selectbox("Select Build to Verify", builds if builds else ["None"])
+    if st.sidebar.button("🛡️ Run Guardian Check"):
+        if selected_build != "None":
+            st.sidebar.info(f"Running Guardian for {selected_build}...")
+            test_script = os.path.join(dist_dir, selected_build, "tests.py")
+            if os.path.exists(test_script):
+                result = subprocess.run([sys.executable, test_script], capture_output=True, text=True)
+                st.sidebar.text_area("Guardian Report", result.stdout, height=150)
+            else:
+                st.sidebar.error("Tests script not found in build.")
+
+# Main Interface: Tabs
+tab1, tab2, tab3 = st.tabs(["🏗️ Active Build", "📊 Live Mission Feed", "🧬 Industry DNA"])
+
+with tab1:
+    if st.sidebar.button("Initiate Factory Build"):
+        st.session_state['build_active'] = True
+        
+        # Create manifest
+        manifest_data = {
+            "industry": industry,
+            "tracks": [t.lower() for t in tracks]
+        }
+        manifest_path = "_factory/manifests/mission_build.yaml"
+        os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
+        with open(manifest_path, 'w') as f:
+            yaml.dump(manifest_data, f)
+            
+        # Clear old logs for fresh feed
+        if os.path.exists("_factory/logs/events.jsonl"):
+            os.remove("_factory/logs/events.jsonl")
+            
+        st.info(f"Launching Build: {industry} in {mode_val.upper()} mode...")
+        
+        # Run compiler in background process to allow UI updates via log tailing
+        with st.spinner("Factory Engine Running..."):
+            compiler_path = "_factory/factory_compiler.py"
+            env = os.environ.copy()
+            # Note: User needs to ensure GOOGLE_API_KEY is in env if using cloud
+            process = subprocess.Popen([sys.executable, compiler_path, manifest_path, "--mode", mode_val], env=env)
+            
+            # Simple polling of the log file for UI feedback
+            log_placeholder = st.empty()
+            while process.poll() is None:
+                if os.path.exists("_factory/logs/events.jsonl"):
+                    with open("_factory/logs/events.jsonl", "r") as f:
+                        lines = f.readlines()
+                        if lines:
+                            last_event = json.loads(lines[-1])
+                            log_placeholder.info(f"Current Activity: {last_event['event']}")
+                time.sleep(1)
+            
+            if process.returncode == 0:
+                st.success(f"🌟 Build for '{industry}' completed successfully!")
+                st.balloons()
+            else:
+                st.error("❌ Build failed. Check the Mission Feed for details.")
+
+with tab2:
+    st.subheader("Live Mission Feed (Telemetry)")
+    if os.path.exists("_factory/logs/events.jsonl"):
+        with open("_factory/logs/events.jsonl", "r") as f:
+            log_entries = [json.loads(line) for line in f.readlines()]
+            # Display last 50 entries
+            for entry in reversed(log_entries[-50:]):
+                color = "blue" if entry['level'] == "INFO" else "orange" if entry['level'] == "WARNING" else "red"
+                st.markdown(f"**[{entry['timestamp'].split('T')[1][:8]}]** :{color}[{entry['level']}] {entry['event']}")
+    else:
+        st.info("No active mission logs found.")
+
+with tab3:
+    st.subheader(f"Historical Evolution: {industry}")
+    if st.button("Generate Timeline"):
+        from _factory.core.compiler import FactoryCompiler
+        # Use a temporary compiler for timeline generation
+        temp_manifest = "_factory/manifests/temp.yaml"
+        with open(temp_manifest, 'w') as f: yaml.dump({"industry": industry}, f)
+        comp = FactoryCompiler(temp_manifest, engine_mode=mode_val)
+        
+        with st.spinner("Extracting DNA Milestone..."):
+            prompt = f"Generate a 2011-2026 AI evolution timeline for {industry}. Markdown table: Year | Milestone | Impact."
+            content = comp.call_llm(prompt)
+            if content: st.markdown(content)
+            else: st.error("Failed to generate timeline.")
+
+st.sidebar.markdown("---")
+st.sidebar.markdown(f"**Status:** Operational")
 st.sidebar.markdown(f"**User:** Supportive Facilitator")
-st.sidebar.markdown(f"**Mode:** Cyber-Sovereign")

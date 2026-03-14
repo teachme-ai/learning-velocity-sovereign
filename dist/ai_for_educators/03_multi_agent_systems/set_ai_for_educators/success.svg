@@ -1,0 +1,185 @@
+<svg class="rich-terminal" viewBox="0 0 1238 830.8" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generated with Rich https://www.textualize.io -->
+    <style>
+
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Regular"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Bold"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff") format("woff");
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-3350956556-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-3350956556-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-3350956556-r1 { fill: #d9d9d9 }
+.terminal-3350956556-r2 { fill: #fd971f }
+.terminal-3350956556-r3 { fill: #d9d9d9;font-weight: bold }
+.terminal-3350956556-r4 { fill: #58d1eb;font-weight: bold }
+    </style>
+
+    <defs>
+    <clipPath id="terminal-3350956556-clip-terminal">
+      <rect x="0" y="0" width="1219.0" height="779.8" />
+    </clipPath>
+    <clipPath id="terminal-3350956556-line-0">
+    <rect x="0" y="1.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-1">
+    <rect x="0" y="25.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-2">
+    <rect x="0" y="50.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-3">
+    <rect x="0" y="74.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-4">
+    <rect x="0" y="99.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-5">
+    <rect x="0" y="123.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-6">
+    <rect x="0" y="147.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-7">
+    <rect x="0" y="172.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-8">
+    <rect x="0" y="196.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-9">
+    <rect x="0" y="221.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-10">
+    <rect x="0" y="245.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-11">
+    <rect x="0" y="269.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-12">
+    <rect x="0" y="294.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-13">
+    <rect x="0" y="318.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-14">
+    <rect x="0" y="343.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-15">
+    <rect x="0" y="367.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-16">
+    <rect x="0" y="391.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-17">
+    <rect x="0" y="416.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-18">
+    <rect x="0" y="440.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-19">
+    <rect x="0" y="465.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-20">
+    <rect x="0" y="489.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-21">
+    <rect x="0" y="513.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-22">
+    <rect x="0" y="538.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-23">
+    <rect x="0" y="562.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-24">
+    <rect x="0" y="587.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-25">
+    <rect x="0" y="611.5" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-26">
+    <rect x="0" y="635.9" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-27">
+    <rect x="0" y="660.3" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-28">
+    <rect x="0" y="684.7" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-29">
+    <rect x="0" y="709.1" width="1220" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-3350956556-line-30">
+    <rect x="0" y="733.5" width="1220" height="24.65"/>
+            </clipPath>
+    </defs>
+
+    <rect fill="#0c0c0c" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1236" height="828.8" rx="8"/><text class="terminal-3350956556-title" fill="#d9d9d9" text-anchor="middle" x="618" y="27">Session&#160;03:&#160;Multi-Agent&#160;Systems&#160;(Finance)</text>
+            <g transform="translate(26,22)">
+            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
+            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
+            <circle cx="44" cy="0" r="7" fill="#28c840"/>
+            </g>
+        
+    <g transform="translate(9, 41)" clip-path="url(#terminal-3350956556-clip-terminal)">
+    
+    <g class="terminal-3350956556-matrix">
+    <text class="terminal-3350956556-r1" x="0" y="20" textLength="805.2" clip-path="url(#terminal-3350956556-line-0)">Warning:&#160;Genkit&#160;Python&#160;SDK&#160;not&#160;found.&#160;Running&#160;fallback&#160;Swarm&#160;mode.</text><text class="terminal-3350956556-r1" x="1220" y="20" textLength="12.2" clip-path="url(#terminal-3350956556-line-0)">
+</text><text class="terminal-3350956556-r1" x="0" y="44.4" textLength="549" clip-path="url(#terminal-3350956556-line-1)">Starting&#160;Corporate&#160;Finance&#160;Triple-Agent&#160;Swarm</text><text class="terminal-3350956556-r2" x="549" y="44.4" textLength="36.6" clip-path="url(#terminal-3350956556-line-1)">...</text><text class="terminal-3350956556-r1" x="1220" y="44.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-1)">
+</text><text class="terminal-3350956556-r1" x="1220" y="68.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-2)">
+</text><text class="terminal-3350956556-r3" x="0" y="93.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-3)">[</text><text class="terminal-3350956556-r1" x="12.2" y="93.2" textLength="292.8" clip-path="url(#terminal-3350956556-line-3)">Agent:&#160;Financial&#160;Analyst</text><text class="terminal-3350956556-r3" x="305" y="93.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-3)">]</text><text class="terminal-3350956556-r1" x="317.2" y="93.2" textLength="134.2" clip-path="url(#terminal-3350956556-line-3)">&#160;processing</text><text class="terminal-3350956556-r2" x="451.4" y="93.2" textLength="36.6" clip-path="url(#terminal-3350956556-line-3)">...</text><text class="terminal-3350956556-r1" x="1220" y="93.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-3)">
+</text><text class="terminal-3350956556-r1" x="1220" y="117.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-4)">
+</text><text class="terminal-3350956556-r3" x="0" y="142" textLength="12.2" clip-path="url(#terminal-3350956556-line-5)">[</text><text class="terminal-3350956556-r1" x="12.2" y="142" textLength="292.8" clip-path="url(#terminal-3350956556-line-5)">Agent:&#160;Corporate&#160;Auditor</text><text class="terminal-3350956556-r3" x="305" y="142" textLength="12.2" clip-path="url(#terminal-3350956556-line-5)">]</text><text class="terminal-3350956556-r1" x="317.2" y="142" textLength="134.2" clip-path="url(#terminal-3350956556-line-5)">&#160;processing</text><text class="terminal-3350956556-r2" x="451.4" y="142" textLength="36.6" clip-path="url(#terminal-3350956556-line-5)">...</text><text class="terminal-3350956556-r1" x="1220" y="142" textLength="12.2" clip-path="url(#terminal-3350956556-line-5)">
+</text><text class="terminal-3350956556-r1" x="1220" y="166.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-6)">
+</text><text class="terminal-3350956556-r3" x="0" y="190.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-7)">[</text><text class="terminal-3350956556-r1" x="12.2" y="190.8" textLength="305" clip-path="url(#terminal-3350956556-line-7)">Agent:&#160;Executive&#160;Reporter</text><text class="terminal-3350956556-r3" x="317.2" y="190.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-7)">]</text><text class="terminal-3350956556-r1" x="329.4" y="190.8" textLength="134.2" clip-path="url(#terminal-3350956556-line-7)">&#160;processing</text><text class="terminal-3350956556-r2" x="463.6" y="190.8" textLength="36.6" clip-path="url(#terminal-3350956556-line-7)">...</text><text class="terminal-3350956556-r1" x="1220" y="190.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-7)">
+</text><text class="terminal-3350956556-r1" x="1220" y="215.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-8)">
+</text><text class="terminal-3350956556-r1" x="0" y="239.6" textLength="378.2" clip-path="url(#terminal-3350956556-line-9)">---&#160;Final&#160;Integrated&#160;Report&#160;---</text><text class="terminal-3350956556-r1" x="1220" y="239.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-9)">
+</text><text class="terminal-3350956556-r1" x="0" y="264" textLength="353.8" clip-path="url(#terminal-3350956556-line-10)">TO:&#160;All&#160;Relevant&#160;Stakeholders</text><text class="terminal-3350956556-r1" x="1220" y="264" textLength="12.2" clip-path="url(#terminal-3350956556-line-10)">
+</text><text class="terminal-3350956556-r1" x="1220" y="288.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-11)">
+</text><text class="terminal-3350956556-r1" x="0" y="312.8" textLength="366" clip-path="url(#terminal-3350956556-line-12)">FROM:&#160;Executive&#160;Reporter&#160;Agent</text><text class="terminal-3350956556-r1" x="1220" y="312.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-12)">
+</text><text class="terminal-3350956556-r1" x="1220" y="337.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-13)">
+</text><text class="terminal-3350956556-r1" x="0" y="361.6" textLength="707.6" clip-path="url(#terminal-3350956556-line-14)">SUBJECT:&#160;Risk&#160;Assessment&#160;of&#160;Out-of-Bounds&#160;Expenses&#160;in&#160;TXN-</text><text class="terminal-3350956556-r4" x="707.6" y="361.6" textLength="36.6" clip-path="url(#terminal-3350956556-line-14)">003</text><text class="terminal-3350956556-r1" x="744.2" y="361.6" textLength="73.2" clip-path="url(#terminal-3350956556-line-14)">,&#160;TXN-</text><text class="terminal-3350956556-r4" x="817.4" y="361.6" textLength="36.6" clip-path="url(#terminal-3350956556-line-14)">006</text><text class="terminal-3350956556-r1" x="854" y="361.6" textLength="122" clip-path="url(#terminal-3350956556-line-14)">,&#160;and&#160;TXN-</text><text class="terminal-3350956556-r4" x="976" y="361.6" textLength="36.6" clip-path="url(#terminal-3350956556-line-14)">009</text><text class="terminal-3350956556-r1" x="1220" y="361.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-14)">
+</text><text class="terminal-3350956556-r1" x="1220" y="386" textLength="12.2" clip-path="url(#terminal-3350956556-line-15)">
+</text><text class="terminal-3350956556-r1" x="0" y="410.4" textLength="1207.8" clip-path="url(#terminal-3350956556-line-16)">As&#160;part&#160;of&#160;our&#160;ongoing&#160;efforts&#160;to&#160;ensure&#160;compliance&#160;with&#160;corporate&#160;policies&#160;and&#160;procedures,&#160;I&#160;have&#160;</text><text class="terminal-3350956556-r1" x="1220" y="410.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-16)">
+</text><text class="terminal-3350956556-r1" x="0" y="434.8" textLength="793" clip-path="url(#terminal-3350956556-line-17)">conducted&#160;a&#160;review&#160;of&#160;the&#160;out-of-bounds&#160;expenses&#160;reported&#160;in&#160;TXN-</text><text class="terminal-3350956556-r4" x="793" y="434.8" textLength="36.6" clip-path="url(#terminal-3350956556-line-17)">003</text><text class="terminal-3350956556-r1" x="829.6" y="434.8" textLength="73.2" clip-path="url(#terminal-3350956556-line-17)">,&#160;TXN-</text><text class="terminal-3350956556-r4" x="902.8" y="434.8" textLength="36.6" clip-path="url(#terminal-3350956556-line-17)">006</text><text class="terminal-3350956556-r1" x="939.4" y="434.8" textLength="122" clip-path="url(#terminal-3350956556-line-17)">,&#160;and&#160;TXN-</text><text class="terminal-3350956556-r4" x="1061.4" y="434.8" textLength="36.6" clip-path="url(#terminal-3350956556-line-17)">009</text><text class="terminal-3350956556-r1" x="1098" y="434.8" textLength="73.2" clip-path="url(#terminal-3350956556-line-17)">.&#160;The&#160;</text><text class="terminal-3350956556-r1" x="1220" y="434.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-17)">
+</text><text class="terminal-3350956556-r1" x="0" y="459.2" textLength="1207.8" clip-path="url(#terminal-3350956556-line-18)">findings&#160;indicate&#160;that&#160;these&#160;expenses&#160;exceed&#160;the&#160;allowed&#160;amounts,&#160;resulting&#160;in&#160;potential&#160;financial&#160;</text><text class="terminal-3350956556-r1" x="1220" y="459.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-18)">
+</text><text class="terminal-3350956556-r1" x="0" y="483.6" textLength="488" clip-path="url(#terminal-3350956556-line-19)">risks&#160;to&#160;the&#160;company.&#160;Specifically,&#160;TXN-</text><text class="terminal-3350956556-r4" x="488" y="483.6" textLength="36.6" clip-path="url(#terminal-3350956556-line-19)">003</text><text class="terminal-3350956556-r1" x="524.6" y="483.6" textLength="329.4" clip-path="url(#terminal-3350956556-line-19)">&#160;exceeds&#160;the&#160;threshold&#160;by&#160;$</text><text class="terminal-3350956556-r4" x="854" y="483.6" textLength="24.4" clip-path="url(#terminal-3350956556-line-19)">12</text><text class="terminal-3350956556-r1" x="878.4" y="483.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-19)">,</text><text class="terminal-3350956556-r4" x="890.6" y="483.6" textLength="73.2" clip-path="url(#terminal-3350956556-line-19)">500.00</text><text class="terminal-3350956556-r1" x="963.8" y="483.6" textLength="73.2" clip-path="url(#terminal-3350956556-line-19)">,&#160;TXN-</text><text class="terminal-3350956556-r4" x="1037" y="483.6" textLength="36.6" clip-path="url(#terminal-3350956556-line-19)">006</text><text class="terminal-3350956556-r1" x="1073.6" y="483.6" textLength="48.8" clip-path="url(#terminal-3350956556-line-19)">&#160;by&#160;</text><text class="terminal-3350956556-r1" x="1220" y="483.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-19)">
+</text><text class="terminal-3350956556-r1" x="0" y="508" textLength="12.2" clip-path="url(#terminal-3350956556-line-20)">$</text><text class="terminal-3350956556-r4" x="12.2" y="508" textLength="24.4" clip-path="url(#terminal-3350956556-line-20)">18</text><text class="terminal-3350956556-r1" x="36.6" y="508" textLength="12.2" clip-path="url(#terminal-3350956556-line-20)">,</text><text class="terminal-3350956556-r4" x="48.8" y="508" textLength="73.2" clip-path="url(#terminal-3350956556-line-20)">750.00</text><text class="terminal-3350956556-r1" x="122" y="508" textLength="122" clip-path="url(#terminal-3350956556-line-20)">,&#160;and&#160;TXN-</text><text class="terminal-3350956556-r4" x="244" y="508" textLength="36.6" clip-path="url(#terminal-3350956556-line-20)">009</text><text class="terminal-3350956556-r1" x="280.6" y="508" textLength="61" clip-path="url(#terminal-3350956556-line-20)">&#160;by&#160;$</text><text class="terminal-3350956556-r4" x="341.6" y="508" textLength="24.4" clip-path="url(#terminal-3350956556-line-20)">45</text><text class="terminal-3350956556-r1" x="366" y="508" textLength="12.2" clip-path="url(#terminal-3350956556-line-20)">,</text><text class="terminal-3350956556-r4" x="378.2" y="508" textLength="73.2" clip-path="url(#terminal-3350956556-line-20)">000.00</text><text class="terminal-3350956556-r1" x="451.4" y="508" textLength="768.6" clip-path="url(#terminal-3350956556-line-20)">.&#160;These&#160;excessive&#160;expenditures&#160;may&#160;not&#160;only&#160;result&#160;in&#160;financial</text><text class="terminal-3350956556-r1" x="1220" y="508" textLength="12.2" clip-path="url(#terminal-3350956556-line-20)">
+</text><text class="terminal-3350956556-r1" x="0" y="532.4" textLength="1012.6" clip-path="url(#terminal-3350956556-line-21)">losses&#160;but&#160;also&#160;compromise&#160;the&#160;integrity&#160;of&#160;our&#160;corporate&#160;travel&#160;policy&#160;and&#160;budget.</text><text class="terminal-3350956556-r1" x="1220" y="532.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-21)">
+</text><text class="terminal-3350956556-r1" x="1220" y="556.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-22)">
+</text><text class="terminal-3350956556-r1" x="0" y="581.2" textLength="1220" clip-path="url(#terminal-3350956556-line-23)">The&#160;risks&#160;associated&#160;with&#160;these&#160;out-of-bounds&#160;expenses&#160;are&#160;multifaceted.&#160;Firstly,&#160;they&#160;may&#160;lead&#160;to&#160;a</text><text class="terminal-3350956556-r1" x="1220" y="581.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-23)">
+</text><text class="terminal-3350956556-r1" x="0" y="605.6" textLength="1183.4" clip-path="url(#terminal-3350956556-line-24)">loss&#160;of&#160;company&#160;funds,&#160;which&#160;could&#160;have&#160;far-reaching&#160;consequences&#160;for&#160;our&#160;bottom&#160;line.&#160;Secondly,&#160;</text><text class="terminal-3350956556-r1" x="1220" y="605.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-24)">
+</text><text class="terminal-3350956556-r1" x="0" y="630" textLength="1171.2" clip-path="url(#terminal-3350956556-line-25)">they&#160;may&#160;damage&#160;the&#160;company&#x27;s&#160;reputation&#160;if&#160;discovered&#160;after&#160;being&#160;paid,&#160;potentially&#160;leading&#160;to&#160;</text><text class="terminal-3350956556-r1" x="1220" y="630" textLength="12.2" clip-path="url(#terminal-3350956556-line-25)">
+</text><text class="terminal-3350956556-r1" x="0" y="654.4" textLength="1207.8" clip-path="url(#terminal-3350956556-line-26)">financial&#160;losses&#160;and&#160;reputational&#160;harm.&#160;Thirdly,&#160;they&#160;may&#160;also&#160;create&#160;an&#160;audit&#160;trail&#160;that&#160;could&#160;be&#160;</text><text class="terminal-3350956556-r1" x="1220" y="654.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-26)">
+</text><text class="terminal-3350956556-r1" x="0" y="678.8" textLength="1183.4" clip-path="url(#terminal-3350956556-line-27)">used&#160;to&#160;identify&#160;other&#160;potential&#160;irregularities&#160;or&#160;misappropriations.&#160;To&#160;mitigate&#160;these&#160;risks,&#160;I&#160;</text><text class="terminal-3350956556-r1" x="1220" y="678.8" textLength="12.2" clip-path="url(#terminal-3350956556-line-27)">
+</text><text class="terminal-3350956556-r1" x="0" y="703.2" textLength="1220" clip-path="url(#terminal-3350956556-line-28)">recommend&#160;taking&#160;additional&#160;steps&#160;to&#160;ensure&#160;that&#160;these&#160;expenses&#160;are&#160;properly&#160;authorized&#160;and&#160;approved</text><text class="terminal-3350956556-r1" x="1220" y="703.2" textLength="12.2" clip-path="url(#terminal-3350956556-line-28)">
+</text><text class="terminal-3350956556-r1" x="0" y="727.6" textLength="1220" clip-path="url(#terminal-3350956556-line-29)">by&#160;the&#160;relevant&#160;stakeholders&#160;before&#160;being&#160;paid.&#160;This&#160;includes&#160;reviewing&#160;expense&#160;reports&#160;for&#160;accuracy</text><text class="terminal-3350956556-r1" x="1220" y="727.6" textLength="12.2" clip-path="url(#terminal-3350956556-line-29)">
+</text><text class="terminal-3350956556-r1" x="0" y="752" textLength="1220" clip-path="url(#terminal-3350956556-line-30)">and&#160;completeness,&#160;verifying&#160;alignment&#160;with&#160;company&#160;policies&#160;and&#160;budget,&#160;and&#160;obtaining&#160;approval&#160;from&#160;</text><text class="terminal-3350956556-r1" x="1220" y="752" textLength="12.2" clip-path="url(#terminal-3350956556-line-30)">
+</text><text class="terminal-3350956556-r1" x="0" y="776.4" textLength="646.6" clip-path="url(#terminal-3350956556-line-31)">travel&#160;coordinators&#160;or&#160;department&#160;heads&#160;as&#160;necessary.</text><text class="terminal-3350956556-r1" x="1220" y="776.4" textLength="12.2" clip-path="url(#terminal-3350956556-line-31)">
+</text>
+    </g>
+    </g>
+</svg>

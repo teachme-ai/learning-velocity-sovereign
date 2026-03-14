@@ -1,0 +1,6 @@
+chromadb
+sentence-transformers
+langchain
+google-generativeai
+pypdf
+langchain-text-splitters

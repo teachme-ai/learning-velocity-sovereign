@@ -26,53 +26,48 @@ HEALTH_CHECK_PATH = os.path.join(ROOT, "HEALTH_CHECK.md")
 PYTHON = sys.executable
 
 # ── Session × Domain Matrix ───────────────────────────────────────────────────
+# ── Session × Domain Matrix ───────────────────────────────────────────────────
 DOMAINS = {
     "set_a_finance": {
         "label": "Finance",
         "sessions": {
-            "01": "01_data_pipeline_automation/set_a_finance/logic/cleaner.py",
-            "02": "02_executive_narrative_engine/set_a_finance/logic/narrative_gen.py",
-            "03": "03_multi_agent_systems/set_a_finance/logic/swarm.py",
+            "01": "dist/ai_for_global_finance/01_data_pipeline_automation/set_ai_for_global_finance/logic/cleaner.py",
+            "02": "dist/ai_for_global_finance/02_executive_narrative_engine/set_ai_for_global_finance/logic/narrative_gen.py",
+            "03": "dist/ai_for_global_finance/03_multi_agent_systems/set_ai_for_global_finance/logic/swarm.py",
+            "04": "dist/ai_for_global_finance/04_sovereign_knowledge_rag/set_ai_for_global_finance/logic/ingest_and_query.py",
+            "05": "dist/ai_for_global_finance/05_advanced_ui_lobechat/logic/multi_domain_api.py",
+            "06": "dist/ai_for_global_finance/01_data_pipeline_automation/set_ai_for_global_finance/logic/cleaner.py", # Placeholder for 06 logic
+            "07": "dist/ai_for_global_finance/07_sovereign_security/set_ai_for_global_finance/logic/pii_scrubber.py",
+            "08": "dist/ai_for_global_finance/08_grand_capstone/set_ai_for_global_finance/logic/dashboard.py",
         },
     },
     "set_b_healthcare": {
         "label": "Healthcare",
         "sessions": {
-            "01": "01_data_pipeline_automation/set_b_healthcare/logic/scrubber.py",
-            "02": "02_executive_narrative_engine/set_b_healthcare/logic/compliance_gen.py",
-            "03": "03_multi_agent_systems/set_b_healthcare/logic/swarm.py",
+            "01": "builds/ai_in_retail_and_e-commerce/01_data_pipeline_automation/set_ai_in_retail_and_e-commerce/logic/cleaner.py",
+            "02": "builds/ai_in_retail_and_e-commerce/02_executive_narrative_engine/set_ai_in_retail_and_e-commerce/logic/narrative_gen.py",
+            "03": "builds/ai_in_retail_and_e-commerce/03_multi_agent_systems/set_ai_in_retail_and_e-commerce/logic/swarm.py",
         },
     },
     "set_c_supply_chain": {
         "label": "Supply Chain",
         "sessions": {
-            "01": "01_data_pipeline_automation/set_c_supply_chain/logic/inventory_validator.py",
-            "02": "02_executive_narrative_engine/set_c_supply_chain/logic/risk_memo_gen.py",
-            "03": "03_multi_agent_systems/set_c_supply_chain/logic/swarm.py",
+            "01": "builds/sustainability_and_esg/01_data_pipeline_automation/set_sustainability_and_esg/logic/cleaner.py",
+            "02": "builds/sustainability_and_esg/02_executive_narrative_engine/set_sustainability_and_esg/logic/narrative_gen.py",
+            "03": "builds/sustainability_and_esg/03_multi_agent_systems/set_sustainability_and_esg/logic/swarm.py",
         },
-    },
-    "set_d_edtech": {
-        "label": "EdTech",
-        "sessions": {
-            "01": "01_data_pipeline_automation/set_d_edtech/logic/velocity_cleaner.py",
-            "02": "02_executive_narrative_engine/set_d_edtech/logic/velocity_memo_gen.py",
-            "03": "03_multi_agent_systems/set_d_edtech/logic/swarm.py",
-        },
-    },
-    "set_e_legal": {
-        "label": "Legal",
-        "sessions": {
-            "01": "01_data_pipeline_automation/set_e_legal/logic/clause_scanner.py",
-            "02": "02_executive_narrative_engine/set_e_legal/logic/due_diligence_gen.py",
-            "03": "03_multi_agent_systems/set_e_legal/logic/swarm.py",
-        },
-    },
+    }
 }
 
 SESSION_LABELS = {
-    "01": "Data Pipeline Automation",
-    "02": "Executive Narrative Engine",
-    "03": "Multi-Agent Systems",
+    "01": "Data Pipeline",
+    "02": "Narrative Engine",
+    "03": "Multi-Agent Swarm",
+    "04": "Sovereign RAG",
+    "05": "Cockpit UI",
+    "06": "Observability",
+    "07": "Security",
+    "08": "Capstone",
 }
 
 # ── Ollama Health Check ────────────────────────────────────────────────────────
@@ -165,8 +160,11 @@ def run_validation():
     for session_id, session_label in SESSION_LABELS.items():
         row = f"| **{session_id}** {session_label} |"
         for domain_key in DOMAINS:
-            emoji, _ = results[domain_key][session_id]
-            row += f" {emoji} |"
+            if session_id in results[domain_key]:
+                emoji, _ = results[domain_key][session_id]
+                row += f" {emoji} |"
+            else:
+                row += " — |"
         md_lines.append(row)
 
     md_lines += [

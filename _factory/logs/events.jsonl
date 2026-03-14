@@ -1,0 +1,82 @@
+{"timestamp": "2026-03-12T17:33:27.091854", "level": "INFO", "event": "Force rebuild: cache cleared", "metadata": {}}
+{"timestamp": "2026-03-12T17:33:27.092221", "level": "INFO", "event": "Generating DNA context for AI for Cyber-Security via local...", "metadata": {}}
+{"timestamp": "2026-03-12T17:33:27.092273", "level": "DEBUG", "event": "Using model: qwen2.5:0.5b for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-12T17:42:40.285965", "level": "INFO", "event": "Generating DNA context for AI for Cyber-Security via local...", "metadata": {}}
+{"timestamp": "2026-03-12T17:42:40.286550", "level": "DEBUG", "event": "Using model: qwen2.5:0.5b for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-12T17:55:34.871658", "level": "INFO", "event": "Generating DNA context for AI for Cyber-Security via local...", "metadata": {}}
+{"timestamp": "2026-03-12T17:55:34.873607", "level": "DEBUG", "event": "Using model: llama3.2:1b for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-12T22:01:44.392748", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
+{"timestamp": "2026-03-12T22:01:46.236813", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
+{"timestamp": "2026-03-12T22:01:46.241057", "level": "INFO", "event": "Initiating data synthesis agent for AI for Cyber-Security...", "metadata": {}}
+{"timestamp": "2026-03-12T22:01:53.636185", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.188195", "level": "INFO", "event": "Data synthesis agent completed.", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.244769", "level": "INFO", "event": "Incremental build: cache active for AI for Cyber-Security", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.246056", "level": "INFO", "event": "Mission Start: Compiling AI for Cyber-Security to dist/ai_for_cyber-security", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.255948", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.688656", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.868019", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.874033", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.882541", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.892767", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.900416", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.993459", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.995697", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.995773", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-13T02:48:59.999631", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.073367", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.083359", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.092929", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.108505", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.108653", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.154448", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.154555", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.180268", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.194936", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.196198", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.214793", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.218604", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.230550", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.238748", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.241827", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.246458", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.254240", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.259368", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.305751", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.387916", "level": "INFO", "event": "Queued for refinement: session_06_observability.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.401087", "level": "INFO", "event": "Queued for refinement: 01_edtech_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.408632", "level": "INFO", "event": "Queued for refinement: 01_healthcare_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.412517", "level": "INFO", "event": "Queued for refinement: 01_finance_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.422711", "level": "INFO", "event": "Queued for refinement: 01_supply_chain_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.426372", "level": "INFO", "event": "Queued for refinement: 01_legal_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.432842", "level": "INFO", "event": "Queued for refinement: 03_edtech_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.441765", "level": "INFO", "event": "Queued for refinement: 03_healthcare_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.450424", "level": "INFO", "event": "Queued for refinement: 03_finance_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.453501", "level": "INFO", "event": "Queued for refinement: 03_supply_chain_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.465615", "level": "INFO", "event": "Queued for refinement: 03_legal_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.471747", "level": "INFO", "event": "Queued for refinement: 04_edtech_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.474597", "level": "INFO", "event": "Queued for refinement: 04_healthcare_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.478141", "level": "INFO", "event": "Queued for refinement: 04_finance_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.483750", "level": "INFO", "event": "Queued for refinement: 04_supply_chain_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.486823", "level": "INFO", "event": "Queued for refinement: 04_legal_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.494797", "level": "INFO", "event": "Queued for refinement: 05_edtech_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.499680", "level": "INFO", "event": "Queued for refinement: 05_healthcare_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.509528", "level": "INFO", "event": "Queued for refinement: 05_finance_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.513532", "level": "INFO", "event": "Queued for refinement: 05_supply_chain_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.525406", "level": "INFO", "event": "Queued for refinement: 05_legal_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.531906", "level": "INFO", "event": "Queued for refinement: 02_edtech_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.535494", "level": "INFO", "event": "Queued for refinement: 02_healthcare_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.538030", "level": "INFO", "event": "Queued for refinement: 02_finance_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.541192", "level": "INFO", "event": "Queued for refinement: 02_supply_chain_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.545375", "level": "INFO", "event": "Queued for refinement: 02_legal_nocode.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.548767", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.555766", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.558340", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.564483", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.573861", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.619331", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.626562", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.647987", "level": "INFO", "event": "Mission Successful: AI for Cyber-Security build complete.", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.648062", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.654960", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.656593", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
+{"timestamp": "2026-03-13T02:49:00.657726", "level": "INFO", "event": "Pass 1 complete. 48 files queued for LLM refinement.", "metadata": {}}

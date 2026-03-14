@@ -32,11 +32,15 @@ Welcome to the Finance Sovereign AI track. This curriculum focuses on financial 
 - **Goal**: Trace Agent steps to ensure exact compliance and auditability.
 - **Lab**: [**06 Observability**](../06_observability/06_sovereign_tracing.md)
 
-### 7. Enterprise Auth (Architecting)
-- *Coming Soon*
+### 7. Sovereign Security
+- **Goal**: Implement PII scrubbing and secure local boundaries for financial data.
+- **Code**: [`logic/pii_scrubber.py`](../dist/ai_for_global_finance/07_sovereign_security/set_ai_for_global_finance/logic/pii_scrubber.py)
+- **Lab**: [**07 Sovereign Security**](../dist/ai_for_global_finance/07_sovereign_security/07_sovereign_security.md)
 
-### 8. Capstone Production (Architecting)
-- *Coming Soon*
+### 8. Capstone Production
+- **Goal**: Deploy a full-stack financial audit dashboard with real-time agentic insights.
+- **Code**: [`logic/dashboard.py`](../dist/ai_for_global_finance/08_grand_capstone/set_ai_for_global_finance/logic/dashboard.py)
+- **Lab**: [**08 Grand Capstone**](../dist/ai_for_global_finance/08_grand_capstone/08_grand_capstone.md)
 
 ---
 **[Back to Curriculum Hub](../README.md)**

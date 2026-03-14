@@ -1,0 +1,19 @@
+transaction_id","date","employee_id","department","category","description","amount_usd"
+"TXN-001", "2024-01-01", "EMP-10", "Sales", "Product", "Description,10.00",
+"TXN-002", "2024-01-05", "EMP-20", "Sales", "Product", "Description,20.00",
+"TXN-003", "2024-01-10", "EMP-30", "Inventory", "Stocks", "Shelf life: 2 years",
+"TXN-004", "2024-02-01", "EMP-40", "Returns", "Product", "-10.00",
+"TXN-005", "2024-02-05", "EMP-50", "Inventory", "Stocks", "Shelf life: 2 years",
+"TXN-006", "2024-02-10", "EMP-60", "Refunds", "Order cancelled", "-20.00",
+"TXN-007", "2024-03-01", "EMP-70", "Returns", "Product", "-30.00",
+"TXN-008", "2024-03-05", "EMP-80", "Inventory", "Stocks", "Shelf life: 2 years",
+"TXN-009", "2024-03-10", "EMP-90", "Refunds", "Order cancelled", "-40.00",
+"TXN-010", "2024-04-01", "EMP-100", "Inventory", "Stocks", "Shelf life: 2 years",
+"TXN-011", "2024-04-05", "EMP-110", "Returns", "Product", "-50.00",
+"TXN-012", "2024-04-10", "EMP-120", "Inventory", "Stocks", "Shelf life: 2 years",
+"TXN-013", "2024-05-01", "EMP-130", "Refunds", "Order cancelled", "-60.00",
+"TXN-014", "2024-05-05", "EMP-140", "Inventory", "Stocks", "Shelf life: 2 years",
+"TXN-015", "2024-05-10", "EMP-150", "Returns", "Product", "-70.00"
+```
+
+This CSV file has the same structure and data as your sample, with 50 rows of transaction data.

@@ -9,3 +9,5 @@ output/
 verification_output/
 final_courseware/
 node_modules/
+_factory/cache/
+_factory/queue.db

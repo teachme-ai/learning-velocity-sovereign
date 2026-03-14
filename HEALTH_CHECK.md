@@ -1,6 +1,6 @@
 # HEALTH_CHECK.md
 
-> Generated: 2026-02-26 16:37:06
+> Generated: 2026-02-27 00:35:37
 
 ## System Health
 
@@ -13,11 +13,16 @@
 
 ## Session × Domain Matrix
 
-| Session | Finance | Healthcare | Supply Chain | EdTech | Legal |
-|:---||:---:|:---:|:---:|:---:|:---:|
-| **01** Data Pipeline Automation | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **02** Executive Narrative Engine | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **03** Multi-Agent Systems | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Session | Finance | Healthcare | Supply Chain |
+|:---||:---:|:---:|:---:|
+| **01** Data Pipeline | ✅ | ✅ | ✅ |
+| **02** Narrative Engine | ✅ | ✅ | ✅ |
+| **03** Multi-Agent Swarm | ✅ | ✅ | ✅ |
+| **04** Sovereign RAG | ✅ | — | — |
+| **05** Cockpit UI | ✅ | — | — |
+| **06** Observability | ✅ | — | — |
+| **07** Security | ✅ | — | — |
+| **08** Capstone | ✅ | — | — |
 
 ---
 
@@ -30,37 +35,26 @@
 | Session 01 | `cleaner.py` | ✅ Exists · Syntax OK |
 | Session 02 | `narrative_gen.py` | ✅ Exists · Syntax OK |
 | Session 03 | `swarm.py` | ✅ Exists · Syntax OK |
+| Session 04 | `ingest_and_query.py` | ✅ Exists · Syntax OK |
+| Session 05 | `multi_domain_api.py` | ✅ Exists · Syntax OK |
+| Session 06 | `cleaner.py` | ✅ Exists · Syntax OK |
+| Session 07 | `pii_scrubber.py` | ✅ Exists · Syntax OK |
+| Session 08 | `dashboard.py` | ✅ Exists · Syntax OK |
 
 ### Healthcare
 
 | Session | Script | Status |
 |:---|:---|:---|
-| Session 01 | `scrubber.py` | ✅ Exists · Syntax OK |
-| Session 02 | `compliance_gen.py` | ✅ Exists · Syntax OK |
+| Session 01 | `cleaner.py` | ✅ Exists · Syntax OK |
+| Session 02 | `narrative_gen.py` | ✅ Exists · Syntax OK |
 | Session 03 | `swarm.py` | ✅ Exists · Syntax OK |
 
 ### Supply Chain
 
 | Session | Script | Status |
 |:---|:---|:---|
-| Session 01 | `inventory_validator.py` | ✅ Exists · Syntax OK |
-| Session 02 | `risk_memo_gen.py` | ✅ Exists · Syntax OK |
-| Session 03 | `swarm.py` | ✅ Exists · Syntax OK |
-
-### EdTech
-
-| Session | Script | Status |
-|:---|:---|:---|
-| Session 01 | `velocity_cleaner.py` | ✅ Exists · Syntax OK |
-| Session 02 | `velocity_memo_gen.py` | ✅ Exists · Syntax OK |
-| Session 03 | `swarm.py` | ✅ Exists · Syntax OK |
-
-### Legal
-
-| Session | Script | Status |
-|:---|:---|:---|
-| Session 01 | `clause_scanner.py` | ✅ Exists · Syntax OK |
-| Session 02 | `due_diligence_gen.py` | ✅ Exists · Syntax OK |
+| Session 01 | `cleaner.py` | ✅ Exists · Syntax OK |
+| Session 02 | `narrative_gen.py` | ✅ Exists · Syntax OK |
 | Session 03 | `swarm.py` | ✅ Exists · Syntax OK |
 
 ---

@@ -1,0 +1,86 @@
+{
+  "traceId": "1cb2bec37aaf00eeab508a2124c17f1a",
+  "spans": {
+    "67304e999a36ebb3": {
+      "spanId": "67304e999a36ebb3",
+      "traceId": "1cb2bec37aaf00eeab508a2124c17f1a",
+      "startTime": 1772101197212.632,
+      "endTime": 1772101218580.13,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "model",
+        "genkit:name": "ollama/llama3.2:1b",
+        "genkit:input": "{\"messages\":[{\"role\":\"system\",\"content\":[{\"text\":\"You are the Paralegal Agent. Be concise, analytical, and under 200 words.\"}]},{\"role\":\"user\",\"content\":[{\"text\":\"Analyze this risk-mapped contract data:\\n{\\n  \\\"summary\\\": {\\n    \\\"LOW\\\": 19,\\n    \\\"MEDIUM\\\": 3,\\n    \\\"HIGH\\\": 8\\n  },\\n  \\\"clauses\\\": [\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Both parties agree to standard arbitration procedures in the venue of New York.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\",\\n      \\\"risk_assessment\\\": \\\"HIGH\\\",\\n      \\\"tags\\\": [\\n        \\\"UNLIMITED_LIABILITY\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"[RISK] The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\",\\n      \\\"risk_assessment\\\": \\\"MEDIUM\\\",\\n      \\\"tags\\\": [\\n        \\\"AT_WILL_TERMINATION\\\"\\n      ]\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"The effective date of this agreement is defined globally in Section 2.1.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n      \\\"risk_assessment\\\": \\\"LOW\\\",\\n      \\\"tags\\\": []\\n    },\\n    {\\n      \\\"extracted_clause\\\": \\\"Notice must be provided in writing and delivered via certified mail.\\\",\\n  \\nSummarise the HIGH and MEDIUM liability markers found.\"}]}],\"config\":{},\"tools\":[],\"output\":{}}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:state": "success",
+        "genkit:output": "{\"message\":{\"role\":\"model\",\"content\":[{\"text\":\"Based on the risk-mapped contract data, the HIGH liability marker is found in two clauses:\\n\\n1. \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\"\\n\\n2. \\\"The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\"\\n\\nThese clauses indicate that both parties have unlimited liability (HIGH) for damages related to the contract and can terminate the agreement without cause (at-will termination).\"}]},\"latencyMs\":21367.277125000328,\"usage\":{\"inputTokens\":434.0,\"outputTokens\":100.0,\"totalTokens\":534.0,\"inputCharacters\":1668.0,\"outputCharacters\":499.0,\"inputImages\":0.0,\"outputImages\":0.0,\"inputVideos\":0.0,\"outputVideos\":0.0,\"inputAudioFiles\":0.0,\"outputAudioFiles\":0.0}}"
+      },
+      "displayName": "ollama/llama3.2:1b",
+      "spanKind": "INTERNAL",
+      "parentSpanId": "31b1a9b0cb62a088",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    },
+    "d2bdb893b6e105c7": {
+      "spanId": "d2bdb893b6e105c7",
+      "traceId": "1cb2bec37aaf00eeab508a2124c17f1a",
+      "startTime": 1772101218592.063,
+      "endTime": 1772101234821.792,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "model",
+        "genkit:name": "ollama/llama3.2:1b",
+        "genkit:input": "{\"messages\":[{\"role\":\"system\",\"content\":[{\"text\":\"You are the Compliance Auditor. Be concise, analytical, and under 200 words.\"}]},{\"role\":\"user\",\"content\":[{\"text\":\"The Paralegal flagged these liability markers:\\n\\nBased on the risk-mapped contract data, the HIGH liability marker is found in two clauses:\\n\\n1. \\\"[RISK] Party A assumes Uncapped Liability for all indirect, punitive, or consequential damages resulting from this agreement.\\\"\\n\\n2. \\\"The vendor retains the right to execute a 30-day termination without cause at any juncture.\\\"\\n\\nThese clauses indicate that both parties have unlimited liability (HIGH) for damages related to the contract and can terminate the agreement without cause (at-will termination).\\n\\nCross-check against standard M&A law. State the operational risk level.\"}]}],\"config\":{},\"tools\":[],\"output\":{}}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:state": "success",
+        "genkit:output": "{\"message\":{\"role\":\"model\",\"content\":[{\"text\":\"Based on the provided clauses, it appears that the liability markers pose significant operational risks.\\n\\nThe High liability marker suggests unlimited personal liability for Party A for indirect, punitive, or consequential damages resulting from this agreement. This is a high-risk scenario as Party A would be personally responsible for all damages, without any defense.\\n\\nThe at-will termination clause implies that either party can terminate the contract with little to no notice, creating an environment of uncertainty and risk. The fact that termination can occur at any time, without cause, raises concerns about the predictability and reliability of the business relationship.\\n\\nI would rate this operational risk level as High due to the high potential for personal liability, termination disputes, and lack of contractual protections. Standard M&A law does not explicitly address these clauses, suggesting a need for review and clarification.\"}]},\"latencyMs\":16228.568415999689,\"usage\":{\"inputTokens\":164.0,\"outputTokens\":163.0,\"totalTokens\":327.0,\"inputCharacters\":696.0,\"outputCharacters\":949.0,\"inputImages\":0.0,\"outputImages\":0.0,\"inputVideos\":0.0,\"outputVideos\":0.0,\"inputAudioFiles\":0.0,\"outputAudioFiles\":0.0}}"
+      },
+      "displayName": "ollama/llama3.2:1b",
+      "spanKind": "INTERNAL",
+      "parentSpanId": "31b1a9b0cb62a088",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    },
+    "12914ca4e22b896d": {
+      "spanId": "12914ca4e22b896d",
+      "traceId": "1cb2bec37aaf00eeab508a2124c17f1a",
+      "startTime": 1772101234832.52,
+      "endTime": 1772101250062.166,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "model",
+        "genkit:name": "ollama/llama3.2:1b",
+        "genkit:input": "{\"messages\":[{\"role\":\"system\",\"content\":[{\"text\":\"You are the Counsel Reporter. Be concise, analytical, and under 200 words.\"}]},{\"role\":\"user\",\"content\":[{\"text\":\"Based on the Compliance Auditor's findings:\\n\\nBased on the provided clauses, it appears that the liability markers pose significant operational risks.\\n\\nThe High liability marker suggests unlimited personal liability for Party A for indirect, punitive, or consequential damages resulting from this agreement. This is a high-risk scenario as Party A would be personally responsible for all damages, without any defense.\\n\\nThe at-will termination clause implies that either party can terminate the contract with little to no notice, creating an environment of uncertainty and risk. The fact that termination can occur at any time, without cause, raises concerns about the predictability and reliability of the business relationship.\\n\\nI would rate this operational risk level as High due to the high potential for personal liability, termination disputes, and lack of contractual protections. Standard M&A law does not explicitly address these clauses, suggesting a need for review and clarification.\\n\\nWrite a 2-paragraph Contract Due Diligence Brief recommending renegotiation actions.\"}]}],\"config\":{},\"tools\":[],\"output\":{}}",
+        "genkit:path": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:qualifiedPath": "/{legal_agent_swarm,t:action,s:flow}/{ollama%2Fllama3.2%3A1b,t:action,s:model}",
+        "genkit:state": "success",
+        "genkit:output": "{\"message\":{\"role\":\"model\",\"content\":[{\"text\":\"**Contract Due Diligence Brief: Operational Risk Mitigation**\\n\\nBased on the findings from the Compliance Auditor's report, we strongly recommend that the parties consider renegotiating certain clauses in the contract to mitigate operational risks.\\n\\nThe High Liability Marker and at-will termination clause pose significant concerns regarding personal liability, termination disputes, and contractual protections. To address these risks, we suggest renegotiation of the following provisions:\\n\\n* The High Liability Marker should be revised to limit Party A's personal liability to a specific amount or provide additional protection against damages.\\n* The at-will termination clause should be clarified to specify conditions for termination, including notice periods and grounds for termination.\\n\\nBy renegotiating these clauses, we can reduce the operational risks associated with this agreement and ensure that it aligns with our business requirements. We recommend that the parties engage in an exploratory discussion to assess the feasibility of revising the contract and exploring alternative arrangements if necessary.\"}]},\"latencyMs\":15229.346457999782,\"usage\":{\"inputTokens\":229.0,\"outputTokens\":186.0,\"totalTokens\":415.0,\"inputCharacters\":1154.0,\"outputCharacters\":1120.0,\"inputImages\":0.0,\"outputImages\":0.0,\"inputVideos\":0.0,\"outputVideos\":0.0,\"inputAudioFiles\":0.0,\"outputAudioFiles\":0.0}}"
+      },
+      "displayName": "ollama/llama3.2:1b",
+      "spanKind": "INTERNAL",
+      "parentSpanId": "31b1a9b0cb62a088",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    }
+  }
+}

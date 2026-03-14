@@ -1,0 +1,4 @@
+id,label,value,category
+1,vault_status,1.0,system
+2,ingestion_rate,0.85,performance
+3,semantic_drift,0.02,audit

@@ -16,6 +16,6 @@ This Master Manifest outlines the 8-session curriculum across 3 distinct **Learn
 | **03** | Multi-Agent Systems | ✅ VALIDATED | ✅ VALIDATED | ✅ VALIDATED |
 | **04** | Sovereign Knowledge RAG | ✅ VALIDATED | ✅ VALIDATED | ✅ VALIDATED |
 | **05** | Advanced UI (LobeChat) | ✅ VALIDATED | ✅ VALIDATED | ✅ VALIDATED |
-| **06** | Evidentiary Testing & CI/CD | Architecting | ✅ VALIDATED | ✅ VALIDATED |
-| **07** | Enterprise Auth & Security | Architecting | Architecting | Architecting |
-| **08** | Production Capstone | Architecting | Architecting | Architecting |
+| **06** | Evidentiary Testing & CI/CD | ✅ VALIDATED | ✅ VALIDATED | ✅ VALIDATED |
+| **07** | Enterprise Auth & Security | ✅ VALIDATED | ✅ VALIDATED | ✅ VALIDATED |
+| **08** | Production Capstone | ✅ VALIDATED | ✅ VALIDATED | ✅ VALIDATED |

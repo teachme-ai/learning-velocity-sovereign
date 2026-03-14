@@ -1,0 +1,210 @@
+courses:
+  - id: ai_cyber_security
+    label: "AI for Cyber-Security"
+    industry: "AI for Cyber-Security"
+    use_cases:
+      - "Threat Detection & SIEM Automation"
+      - "Vulnerability Assessment Pipelines"
+      - "AI-Powered Incident Response"
+      - "Zero-Trust Network Intelligence"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 6, 7, 8]
+    tone: "Technical & Precise"
+    compliance: ["ISO 27001"]
+    region: "Global"
+
+  - id: ai_global_finance
+    label: "AI for Global Finance"
+    industry: "AI for Global Finance"
+    use_cases:
+      - "Risk Modeling & Liquidity Prediction"
+      - "Quantitative Sentiment Swarms"
+      - "Automated ESG Disclosure Tracing"
+      - "Algorithmic Trading Pipelines"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Strategic & Analytical"
+    compliance: ["SOX"]
+    region: "US"
+
+  - id: ai_healthcare
+    label: "AI for Healthcare"
+    industry: "AI for Healthcare"
+    use_cases:
+      - "Clinical Decision Support Pipelines"
+      - "Medical Imaging Analysis Automation"
+      - "Patient Risk Stratification"
+      - "Drug Interaction Detection"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Practical & Applied"
+    compliance: ["HIPAA"]
+    region: "US"
+
+  - id: ai_supply_chain
+    label: "AI for Supply Chain"
+    industry: "AI for Supply Chain"
+    use_cases:
+      - "Demand Forecasting & Inventory Optimization"
+      - "Supplier Risk Intelligence Agents"
+      - "Last-Mile Delivery Routing AI"
+      - "Procurement Anomaly Detection"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Practical & Applied"
+    compliance: ["None"]
+    region: "Global"
+
+  - id: ai_legal
+    label: "AI for Legal"
+    industry: "AI for Legal"
+    use_cases:
+      - "Contract Review & Risk Extraction"
+      - "Regulatory Compliance Monitoring"
+      - "Legal Research Automation (RAG)"
+      - "E-Discovery Document Classification"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Strategic & Analytical"
+    compliance: ["GDPR"]
+    region: "EU"
+
+  - id: ai_retail_ecommerce
+    label: "AI for Retail & E-Commerce"
+    industry: "AI for Retail & E-Commerce"
+    use_cases:
+      - "Personalization & Recommendation Engines"
+      - "Dynamic Pricing Automation"
+      - "Customer Churn Prediction"
+      - "Visual Search & Catalogue Tagging"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Conversational & Accessible"
+    compliance: ["GDPR"]
+    region: "Global"
+
+  - id: ai_educators
+    label: "AI for Educators"
+    industry: "AI for Educators"
+    use_cases:
+      - "Adaptive Learning Path Generation"
+      - "Automated Assessment & Grading"
+      - "Student Performance Early Warning"
+      - "Curriculum Content Synthesis"
+    default_tracks: [base, integrated]
+    default_sessions: [1, 2, 3, 4, 5, 6]
+    tone: "Conversational & Accessible"
+    compliance: ["None"]
+    region: "Global"
+
+  - id: ai_marketing
+    label: "AI for Marketing"
+    industry: "AI for Marketing"
+    use_cases:
+      - "Hyper-Personalized Campaign Generation"
+      - "Customer Segmentation & Lookalike Modeling"
+      - "Sentiment Analysis & Brand Intelligence"
+      - "Multi-Channel Attribution Automation"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Conversational & Accessible"
+    compliance: ["GDPR"]
+    region: "Global"
+
+  - id: ai_sales
+    label: "AI for Sales"
+    industry: "AI for Sales"
+    use_cases:
+      - "Lead Scoring & Pipeline Intelligence"
+      - "Conversation Intelligence & Coaching"
+      - "Deal Risk Detection Agents"
+      - "Automated Outreach Personalization"
+    default_tracks: [base, integrated]
+    default_sessions: [1, 2, 3, 4, 5, 6]
+    tone: "Conversational & Accessible"
+    compliance: ["None"]
+    region: "Global"
+
+  - id: ai_product_managers
+    label: "AI for Product Managers"
+    industry: "AI for Product Managers"
+    use_cases:
+      - "Feature Prioritization Intelligence"
+      - "User Feedback Synthesis & Clustering"
+      - "Roadmap Generation from Signal Swarms"
+      - "Competitive Intelligence Automation"
+    default_tracks: [base, integrated]
+    default_sessions: [1, 2, 3, 4, 5, 6]
+    tone: "Strategic & Analytical"
+    compliance: ["None"]
+    region: "Global"
+
+  - id: ai_hr
+    label: "AI for HR"
+    industry: "AI for HR"
+    use_cases:
+      - "Resume Screening & Candidate Ranking"
+      - "Employee Attrition Prediction"
+      - "Performance Review Synthesis"
+      - "Workforce Planning Intelligence"
+    default_tracks: [base, integrated]
+    default_sessions: [1, 2, 3, 4, 5, 6]
+    tone: "Conversational & Accessible"
+    compliance: ["GDPR"]
+    region: "EU"
+
+  - id: ai_manufacturing
+    label: "AI for Manufacturing"
+    industry: "AI for Manufacturing"
+    use_cases:
+      - "Predictive Maintenance Pipelines"
+      - "Quality Control Vision Systems"
+      - "Energy Consumption Optimization"
+      - "Production Scheduling Agents"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Technical & Precise"
+    compliance: ["ISO 27001"]
+    region: "Global"
+
+  - id: ai_energy
+    label: "AI for Energy"
+    industry: "AI for Energy"
+    use_cases:
+      - "Grid Load Forecasting & Balancing"
+      - "Renewable Energy Yield Prediction"
+      - "Asset Failure & Maintenance Intelligence"
+      - "Carbon Footprint Tracking Automation"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Technical & Precise"
+    compliance: ["None"]
+    region: "Global"
+
+  - id: ai_real_estate
+    label: "AI for Real Estate"
+    industry: "AI for Real Estate"
+    use_cases:
+      - "Property Valuation & AVM Pipelines"
+      - "Market Trend Intelligence Agents"
+      - "Lease Abstraction & Clause Extraction"
+      - "Tenant Risk Scoring"
+    default_tracks: [base, integrated]
+    default_sessions: [1, 2, 3, 4, 5, 6]
+    tone: "Strategic & Analytical"
+    compliance: ["None"]
+    region: "US"
+
+  - id: ai_government
+    label: "AI for Government"
+    industry: "AI for Government"
+    use_cases:
+      - "Public Service Demand Forecasting"
+      - "Policy Document Intelligence (RAG)"
+      - "Fraud Detection in Benefits Systems"
+      - "Citizen Sentiment & Feedback Analysis"
+    default_tracks: [base, integrated, architect]
+    default_sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+    tone: "Strategic & Analytical"
+    compliance: ["GDPR"]
+    region: "EU"

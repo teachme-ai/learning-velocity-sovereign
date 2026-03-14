@@ -1,41 +1,28 @@
-## Introduction to AI for Global Finance Data Pipeline Automation
+## Session 01: Data Pipeline Automation - Sovereign AI Solutions
 
-In this session, we will focus on implementing a **Sovereign Data Pipeline** using advanced technologies and tools. This automation enables efficient data preparation, validation, and scoring of financial transactions, ultimately facilitating informed business decisions.
+### Overview
+This session focuses on the **Sovereign Data Pipeline**, a comprehensive approach to automating data pipeline workflows critical for advanced cyber defense and threat intelligence. We leverage Artificial Intelligence (AI) and Machine Learning (ML) technologies to streamline manual processes in areas like SIEM correlation, incident enrichment, and proactive threat hunting, thereby ensuring the integrity, consistency, and accuracy of critical security telemetry.
+### Learning Outcomes
+- [ ] Develop a custom Pydantic validator in Python using AI Studio to automate data cleaning.
+- [ ] Integrate a local Ollama model for policy compliance categorization, with automated output filtering and validation.
+- [ ] Generate a structured audit report from local model outputs, ensuring compliance with regulatory requirements.
 
-## Learning Outcomes
-- [ ] Utilize Google AI Studio to upload structured data from CSV files.
-- [ ] Develop a Pydantic-validated data cleaner in Python, capable of validating against corporate expense structures.
-- [ ] Integrate a local Ollama model for policy compliance categorization using a System Instruction.
-- [ ] Generate a structured audit report from the local model outputs.
+## [INTEGRATOR] Lab: The Sovereign Data Pipeline Flow
 
-## Integrator Lab: The Google AI Studio Flow
+**Step 1:** Upload the `corporate_expenses.csv` to AI Studio using **Gemini 2.0 Flash**, a system instruction optimized for data quality and accuracy.
 
-**Step 1:** Upload the `corporate_expenses.csv` to Google AI Studio, ensuring proper schema validation and data quality checks.
+**Step 2:** Request the output as a **JSON list** of flagged IDs with a reason for each flag, ensuring compliance with regulatory requirements.
 
-**Step 2:** Utilize the **Gemini 2.0 Flash** model with a System Instruction:
-> *"Identify transactions that violate a $1,000 limit for non-travel expenses."*
+## [ARCHITECT] Lab: The OpenCode & Ollama Pipeline
 
-## Architect Lab: The OpenCode & Ollama Pipeline
-
-**Step 1:** Develop a Python script `logic/cleaner.py` using Pydantic to enforce a schema on the CSV data, ensuring compliance with corporate expense structures.
+**Step 1:** Develop a custom Pydantic validator in Python using AI Studio to enforce a schema on the CSV, ensuring data quality and consistency.
 
 **Step 2:** Integrate a local call to **Ollama** (`llama3.2:8b`) to categorize the `description` field into one of:
 - `Policy-Compliant`
 - `Suspicious`
 - `Needs Review`
 
+**Step 3:** Generate a summary report `data/audit_summary.md` using the local model results, ensuring compliance with regulatory requirements.
+
 ## Governance Notes
-<!-- Compliance, security, and enterprise governance considerations. --> 
-
-### Limitations
-
-- This automation should be adapted for real-world use cases, which may involve varying dataset structures, regulatory requirements, and business context.
-- Ensure adherence to all relevant industry guidelines, regulations, and standards when implementing in production environments.
-
-### Additional Guidance
-
-For further details on these topics, please refer to the attached resources:
-
-* Google AI Studio documentation
-* Pydantic library documentation
-* Ollama documentation
+<!-- Compliance, security, and enterprise governance considerations. --> # Limit context window

@@ -39,7 +39,7 @@ async def call_agent(system_role: str, prompt: str) -> str:
 
 # ── Genkit Flow ───────────────────────────────────────────────────────────────
 @ai.flow()
-async def ai_in_retail_and_e-commerce_agent_swarm(input_data: SwarmInput) -> SwarmOutput:
+async def ai_in_retail_and_e_commerce_agent_swarm(input_data: SwarmInput) -> SwarmOutput:
     print("Starting Corporate AI in Retail & E-commerce Triple-Agent Swarm...")
 
     # 1. Financial Analyst — find anomalies
@@ -77,7 +77,7 @@ async def main():
     with open(input_file, "r") as f:
         csv_data = f.read()
 
-    result = await ai_in_retail_and_e-commerce_agent_swarm(SwarmInput(csv_data=csv_data))
+    result = await ai_in_retail_and_e_commerce_agent_swarm(SwarmInput(csv_data=csv_data))
 
     output_dir = "/tmp/ai_in_retail_and_e-commerce_output"
     os.makedirs(output_dir, exist_ok=True)
