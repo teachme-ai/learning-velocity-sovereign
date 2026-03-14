@@ -94,6 +94,7 @@ def parse_refined_sections(llm_response):
 def refine_markdown(file_path, industry_name, industry_slug):
     """Surgically rewrite only Introduction/Business Value sections for the target industry."""
     print(f"✨ Refining {os.path.basename(file_path)} for {industry_name}...")
+    tone = os.environ.get("REFINER_TONE", "Practical & Applied")
 
     with open(file_path, "r") as f:
         content = f.read()
@@ -108,12 +109,23 @@ def refine_markdown(file_path, industry_name, industry_slug):
         for s in target_sections
     )
 
+    TONE_INSTRUCTIONS = {
+        "Strategic & Analytical": "Use executive language: ROI, stakeholder outcomes, governance, risk-adjusted returns, strategic imperatives.",
+        "Technical & Precise":    "Use engineering register: system architecture, implementation details, performance characteristics, failure modes.",
+        "Practical & Applied":    "Use practitioner language: step-by-step workflows, real-world constraints, operational trade-offs.",
+        "Conversational & Accessible": "Use plain, approachable language: relatable analogies, jargon-free explanations, encourage curiosity.",
+    }
+    tone_instruction = TONE_INSTRUCTIONS.get(tone, TONE_INSTRUCTIONS["Practical & Applied"])
+
     prompt = f"""You are a technical curriculum expert rewriting sections for the {industry_name} industry.
+
+Tone: {tone}
+Tone guidance: {tone_instruction}
 
 Rewrite each section below. Rules:
 1. Replace generic analogies with {industry_name}-specific ones
 2. Keep all technical terms, commands, and code references identical
-3. Match the tone and vocabulary of {industry_name} professionals
+3. Match the tone and vocabulary described above
 4. Return ONLY the rewritten sections in this exact format:
    ## SECTION: <original heading>
    <rewritten body>

@@ -1,6 +1,30 @@
+VALID_AUDIENCES = [
+    "Executive / C-Suite",
+    "Business Analyst",
+    "Developer / Engineer",
+    "Data Scientist",
+    "Product Manager",
+]
+VALID_TONES = [
+    "Strategic & Analytical",
+    "Technical & Precise",
+    "Practical & Applied",
+    "Conversational & Accessible",
+]
+VALID_COMPLIANCE = ["None", "GDPR", "HIPAA", "SOX", "ISO 27001"]
+VALID_REGIONS = ["Global", "EU", "US", "APAC", "Middle East"]
+
+
 class ManifestValidator:
     DEFAULTS = {
         "tracks": ["base", "integrated", "architect"],
+        "audience": "Developer / Engineer",
+        "use_cases": [],
+        "sessions": list(range(1, 9)),
+        "tone": "Practical & Applied",
+        "compliance_framework": "None",
+        "region": "Global",
+        "concurrency": 3,
         "token_budget": {
             "total_tokens": 100000,
             "tokens_per_minute": 1000,
@@ -57,6 +81,30 @@ class ManifestValidator:
             rc = ds.get("row_count")
             if rc is not None and (not isinstance(rc, int) or not (10 <= rc <= 500)):
                 self.errors.append(f"data_schema.row_count must be an integer between 10 and 500, got: {rc}")
+
+        # Plan 08 fields — warn on invalid, don't error (they have safe defaults)
+        audience = self.raw.get("audience")
+        if audience is not None and audience not in VALID_AUDIENCES:
+            self.warnings.append(f"Invalid audience '{audience}'. Defaulting to 'Developer / Engineer'.")
+
+        tone = self.raw.get("tone")
+        if tone is not None and tone not in VALID_TONES:
+            self.warnings.append(f"Invalid tone '{tone}'. Defaulting to 'Practical & Applied'.")
+
+        compliance = self.raw.get("compliance_framework")
+        if compliance is not None and compliance not in VALID_COMPLIANCE:
+            self.warnings.append(f"Invalid compliance_framework '{compliance}'. Defaulting to 'None'.")
+
+        region = self.raw.get("region")
+        if region is not None and region not in VALID_REGIONS:
+            self.warnings.append(f"Invalid region '{region}'. Defaulting to 'Global'.")
+
+        sessions = self.raw.get("sessions")
+        if sessions is not None and (
+            not isinstance(sessions, list) or
+            not all(isinstance(s, int) and 1 <= s <= 8 for s in sessions)
+        ):
+            self.warnings.append(f"Invalid sessions '{sessions}'. Defaulting to all 8 sessions.")
 
         return len(self.errors) == 0
 

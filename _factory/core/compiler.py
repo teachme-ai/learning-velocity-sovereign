@@ -1,3 +1,4 @@
+import asyncio
 import os
 import yaml
 import json
@@ -38,6 +39,11 @@ try:
 except ImportError:
     from core.model_router import ModelRouter
 
+try:
+    from _factory.core.worker import drain_queue
+except ImportError:
+    from core.worker import drain_queue
+
 class TelemetryLogger:
     def __init__(self, log_path="_factory/logs/events.jsonl"):
         self.log_path = log_path
@@ -71,17 +77,24 @@ class FactoryCompiler:
         self.manifest = validator.get_merged()
         self.token_budget = self.manifest.get("token_budget")
         self.data_schema = self.manifest.get("data_schema")
+        self.concurrency = self.manifest.get("concurrency", 3)
 
         self.industry = self.manifest.get('industry', 'Generic AI')
         self.slug = self.industry.lower().replace(' ', '_').replace('&', 'and')
         self.build_dir = os.path.join('dist', self.slug)
         self.template_dir = os.path.join('_factory', 'templates')
+        self.allowed_sessions = self.manifest.get('sessions', list(range(1, 9)))
 
         self.env = Environment(loader=FileSystemLoader(self.template_dir))
         self.context = {
             'industry_name': self.industry,
             'industry_slug': self.slug,
-            'tracks': self.manifest.get('tracks', ['base', 'integrated', 'architect'])
+            'tracks': self.manifest.get('tracks', ['base', 'integrated', 'architect']),
+            'audience': self.manifest.get('audience', 'Developer / Engineer'),
+            'use_cases': self.manifest.get('use_cases', []),
+            'tone': self.manifest.get('tone', 'Practical & Applied'),
+            'compliance_framework': self.manifest.get('compliance_framework', 'None'),
+            'region': self.manifest.get('region', 'Global'),
         }
         self.cache = BuildCache()
         self.refinement_queue = RefinementQueue()
@@ -131,12 +144,21 @@ class FactoryCompiler:
 
     def generate_llm_context(self):
         self.logger.log(f"Generating DNA context for {self.industry} via {self.engine_mode}...")
+        use_cases_str = ", ".join(self.context.get('use_cases', [])) or "general AI applications"
         prompt = f"""
-        You are an expert AI curriculum architect. Generate industry-specific context for an AI Bootcamp focused on {self.industry}.
+        You are an expert AI curriculum architect. Generate industry-specific context for an AI Bootcamp.
+
+        Industry: {self.industry}
+        Target Audience: {self.context.get('audience', 'Developer / Engineer')}
+        Use Cases to emphasize: {use_cases_str}
+        Compliance context: {self.context.get('compliance_framework', 'None')}
+        Region: {self.context.get('region', 'Global')}
+        Tone: {self.context.get('tone', 'Practical & Applied')}
+
         Return ONLY a JSON object with this exact structure:
         {{
             "terminology": ["term1", "term2", "term3", "term4", "term5"],
-            "data_scenario": "A short 2-sentence description of an industry-specific data challenge.",
+            "data_scenario": "A 2-sentence description of an industry-specific data challenge tied to the use cases above.",
             "dataset_name": "filename_without_spaces.csv",
             "primary_color": "#HEXCODE"
         }}
@@ -176,6 +198,7 @@ class FactoryCompiler:
         try:
             env = os.environ.copy()
             env["REFINER_MODEL"] = self.router.get_model("md_refine")
+            env["REFINER_TONE"] = self.context.get('tone', 'Practical & Applied')
             subprocess.run([sys.executable, refiner_script, dest_path, self.industry, self.slug], env=env, check=True)
         except Exception as e:
             self.logger.log(f"Linguistic refinement failed for {os.path.basename(dest_path)}", level="WARNING")
@@ -188,6 +211,15 @@ class FactoryCompiler:
 
         queued_count = 0
         for root, dirs, files in os.walk(self.template_dir):
+            rel_root = os.path.relpath(root, self.template_dir)
+            parts = rel_root.split(os.sep)
+            if len(parts) >= 1 and parts[0] != '.':
+                dir_name = parts[0]
+                if len(dir_name) >= 2 and dir_name[:2].isdigit():
+                    session_num = int(dir_name[:2])
+                    if session_num not in self.allowed_sessions:
+                        dirs[:] = []
+                        continue
             original_dirs = list(dirs)
             dirs[:] = [d for d in dirs if not d.startswith('.') and d not in ('.venv', '__pycache__', 'node_modules', 'libs')]
             for skipped in [d for d in original_dirs if d not in dirs]:
@@ -235,22 +267,21 @@ class FactoryCompiler:
         self.logger.log(f"Pass 1 complete. {queued_count} files queued for LLM refinement.")
 
     def compile_pass2(self):
-        self.logger.log("Pass 2 starting: draining refinement queue...")
-        while True:
-            job = self.refinement_queue.next_job()
-            if job is None:
-                break
-            self.refinement_queue.mark_in_progress(job['id'])
-            try:
-                self.run_context_refiner(job['file_path'])
-                self.refinement_queue.mark_done(job['id'])
-                self.logger.log(f"Refined: {os.path.basename(job['file_path'])}")
-            except Exception as e:
-                self.refinement_queue.mark_failed(job['id'], str(e))
-                self.logger.log(f"Refinement failed: {e}", level="WARNING")
-
-        self.refinement_queue.clear_done()
-        self.logger.log(f"Pass 2 complete. Stats: {self.refinement_queue.stats()}")
+        self.logger.log(f"Pass 2: draining queue ({self.refinement_queue.pending_count()} jobs) with {self.concurrency} workers...")
+        refiner_script = os.path.join(
+            os.path.dirname(__file__),
+            "../../.agent/skills/factory/context_refiner.py"
+        )
+        model = self.router.get_model("md_refine")
+        asyncio.run(drain_queue(
+            queue=self.refinement_queue,
+            industry_name=self.industry,
+            refiner_script=refiner_script,
+            model=model,
+            token_budget_config=self.token_budget,
+            logger=self.logger,
+            concurrency=self.concurrency
+        ))
 
     def run_forensic_documentarian(self):
         self.logger.log(f"Running Forensic Documentarian for {self.industry}...")
