@@ -9,21 +9,21 @@ def rewrite_cell(session_num, domain_idx, domain_key, existing_link_path):
     
     # Base track paths
     base_tracks = {
-        1: f"00_base_track_creators/session_01/set_{chr(97+domain_idx)}_{domain_key}/01_{domain_key}_nocode.md",
-        2: f"00_base_track_creators/session_02/set_{chr(97+domain_idx)}_{domain_key}/02_{domain_key}_nocode.md",
-        3: f"00_base_track_creators/session_03/set_{chr(97+domain_idx)}_{domain_key}/03_{domain_key}_nocode.md",
-        4: f"00_base_track_creators/session_04/set_{chr(97+domain_idx)}_{domain_key}/04_{domain_key}_nocode.md",
-        5: f"00_base_track_creators/session_05/set_{chr(97+domain_idx)}_{domain_key}/05_{domain_key}_nocode.md"
+        1: f"track_1_navigator/session_01/set_{chr(97+domain_idx)}_{domain_key}/01_{domain_key}_lab_guide.md",
+        2: f"track_1_navigator/session_02/set_{chr(97+domain_idx)}_{domain_key}/02_{domain_key}_lab_guide.md",
+        3: f"track_1_navigator/session_03/set_{chr(97+domain_idx)}_{domain_key}/03_{domain_key}_lab_guide.md",
+        4: f"track_1_navigator/session_04/set_{chr(97+domain_idx)}_{domain_key}/04_{domain_key}_lab_guide.md",
+        5: f"track_1_navigator/session_05/set_{chr(97+domain_idx)}_{domain_key}/05_{domain_key}_lab_guide.md"
     }
     
     if session_num <= 5:
-        base_link = f"[Base]({base_tracks[session_num]})"
+        base_link = f"[Navigator]({base_tracks[session_num]})"
         # Integrated & Architect share the same file
-        int_link = f"[Int]({existing_link_path})"
-        arch_link = f"[Arch]({existing_link_path})"
+        int_link = f"[Builder]({existing_link_path})"
+        arch_link = f"[Architect]({existing_link_path})"
         return f"{base_link}<br>{int_link}<br>{arch_link}"
     elif session_num == 6:
-        return f"*Architecting*<br>[Int]({existing_link_path})<br>[Arch]({existing_link_path})"
+        return f"*Architecting*<br>[Builder]({existing_link_path})<br>[Architect]({existing_link_path})"
 
 domains = ["finance", "healthcare", "supply_chain", "edtech", "legal"]
 

@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🔍 Watch Agent Commands (Live)",
+      "type": "shell",
+      "command": "clear && echo '🟢 Agent Command Watcher Active — waiting for commands...' && echo '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' && touch /tmp/q_agent_log.txt && tail -f /tmp/q_agent_log.txt",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false,
+        "echo": false,
+        "group": "agent-watcher"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "🧹 Clear Agent Log",
+      "type": "shell",
+      "command": "echo '' > /tmp/q_agent_log.txt && echo '🧹 Log cleared at '$(date)",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

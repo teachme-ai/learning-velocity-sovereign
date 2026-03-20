@@ -3,8 +3,7 @@
 In this session, we implement a **Sovereign Shield** to protect customer and employee data within our AI pipelines.
 
 ## Business Value
-For the **AI for Cyber-Security** industry, data privacy is not just a compliance requirement—it's a trust asset. By scrubbing PII (Personally Identifiable Information) before it hits our local LLMs, we ensure that **AI for Cyber-Security** operations remain secure and sovereign.
-
+In the context of AI for Cyber-Security, data privacy is akin to safeguarding a nation's classified intel – it's a matter of national security. By applying redaction techniques to sensitive PII before feeding it into our local LLMs, we mitigate the risk of exposing valuable threat intelligence and maintain operational superiority.
 ## Lab Objectives
 1. Identify sensitive fields in the **AI for Cyber-Security** dataset.
 2. Implement a Python-based scrubber.

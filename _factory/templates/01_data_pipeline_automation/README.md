@@ -10,7 +10,7 @@ This session focuses on the **Sovereign Data Pipeline**. We move from manual spr
 - [ ] Integrate a local Ollama model for policy compliance categorisation
 - [ ] Generate a structured audit report from local model outputs
 
-## [INTEGRATOR] Lab: The Google AI Studio Flow
+## [BUILDER] Lab: The Google AI Studio Flow
 
 **Step 1:** Upload the `corporate_expenses.csv` to Google AI Studio.
 

@@ -52,7 +52,7 @@ head -n 5 data/flagged_expenses.csv
 
 ---
 
-## 📈 [INTEGRATOR] Proof of Work
+## 📈 [BUILDER] Proof of Work
 **Focus**: *Operational implementation.*
 
 Successfully running `cleaner.py` results in a hybrid summary. Below is your target output:

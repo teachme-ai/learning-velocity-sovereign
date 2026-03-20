@@ -27,7 +27,7 @@ class ExportService:
             document.add_heading(section.title, level=1)
             
             # Integrator Track
-            document.add_heading('[INTEGRATOR] Track', level=2)
+            document.add_heading('[BUILDER] Track', level=2)
             document.add_paragraph(section.integrator_content)
             
             # Architect Track
@@ -78,7 +78,7 @@ class ExportService:
             # Integrator
             pdf.set_font("Helvetica", "B", 14)
             pdf.set_text_color(0, 0, 0)
-            pdf.cell(0, 10, "[INTEGRATOR] Track", ln=True)
+            pdf.cell(0, 10, "[BUILDER] Track", ln=True)
             pdf.set_font("Helvetica", "", 11)
             pdf.multi_cell(0, 7, section.integrator_content)
             pdf.ln(5)

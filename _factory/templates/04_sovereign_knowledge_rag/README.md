@@ -8,7 +8,7 @@ This session explores the architecture of **Retrieval-Augmented Generation (RAG)
 - [ ] **LO2**: Build a local RAG pipeline using ChromaDB or Qdrant.
 - [ ] **LO3**: Mitigate hallucinations through "Groundedness" checks.
 
-## [INTEGRATOR] Lab
+## [BUILDER] Lab
 
 ### The Lesson: Semantic vs. Keyword Search
 Traditional **Keyword Search** is like looking for a needle in a haystack by matching colors. If you search for *"money for a hotel"*, the computer only looks for those exact words. If the policy uses the term *"Travel Reimbursement"*, a keyword search will fail.

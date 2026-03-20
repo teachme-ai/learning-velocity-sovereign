@@ -5,8 +5,8 @@ use_cases:
   - "Sovereign Trade Execution Agents"
   - "Automated ESG Disclosure Tracing"
 tracks:
-  - "base"
-  - "integrated"
+  - "navigator"
+  - "builder"
   - "architect"
 session_count: 8
 tone: "Strategic & Analytical"

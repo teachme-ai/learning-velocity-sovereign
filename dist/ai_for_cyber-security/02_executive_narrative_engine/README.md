@@ -1,14 +1,13 @@
 # Session 02: Executive Narrative Engine
 
 ## Overview
-<!-- One-paragraph summary of what this session covers. -->
-
+This section will provide a high-level overview of the critical components and trade-offs involved in designing and implementing effective AI-powered security solutions in the cyber domain. We'll explore the real-world challenges, operational constraints, and practical considerations that underpin AI for Cyber-Security, setting the stage for more in-depth discussions on specific technologies and methodologies.
 ## Learning Outcomes
 - [ ] LO1: Identify systemic patterns in flagged data.
 - [ ] LO2: Automate executive-level narrative synthesis.
 - [ ] LO3: Design "Human-in-the-loop" review protocols.
 
-## [INTEGRATOR] Lab: Rapid Knowledge Digestion with NotebookLM
+## [BUILDER] Lab: Rapid Knowledge Digestion with NotebookLM
 
 **Objective:** Transform raw flagged data into an audio briefing and a structured study guide — no coding required.
 

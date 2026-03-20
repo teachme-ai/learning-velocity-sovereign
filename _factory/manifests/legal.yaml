@@ -5,8 +5,8 @@ use_cases:
   - "Contractual Risk Assessment Swarms"
   - "PII Masking for Court Filings"
 tracks:
-  - "base"
-  - "integrated"
+  - "navigator"
+  - "builder"
   - "architect"
 session_count: 8
 tone: "Formal & Precise"

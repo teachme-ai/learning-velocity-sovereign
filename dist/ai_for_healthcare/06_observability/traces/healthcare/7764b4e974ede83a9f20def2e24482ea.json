@@ -1,0 +1,35 @@
+{
+  "traceId": "7764b4e974ede83a9f20def2e24482ea",
+  "spans": {
+    "816f73faa4846bc0": {
+      "spanId": "816f73faa4846bc0",
+      "traceId": "7764b4e974ede83a9f20def2e24482ea",
+      "startTime": 1772101114153.254,
+      "endTime": 1772101147922.732,
+      "attributes": {
+        "genkit:type": "action",
+        "genkit:metadata:subtype": "flow",
+        "genkit:name": "healthcare_agent_swarm",
+        "genkit:input": "{\"csv_data\":\"patient_id,admission_date,diagnosis_code,treatment_cost,insurance_provider,flag_reason\\nP-10001,2025-01-05,J01.90,850.00,BlueCross,MALFORMED_ICD_CODE\\nP-10002,2025-01-08,K21.0,1200.00,Aetna,MALFORMED_ICD_CODE\\nP-10003,2025-01-11,M79.3,450.00,United,MALFORMED_ICD_CODE\\nP-10004,2025-01-15,J01.90,920.00,BlueCross,MALFORMED_ICD_CODE\\nP-10005,2025-01-18,Z00.00,0.00,Medicaid,MALFORMED_ICD_CODE | INVALID_COST\\nP-10006,2025-01-20,I10,15500.00,Cigna,\\nP-10007,2025-01-22,K21.0,3200.00,Aetna,MALFORMED_ICD_CODE\\nP-10008,2025-01-25,INVALID_CODE,1100.00,United,MALFORMED_ICD_CODE\\nP-10009,2025-01-28,C34.10,48000.00,BlueCross,MALFORMED_ICD_CODE\\nP-10010,2025-02-01,Z00.00,350.00,United,MALFORMED_ICD_CODE\\nP-10011,2025-02-04,M79.3,980.00,Cigna,MALFORMED_ICD_CODE\\nP-10012,2025-02-06,J01.90,-200.00,Aetna,MALFORMED_ICD_CODE | INVALID_COST\\nP-10013,2025-02-10,K21.0,2800.00,BlueCross,MALFORMED_ICD_CODE\\nP-10014,2025-02-12,I10,6100.00,Medicaid,\\nP-10015,2026-12-31,Z00.00,400.00,United,FUTURE_ADMISSION_DATE | MALFORMED_ICD_CODE\\n\"}",
+        "genkit:path": "/{healthcare_agent_swarm,t:action,s:flow}",
+        "genkit:qualifiedPath": "/{healthcare_agent_swarm,t:action,s:flow}",
+        "genkit:metadata:flow:name": "healthcare_agent_swarm",
+        "genkit:state": "success",
+        "genkit:output": "{\"report\":\"**Clinical Compliance Memo**\\n\\nTo: Hospital Administration\\n\\nA recent Compliance Auditor's report identified several billing anomalies in our system, including negative treatment costs, malformed ICD-10 codes, and future admission dates billed for patients who were not admitted. Additionally, there were instances of negative amounts indicating potential errors in the billing process. The auditor also found a lack of clear audit trails or documentation to support the identified issues.\\n\\nWe take these findings seriously and agree that immediate action is necessary to address the concerns raised by the Compliance Auditor. To ensure compliance with HIPAA standards, we recommend verifying ICD-10 code validation, correcting negative amounts and errors, and implementing checks to regularly review and audit billing data. We will prioritize addressing these concerns promptly to prevent further errors and maintain patient confidentiality.\"}"
+      },
+      "displayName": "healthcare_agent_swarm",
+      "spanKind": "INTERNAL",
+      "status": {
+        "code": 0,
+        "description": null
+      },
+      "instrumentationLibrary": {
+        "name": "genkit-tracer",
+        "version": "v1"
+      }
+    }
+  },
+  "displayName": "healthcare_agent_swarm",
+  "startTime": 1772101114153.254,
+  "endTime": 1772101147922.732
+}

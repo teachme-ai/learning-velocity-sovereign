@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "command-runner": {
+      "command": "node",
+      "args": [
+        "/Users/khalidirfan/projects/Ai Bootcamps/.agent_tools/command-runner-mcp/dist/index.js"
+      ]
+    }
+  }
+}

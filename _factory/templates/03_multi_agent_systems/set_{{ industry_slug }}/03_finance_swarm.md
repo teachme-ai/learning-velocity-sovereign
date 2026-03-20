@@ -1,6 +1,6 @@
 # Session 03: Multi-Agent Systems ({{ industry_name }} Swarm)
 
-## [INTEGRATOR] Track
+## [BUILDER] Track
 
 ### Overview
 This lab introduces an enterprise-grade, three-agent orchestration pipeline using **Google Genkit** (Python SDK). A `Financial Analyst`, `Corporate Auditor`, and `Executive Reporter` operate sequentially — each agent consuming the previous agent's output — to produce a final Corporate Investigation Memo from flagged expense data.

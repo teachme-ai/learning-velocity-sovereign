@@ -33,7 +33,7 @@ Initialise a new bootcamp session. Requires two inputs:
    - [ ] Outcome 2
    - [ ] Outcome 3
 
-   ## [INTEGRATOR] Lab
+   ## [BUILDER] Lab
    <!-- Step-by-step integration tasks for implementation-focused learners. -->
 
    ## [ARCHITECT] Lab

@@ -1,0 +1,40 @@
+# Healthcare Persona — TeachMeAI Row 100
+# Real intake: Doctor / Healthcare Provider / Early-career / Good digital skills
+# Source: TeachMeAI Intake Responses - Intake_v2.csv
+
+topPriorities:
+  - name: "AI-Powered Diagnostic Support (Radiology)"
+    portfolioArtifact: "AI-Assisted Radiology Prototype using chest X-ray dataset"
+  - name: "Predictive Modeling for Patient Readmission"
+    portfolioArtifact: "30-day Readmission Risk Scoring Dashboard"
+  - name: "Automated Prior Authorization via NLP"
+    portfolioArtifact: "NLP Pipeline extracting clinical data from patient charts"
+  - name: "Personalized Treatment Recommendations"
+    portfolioArtifact: "ML-driven Treatment Recommendation Engine"
+
+marketMaturityScore: 42
+decisionStyle: "Collaborative"
+uncertaintyHandling: "Experimenter"
+cognitiveLoadTolerance: "Medium"
+socialEntanglement: "Social — prefers peer learning and clinical team collaboration"
+
+# From intake: AI opportunity map
+aiOpportunities:
+  - "Predictive readmission modeling using EHR and claims data"
+  - "AI-powered medical image analysis (X-rays, CT, MRI) integrated with PACS"
+  - "NLP-based automated prior authorization"
+  - "Personalized treatment via genomics and patient history"
+
+# Learner context
+role: "Doctor"
+roleCategory: "healthcare provider"
+goal: "Use AI for patient analysis"
+digitalSkills: 8
+skillStage: 4
+timePerWeek: 150  # minutes
+
+# Learning plan from intake
+learningPlan:
+  act: "Set up workspace, familiarize with PACS system and AI tools for AI-Enhanced Image Analysis workflow"
+  check: "Review and compare AI-assisted diagnostic reports with traditional methods weekly"
+  transform: "Automate AI integration, create scripts for automated image processing, share with team"

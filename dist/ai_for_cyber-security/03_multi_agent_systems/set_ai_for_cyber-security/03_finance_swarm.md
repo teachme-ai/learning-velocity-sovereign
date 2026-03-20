@@ -1,10 +1,9 @@
 # Session 03: Multi-Agent Systems (AI for Cyber-Security Swarm)
 
-## [INTEGRATOR] Track
+## [BUILDER] Track
 
 ### Overview
-This lab introduces an enterprise-grade, three-agent orchestration pipeline using **Google Genkit** (Python SDK). A `Financial Analyst`, `Corporate Auditor`, and `Executive Reporter` operate sequentially — each agent consuming the previous agent's output — to produce a final Corporate Investigation Memo from flagged expense data.
-
+This lab introduces an enterprise-grade, three-agent orchestration pipeline using **Google Genkit** (Python SDK). A `Financial Analyst` and `Corporate Auditor` work sequentially — each agent consuming the previous agent's output in a data pipeline like Apache Kafka or AWS Kinesis — to produce a final Corporate Investigation Memo from flagged expense data. The `Executive Reporter` receives this memo, performs real-time monitoring, and triggers alerts using tools like Prometheus or Datadog.
 ### Environment Setup
 ```bash
 # Create the Genkit virtual environment (one-time)

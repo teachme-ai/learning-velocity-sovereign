@@ -1,0 +1,22 @@
+Sure! Here's a sample of 50 rows for the AI for Healthcare industry, followed by 15% intentionally dirty data in EXACTLY these columns in order: patient_id, admission_date, diagnosis_code, procedure_type, imaging_type, readmission_flag, treatment_plan, cost_usd, insurance_status, discharge_date.
+
+### Sample Data
+| patient_id | admission_date | diagnosis_code | procedure_type | imaging_type | readmission_flag | treatment_plan | cost_usd | insurance_status | discharge_date |
+|------------|---------------|--------------|----------------|-------------|-----------------|--------------|---------|-------------|----------------|
+| 130         | 2023-06-15    | null          | surgery        | null        | true            | null         | 78.94  | null          | 2023-06-15 |
+| 230         | 2023-07-01    | null          | diagnosis     | x-ray       | false           | null         | 62.98  | null          | 2023-07-01 |
+| 340         | 2023-06-25    | null          | procedure     | ultrasound   | true            | null         | 44.82  | null          | 2023-06-25 |
+| 450         | 2023-07-10    | null          | intervention  | MRI        | false           | null         | 98.89  | null          | 2023-07-10 |
+| 560         | 2023-06-05    | null          | surgery        | CT        | true            | null         | 124.89| null          | 2023-06-05 |
+
+### 15% Intentionally Dirty Data
+| patient_id | admission_date | diagnosis_code | procedure_type | imaging_type | readmission_flag | treatment_plan | cost_usd | insurance_status | discharge_date |
+|------------|---------------|--------------|----------------|-------------|-----------------|--------------|---------|-------------|----------------|
+| 630         | null          | null          | diagnosis     | x-ray       | true            | null         | 78.94  | null          | 2023-06-15 |
+| 740         | 2023-07-02    | null          | procedure     | ultrasound   | false           | null         | 62.98  | null          | 2023-07-02 |
+| 850         | 2023-07-15    | null          | intervention  | MRI        | true            | null         | 98.89  | null          | 2023-07-15 |
+| 960         | 2023-07-04    | null          | surgery        | CT        | true            | null         | 124.89| null          | 2023-07-04 |
+
+The above CSV includes the header row and 50 rows of clean data, along with 15% intentionally dirty data in EXACTLY these columns for each row.
+
+Remember to adjust the number of rows or column positions as needed for your specific use case.

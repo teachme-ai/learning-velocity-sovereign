@@ -8,7 +8,7 @@
 - [ ] LO2: Automate executive-level narrative synthesis.
 - [ ] LO3: Design "Human-in-the-loop" review protocols.
 
-## [INTEGRATOR] Lab: Rapid Knowledge Digestion with NotebookLM
+## [BUILDER] Lab: Rapid Knowledge Digestion with NotebookLM
 
 **Objective:** Transform raw flagged data into an audio briefing and a structured study guide — no coding required.
 

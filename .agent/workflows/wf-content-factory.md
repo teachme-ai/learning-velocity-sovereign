@@ -26,7 +26,7 @@ Generates all visual and written content for a given session. Requires:
 
    Each lab guide must use the Two-Track format:
    ```markdown
-   ## [INTEGRATOR] Lab — {vertical}
+   ## [BUILDER] Lab — {vertical}
    <!-- Integration tasks specific to this vertical -->
 
    ## [ARCHITECT] Lab — {vertical}

@@ -34,7 +34,7 @@ class ContentFactoryService:
         
         RULES:
         1. Always provide dual perspectives for each section:
-           - [INTEGRATOR]: Implementation focus, API-centric, $10k thresholds, Pydantic validation.
+           - [BUILDER]: Implementation focus, API-centric, $10k thresholds, Pydantic validation.
            - [ARCHITECT]: Governance, Security, Sovereign Infrastructure, trade-offs.
         2. Identify visual 'Diagram Opportunities' suitable for an AI generator (Nano Banana).
         3. Maintain a professional, enterprise-focused tone.
@@ -126,7 +126,7 @@ class ContentFactoryService:
         for section in doc.sections:
             lines.append(f"## {section.title}\n")
             
-            lines.append("### [INTEGRATOR] Track\n")
+            lines.append("### [BUILDER] Track\n")
             lines.append(f"{section.integrator_content}\n")
             
             lines.append("### [ARCHITECT] Track\n")

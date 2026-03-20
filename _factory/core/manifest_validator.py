@@ -17,13 +17,16 @@ VALID_REGIONS = ["Global", "EU", "US", "APAC", "Middle East"]
 
 class ManifestValidator:
     DEFAULTS = {
-        "tracks": ["base", "integrated", "architect"],
+        "tracks": ["navigator", "builder", "architect"],
         "audience": "Developer / Engineer",
         "use_cases": [],
         "sessions": list(range(1, 9)),
         "tone": "Practical & Applied",
         "compliance_framework": "None",
         "region": "Global",
+        "persona_source": None,
+        "planned_sessions": [],
+        "tools": [],
         "concurrency": 3,
         "token_budget": {
             "total_tokens": 100000,
@@ -51,11 +54,11 @@ class ManifestValidator:
         # tracks optional but warn if missing
         tracks = self.raw.get("tracks")
         if tracks is not None:
-            valid = {"base", "integrated", "architect"}
+            valid = {"navigator", "builder", "architect"}
             if not isinstance(tracks, list) or not any(t in valid for t in tracks):
-                self.warnings.append("'tracks' should be a list containing at least one of: base, integrated, architect.")
+                self.warnings.append("'tracks' should be a list containing at least one of: navigator, builder, architect.")
         else:
-            self.warnings.append("'tracks' not specified, using default: base, integrated, architect.")
+            self.warnings.append("'tracks' not specified, using default: navigator, builder, architect.")
 
         # token_budget optional validation
         tb = self.raw.get("token_budget")

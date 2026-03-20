@@ -22,7 +22,7 @@
    - Provide "Expected Result" comments within the code blocks.
 
 5. **Track Evidence**:
-   - **[INTEGRATOR]**: Focus on flow, API connectivity, and successful execution logs.
+   - **[BUILDER]**: Focus on flow, API connectivity, and successful execution logs.
    - **[ARCHITECT]**: Focus on governance, schema enforcement, and proactive failure logs (e.g., Pydantic rejection).
 
 6. **Persona**:

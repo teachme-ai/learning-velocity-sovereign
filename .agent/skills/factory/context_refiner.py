@@ -1,25 +1,40 @@
 import os
 import sys
-import ollama
+import json
+import requests
 
-TARGET_KEYWORDS = {"introduction", "business value", "overview", "why this matters"}
+try:
+    import ollama
+except ImportError:
+    ollama = None
+
+TARGET_KEYWORDS = {
+    "introduction", "business value", "overview", "why this matters",
+    "objective", "goal", "the objective", "what you will learn",
+    "what you will build", "learning outcomes", "prerequisites",
+    "background", "context", "motivation", "the challenge",
+    "step-by-step", "lab overview", "session overview",
+}
+
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 def call_llm(prompt):
-    """Use Gemini if API key available, otherwise fall back to Ollama."""
+    """Use Gemini REST if API key available, otherwise fall back to Ollama."""
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if api_key:
+    model = os.environ.get("REFINER_MODEL", "gemini-2.5-flash")
+    if api_key and not model.startswith("llama") and not model.startswith("qwen"):
         try:
-            from google import genai
-            client = genai.Client(api_key=api_key)
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt
-            )
-            return response.text
+            url = GEMINI_API_URL.format(model=model) + f"?key={api_key}"
+            payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}}
+            resp = requests.post(url, json=payload, timeout=90)
+            resp.raise_for_status()
+            return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
         except Exception as e:
-            print(f"   → Gemini failed ({e}), falling back to Ollama")
+            print(f"   → Gemini REST failed ({e}), falling back to Ollama")
     print("   → Using Ollama (local)")
-    model = os.environ.get("REFINER_MODEL", "llama3.2:latest")
+    if ollama is None:
+        print("   → Ollama not available, skipping refinement")
+        return ""
     response = ollama.chat(model=model, messages=[{"role": "user", "content": prompt}])
     return response["message"]["content"]
 
@@ -91,6 +106,56 @@ def parse_refined_sections(llm_response):
     return sections
 
 
+def refine_intro_paragraph(content, industry_name, tone):
+    """Fallback: rewrite the first prose paragraph for industry specificity."""
+    lines = content.splitlines()
+    # Find first non-heading, non-empty paragraph after the title
+    para_start = None
+    para_end = None
+    for i, line in enumerate(lines):
+        if line.startswith("#"):
+            continue
+        if line.strip() == "":
+            continue
+        if line.startswith("```") or line.startswith("|") or line.startswith("---"):
+            continue
+        # Found a prose line
+        if para_start is None:
+            para_start = i
+        para_end = i
+        # Take up to 5 consecutive prose lines
+        if para_end - para_start >= 4:
+            break
+        # Stop at next heading or blank
+        if i + 1 < len(lines) and (lines[i+1].startswith("#") or lines[i+1].strip() == ""):
+            break
+
+    if para_start is None:
+        return None
+
+    original_para = "\n".join(lines[para_start:para_end+1])
+    if len(original_para) < 30:
+        return None
+
+    prompt = f"""Rewrite this paragraph for the {industry_name} industry. Keep it concise (2-3 sentences max). Use {industry_name}-specific terminology and examples. Tone: {tone}. Return ONLY the rewritten paragraph, nothing else.
+
+Original:
+{original_para}"""
+
+    try:
+        rewritten = call_llm(prompt).strip()
+        if not rewritten or len(rewritten) < 20 or rewritten.startswith("#"):
+            return None
+        # Remove any markdown fencing the LLM might add
+        if rewritten.startswith("```"):
+            rewritten = rewritten.split("```")[1].strip()
+        new_lines = list(lines)
+        new_lines[para_start:para_end+1] = [rewritten]
+        return "\n".join(new_lines)
+    except Exception:
+        return None
+
+
 def refine_markdown(file_path, industry_name, industry_slug):
     """Surgically rewrite only Introduction/Business Value sections for the target industry."""
     print(f"✨ Refining {os.path.basename(file_path)} for {industry_name}...")
@@ -101,7 +166,14 @@ def refine_markdown(file_path, industry_name, industry_slug):
 
     target_sections = extract_target_sections(content)
     if not target_sections:
-        print(f"⚠️  No target sections found in {os.path.basename(file_path)}, skipping.")
+        # Fallback: refine the first prose paragraph after the title
+        refined = refine_intro_paragraph(content, industry_name, tone)
+        if refined and refined != content:
+            with open(file_path, "w") as f:
+                f.write(refined)
+            print(f"✅ Refined intro paragraph in {os.path.basename(file_path)}")
+        else:
+            print(f"⚠️  No refinable sections in {os.path.basename(file_path)}, skipping.")
         return
 
     extracted_text = "\n\n".join(

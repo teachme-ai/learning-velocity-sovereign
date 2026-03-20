@@ -15,9 +15,12 @@ except ImportError:
     ollama = None
 
 try:
-    import google.generativeai as genai
+    from _factory.core.gemini_rest import call_gemini
 except ImportError:
-    genai = None
+    try:
+        from core.gemini_rest import call_gemini
+    except ImportError:
+        call_gemini = None
 
 try:
     from _factory.core.cache import BuildCache
@@ -25,9 +28,9 @@ except ImportError:
     from core.cache import BuildCache
 
 try:
-    from _factory.core.queue import RefinementQueue
+    from _factory.core.refinement_queue import RefinementQueue
 except ImportError:
-    from core.queue import RefinementQueue
+    from core.refinement_queue import RefinementQueue
 
 try:
     from _factory.core.manifest_validator import ManifestValidator
@@ -43,6 +46,25 @@ try:
     from _factory.core.worker import drain_queue
 except ImportError:
     from core.worker import drain_queue
+
+try:
+    from _factory.core.cost_tracker import CostTracker
+except ImportError:
+    from core.cost_tracker import CostTracker
+
+try:
+    from _factory.core.tool_memory import ToolMemory
+except ImportError:
+    from core.tool_memory import ToolMemory
+
+try:
+    from _factory.core.persona_parser import load_persona
+    from _factory.core.session_planner import plan_sessions
+    from _factory.core.tool_researcher import research_tools
+except ImportError:
+    from core.persona_parser import load_persona
+    from core.session_planner import plan_sessions
+    from core.tool_researcher import research_tools
 
 class TelemetryLogger:
     def __init__(self, log_path="_factory/logs/events.jsonl"):
@@ -89,7 +111,7 @@ class FactoryCompiler:
         self.context = {
             'industry_name': self.industry,
             'industry_slug': self.slug,
-            'tracks': self.manifest.get('tracks', ['base', 'integrated', 'architect']),
+            'tracks': self.manifest.get('tracks', ['navigator', 'builder', 'architect']),
             'audience': self.manifest.get('audience', 'Developer / Engineer'),
             'use_cases': self.manifest.get('use_cases', []),
             'tone': self.manifest.get('tone', 'Practical & Applied'),
@@ -99,32 +121,31 @@ class FactoryCompiler:
         self.cache = BuildCache()
         self.refinement_queue = RefinementQueue()
         self.router = ModelRouter(engine_mode=self.engine_mode)
+        self.cost_tracker = CostTracker()
+        self.tool_memory = ToolMemory()
 
         if self.engine_mode == "cloud":
             api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
             if not api_key:
                 self.logger.log("GOOGLE_API_KEY not found in environment. Falling back to local.", level="WARNING")
                 self.engine_mode = "local"
+            elif call_gemini is None:
+                self.logger.log("gemini_rest module not available. Falling back to local.", level="WARNING")
+                self.engine_mode = "local"
             else:
-                genai.configure(api_key=api_key)
-                self.model = genai.GenerativeModel('gemini-1.5-flash')
-                self.logger.log("Turbo Mode (Gemini) activated.", level="INFO")
+                self.logger.log("Turbo Mode (Gemini 2.0 Flash via REST) activated.", level="INFO")
 
     def call_llm(self, prompt, is_json=False, task_type="general"):
-        """Unified interface for local and cloud LLMs."""
+        """Unified interface for local and cloud LLMs with cost tracking."""
         model = self.router.get_model(task_type)
         self.logger.log(f"Using model: {model} for task: {task_type}", level="DEBUG")
         if self.engine_mode == "cloud":
             try:
-                response = self.model.generate_content(prompt)
-                text = response.text
-                if is_json:
-                    if "```json" in text:
-                        text = text.split("```json")[1].split("```")[0].strip()
-                    elif "{" in text:
-                        text = "{" + text.split("{", 1)[1].rsplit("}", 1)[0] + "}"
-                    return json.loads(text)
-                return text
+                result = call_gemini(prompt, model=model, is_json=is_json)
+                if result:
+                    self.cost_tracker.record(task_type, model, result["input_tokens"], result["output_tokens"])
+                    return result["content"]
+                return None
             except Exception as e:
                 self.logger.log(f"Gemini call failed: {e}", level="ERROR")
                 return None
@@ -135,6 +156,8 @@ class FactoryCompiler:
                     {'role': 'user', 'content': prompt}
                 ], format=format_arg)
                 content = response['message']['content']
+                est_tokens = len(prompt + content) // 4
+                self.cost_tracker.record(task_type, model, est_tokens, est_tokens)
                 if is_json:
                     return json.loads(content)
                 return content
@@ -175,6 +198,42 @@ class FactoryCompiler:
                 "dataset_name": f"{self.slug}_data.csv",
                 "primary_color": "#007bff"
             })
+
+        # Dynamic persona → tools → session planning
+        persona_source = self.manifest.get("persona_source")
+        if persona_source and os.path.exists(persona_source):
+            self.logger.log(f"Loading persona from {persona_source}")
+            persona_data = load_persona(persona_source)
+            self.context["persona"] = persona_data
+
+            # Check tool memory before researching
+            use_cases = self.context.get("use_cases", [])
+            refresh_tools = self.manifest.get("refresh_tools", False)
+            cached_tools = None if refresh_tools else self.tool_memory.recall(self.industry, use_cases)
+            if cached_tools:
+                tools = cached_tools
+                mem_status = self.tool_memory.status(self.industry, use_cases)
+                self.logger.log(f"Tool memory hit ({mem_status}): {len(tools)} tools from cache")
+            else:
+                self.logger.log("Researching tools via SearXNG/Tavily + LLM...")
+                tools = research_tools(
+                    self.industry,
+                    use_cases,
+                    lambda p: self.call_llm(p, is_json=True, task_type="general")
+                )
+                self.tool_memory.remember(self.industry, use_cases, tools)
+            self.context["tools"] = tools
+            self.manifest["tools"] = tools
+
+            self.logger.log("Planning dynamic sessions...")
+            session_plan = plan_sessions(
+                persona_data,
+                tools,
+                lambda p: self.call_llm(p, is_json=True, task_type="general")
+            )
+            self.context["planned_sessions"] = session_plan.get("sessions", [])
+            self.manifest["planned_sessions"] = session_plan.get("sessions", [])
+            self.context["total_sessions"] = session_plan.get("total_sessions", 8)
 
     def run_data_synth(self):
         self.logger.log(f"Initiating data synthesis agent for {self.industry}...")
@@ -301,6 +360,10 @@ class FactoryCompiler:
         self.compile_pass1()
         self.compile_pass2()
         self.logger.log(f"Model usage stats: {self.router.get_stats()}")
+        report_path = os.path.join(self.build_dir, "cost_report.json")
+        self.cost_tracker.save(report_path)
+        report = self.cost_tracker.report()
+        self.logger.log(f"Build cost: ${report['total_cost_usd']:.4f} | Tokens: {report['total_tokens']} | Calls: {report['total_calls']}")
         self.run_forensic_documentarian()
 
     def generate_readme(self):
@@ -313,12 +376,12 @@ This repository contains a localized, generative AI curriculum focused on **{{ i
 
 | Session | 🟢 Base (No-Code) | 🟡 Integrated (Low-Code) | 🔴 Architect (High-Code) |
 | :--- | :--- | :--- | :--- |
-| **01: Data Pipeline** | [Manual](00_base_track_creators/session_01/README.md) | [Notebook](01_data_pipeline_automation/README.md) | [Code](01_data_pipeline_automation/set_{{ industry_slug }}/logic/cleaner.py) |
-| **02: Narrative** | [Manual](00_base_track_creators/session_02/README.md) | [Notebook](02_executive_narrative_engine/README.md) | [Code](02_executive_narrative_engine/set_{{ industry_slug }}/logic/narrative_gen.py) |
-| **03: Swarms** | [Manual](00_base_track_creators/session_03/README.md) | [Notebook](03_multi_agent_systems/README.md) | [Code](03_multi_agent_systems/set_{{ industry_slug }}/logic/swarm.py) |
-| **04: RAG** | [Manual](00_base_track_creators/session_04/README.md) | [Notebook](04_sovereign_knowledge_rag/README.md) | [Code](04_sovereign_knowledge_rag/set_{{ industry_slug }}/logic/ingest_and_query.py) |
-| **05: UI/UX** | [Manual](00_base_track_creators/session_05/README.md) | [Notebook](05_advanced_ui_lobechat/05_advanced_ui_lobechat.md) | [Code](05_advanced_ui_lobechat/logic/multi_domain_api.py) |
-| **06: Observability** | [Manual](00_base_track_creators/session_06_observability.md) | [Notebook](06_observability/06_sovereign_tracing.md) | [Code](06_observability/traces) |
+| **01: Data Pipeline** | [Navigator](track_1_navigator/session_01/01_lab_guide.md) | [Builder](01_data_pipeline_automation/01_data_pipeline_automation.md) | [Architect](01_data_pipeline_automation/set_{{ industry_slug }}/logic/cleaner.py) |
+| **02: Narrative** | [Navigator](track_1_navigator/session_02/02_lab_guide.md) | [Builder](02_executive_narrative_engine/02_executive_narrative_engine.md) | [Architect](02_executive_narrative_engine/set_{{ industry_slug }}/logic/narrative_gen.py) |
+| **03: Swarms** | [Navigator](track_1_navigator/session_03/03_lab_guide.md) | [Builder](03_multi_agent_systems/03_multi_agent_systems.md) | [Architect](03_multi_agent_systems/set_{{ industry_slug }}/logic/swarm.py) |
+| **04: RAG** | [Navigator](track_1_navigator/session_04/04_lab_guide.md) | [Builder](04_sovereign_knowledge_rag/04_sovereign_knowledge_rag.md) | [Architect](04_sovereign_knowledge_rag/set_{{ industry_slug }}/logic/ingest_and_query.py) |
+| **05: UI/UX** | [Navigator](track_1_navigator/session_05/05_lab_guide.md) | [Builder](05_advanced_ui_lobechat/05_advanced_ui_lobechat.md) | [Architect](05_advanced_ui_lobechat/logic/multi_domain_api.py) |
+| **06: Observability** | [Navigator](track_1_navigator/session_06_observability.md) | [Builder](06_observability/06_sovereign_tracing.md) | [Architect](06_observability/traces) |
 | **07: Security** | [Manual](07_sovereign_security/README.md) | [Notebook](07_sovereign_security/07_sovereign_security.md) | [Code](07_sovereign_security/set_{{ industry_slug }}/logic/pii_scrubber.py) |
 | **08: Capstone** | [Manual](08_grand_capstone/README.md) | [Notebook](08_grand_capstone/08_grand_capstone.md) | [Code](08_grand_capstone/set_{{ industry_slug }}/logic/dashboard.py) |
 

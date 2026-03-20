@@ -117,7 +117,7 @@ n8n_template_json = {
 
 # ── Generation Loop ──
 
-base_dir = "00_base_track_creators"
+base_dir = "track_1_navigator"
 
 for session_idx, md_template in enumerate([session_01_md, session_02_md, session_03_md, session_04_md, session_05_md], start=1):
     session_str = f"session_{session_idx:02d}"
@@ -127,7 +127,7 @@ for session_idx, md_template in enumerate([session_01_md, session_02_md, session
         os.makedirs(domain_dir, exist_ok=True)
         
         # Write Markdown
-        md_filename = f"{session_idx:02d}_{key}_nocode.md"
+        md_filename = f"{session_idx:02d}_{key}_lab_guide.md"
         with open(os.path.join(domain_dir, md_filename), "w") as f:
             f.write(md_template.format(domain_name=name, domain_label=label, domain_key=key))
             

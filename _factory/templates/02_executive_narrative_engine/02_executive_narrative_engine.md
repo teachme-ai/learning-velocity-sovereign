@@ -51,7 +51,7 @@ head -n 20 data/executive_memo.md
 
 ---
 
-## 📈 [INTEGRATOR] Proof of Work
+## 📈 [BUILDER] Proof of Work
 **Focus**: *Narrative generation.*
 
 Below is the verified **Executive Board Memo** synthesized from the high-risk flags. Note the transition from numbers to systemic risk assessment.

@@ -1,7 +1,7 @@
 industry: "Sustainability & ESG"
 tracks:
-  - base
-  - integrated
+  - navigator
+  - builder
   - architect
 sessions:
   - 01_data_pipeline_automation

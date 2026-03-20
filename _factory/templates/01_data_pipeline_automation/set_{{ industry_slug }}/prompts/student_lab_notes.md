@@ -57,7 +57,7 @@ RAW CSV DATA
 
 ## The Two-Phase Architecture
 
-### [INTEGRATOR] Perspective
+### [BUILDER] Perspective
 You are integrating two systems that have **different failure modes**:
 
 - **Rules** fail loudly — a Pydantic `ValidationError` crashes immediately and tells you exactly what is wrong.

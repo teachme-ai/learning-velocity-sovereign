@@ -51,7 +51,7 @@ ls -l 04_sovereign_knowledge_rag/db/
 
 ---
 
-## 📈 [INTEGRATOR] Proof of Work
+## 📈 [BUILDER] Proof of Work
 **Focus**: *Local Vectorization and Retrieval.*
 
 A successful execution confirms the policy document was ingested and queried. Below is your target terminal proof:

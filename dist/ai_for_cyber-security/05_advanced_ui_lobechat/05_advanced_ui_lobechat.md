@@ -70,7 +70,7 @@ You will now see the `Sovereign Industry Agents` plugin active. You can now prom
 
 ---
 
-## 📈 [INTEGRATOR] Proof of Work
+## 📈 [BUILDER] Proof of Work
 **Focus**: *Local API routing and validation.*
 
 The API Bridge successfully routes queries across all 5 Sovereign Industry domains.

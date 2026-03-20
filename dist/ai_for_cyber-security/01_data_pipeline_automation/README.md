@@ -1,16 +1,18 @@
 # Session 01: Data Pipeline Automation
 
 ## Overview
+In this session, we'll dive into the Sovereign Data Pipeline, a critical component of AI for Cyber-Security that automates data preparation and validation. By moving away from manual spreadsheet cleaning, we can focus on what matters most - detecting and responding to threats in real-time.
 
-This session focuses on the **Sovereign Data Pipeline**. We move from manual spreadsheet cleaning to automated, reproducible scoring using AI.
+Think of it like setting up an Incident Response playbook: you can't just wing it when an attack hits; you need a structured process to contain, eradicate, and recover. Similarly, our data pipeline needs to be efficient, scalable, and reliable to support our threat detection and response efforts.
 
+We'll explore how the Sovereign Data Pipeline integrates with popular AI frameworks like TensorFlow, PyTorch, and Scikit-learn to automate tasks such as data preprocessing, feature engineering, and model training. By leveraging these technologies, we can create a repeatable, auditable process for scoring sensitive data - a crucial step in identifying potential security threats.
 ## Learning Outcomes
 - [ ] Upload and interrogate structured data using Google AI Studio
 - [ ] Build a Pydantic-validated data cleaner in Python
 - [ ] Integrate a local Ollama model for policy compliance categorisation
 - [ ] Generate a structured audit report from local model outputs
 
-## [INTEGRATOR] Lab: The Google AI Studio Flow
+## [BUILDER] Lab: The Google AI Studio Flow
 
 **Step 1:** Upload the `corporate_expenses.csv` to Google AI Studio.
 

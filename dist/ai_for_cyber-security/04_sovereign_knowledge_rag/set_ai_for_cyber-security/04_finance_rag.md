@@ -1,10 +1,9 @@
 # Session 04: Sovereign Knowledge RAG (AI for Cyber-Security)
 
-## [INTEGRATOR] Track
+## [BUILDER] Track
 
 ### Overview
-This lab builds a **fully local, sovereign RAG pipeline** using **Google Genkit** (Python), **ChromaDB** (vector store), and **Ollama** (embeddings + generation). The system ingests the Corporate Travel & Expense Policy, embeds it using `nomic-embed-text`, indexes it into ChromaDB, then uses a **Genkit-native Retriever** to retrieve relevant context and generate a grounded, cited answer using `llama3.2:1b`.
-
+This lab sets up an end-to-end, local RAG pipeline leveraging Google Genkit (Python), ChromaDB (vector store), and Ollama (embeddings & generation). The system ingests the Corporate Travel & Expense Policy, uses `nomic-embed-text` to generate embeddings, indexes these into ChromaDB, and then employs a Genkit-native Retriever to fetch context-relevant information. Finally, it utilizes `llama3.2:1b` to generate grounded, cited answers based on the retrieved context.
 ### Environment Setup
 ```bash
 python3 -m venv /tmp/genkit_env

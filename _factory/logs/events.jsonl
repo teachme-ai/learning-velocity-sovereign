@@ -1,289 +1,348 @@
-{"timestamp": "2026-03-12T17:33:27.091854", "level": "INFO", "event": "Force rebuild: cache cleared", "metadata": {}}
-{"timestamp": "2026-03-12T17:33:27.092221", "level": "INFO", "event": "Generating DNA context for AI for Cyber-Security via local...", "metadata": {}}
-{"timestamp": "2026-03-12T17:33:27.092273", "level": "DEBUG", "event": "Using model: qwen2.5:0.5b for task: json_context", "metadata": {}}
-{"timestamp": "2026-03-12T17:42:40.285965", "level": "INFO", "event": "Generating DNA context for AI for Cyber-Security via local...", "metadata": {}}
-{"timestamp": "2026-03-12T17:42:40.286550", "level": "DEBUG", "event": "Using model: qwen2.5:0.5b for task: json_context", "metadata": {}}
-{"timestamp": "2026-03-12T17:55:34.871658", "level": "INFO", "event": "Generating DNA context for AI for Cyber-Security via local...", "metadata": {}}
-{"timestamp": "2026-03-12T17:55:34.873607", "level": "DEBUG", "event": "Using model: llama3.2:1b for task: json_context", "metadata": {}}
-{"timestamp": "2026-03-12T22:01:44.392748", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
-{"timestamp": "2026-03-12T22:01:46.236813", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
-{"timestamp": "2026-03-12T22:01:46.241057", "level": "INFO", "event": "Initiating data synthesis agent for AI for Cyber-Security...", "metadata": {}}
-{"timestamp": "2026-03-12T22:01:53.636185", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.188195", "level": "INFO", "event": "Data synthesis agent completed.", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.244769", "level": "INFO", "event": "Incremental build: cache active for AI for Cyber-Security", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.246056", "level": "INFO", "event": "Mission Start: Compiling AI for Cyber-Security to dist/ai_for_cyber-security", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.255948", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.688656", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.868019", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.874033", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.882541", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.892767", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.900416", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.993459", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.995697", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.995773", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-13T02:48:59.999631", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.073367", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.083359", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.092929", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.108505", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.108653", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.154448", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.154555", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.180268", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.194936", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.196198", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.214793", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.218604", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.230550", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.238748", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.241827", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.246458", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.254240", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.259368", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.305751", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.387916", "level": "INFO", "event": "Queued for refinement: session_06_observability.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.401087", "level": "INFO", "event": "Queued for refinement: 01_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.408632", "level": "INFO", "event": "Queued for refinement: 01_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.412517", "level": "INFO", "event": "Queued for refinement: 01_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.422711", "level": "INFO", "event": "Queued for refinement: 01_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.426372", "level": "INFO", "event": "Queued for refinement: 01_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.432842", "level": "INFO", "event": "Queued for refinement: 03_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.441765", "level": "INFO", "event": "Queued for refinement: 03_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.450424", "level": "INFO", "event": "Queued for refinement: 03_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.453501", "level": "INFO", "event": "Queued for refinement: 03_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.465615", "level": "INFO", "event": "Queued for refinement: 03_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.471747", "level": "INFO", "event": "Queued for refinement: 04_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.474597", "level": "INFO", "event": "Queued for refinement: 04_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.478141", "level": "INFO", "event": "Queued for refinement: 04_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.483750", "level": "INFO", "event": "Queued for refinement: 04_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.486823", "level": "INFO", "event": "Queued for refinement: 04_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.494797", "level": "INFO", "event": "Queued for refinement: 05_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.499680", "level": "INFO", "event": "Queued for refinement: 05_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.509528", "level": "INFO", "event": "Queued for refinement: 05_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.513532", "level": "INFO", "event": "Queued for refinement: 05_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.525406", "level": "INFO", "event": "Queued for refinement: 05_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.531906", "level": "INFO", "event": "Queued for refinement: 02_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.535494", "level": "INFO", "event": "Queued for refinement: 02_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.538030", "level": "INFO", "event": "Queued for refinement: 02_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.541192", "level": "INFO", "event": "Queued for refinement: 02_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.545375", "level": "INFO", "event": "Queued for refinement: 02_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.548767", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.555766", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.558340", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.564483", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.573861", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.619331", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.626562", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.647987", "level": "INFO", "event": "Mission Successful: AI for Cyber-Security build complete.", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.648062", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.654960", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.656593", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
-{"timestamp": "2026-03-13T02:49:00.657726", "level": "INFO", "event": "Pass 1 complete. 48 files queued for LLM refinement.", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.298911", "level": "INFO", "event": "Warm build: loading cached context, skipping data synthesis", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.299293", "level": "INFO", "event": "Incremental build: cache active for AI for Cyber-Security", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.299351", "level": "INFO", "event": "Mission Start: Compiling AI for Cyber-Security to dist/ai_for_cyber-security", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.299451", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.300547", "level": "DEBUG", "event": "CACHE HIT: skipping requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.301117", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/06_sovereign_tracing.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.302431", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/edtech/18187dbd7e9c7996e72cd4c0ffa5ea86.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.304244", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/healthcare/7764b4e974ede83a9f20def2e24482ea.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.305309", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/healthcare/81dbca7a7b924b77ebddd2a5ba9a6c2b.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.305883", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/supply_chain/b56b8f0c9cd2b4f79cb224116a028aa1.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.306575", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/b56b8f0c9cd2b4f79cb224116a028aa1.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.307019", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/ba96f941a47c83b00b285f490c13315e.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.307441", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/97e4f704d084f983e643e097dd090be8.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.307861", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/a02176e8f4ba320400b4492739273a1a.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.308270", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/18187dbd7e9c7996e72cd4c0ffa5ea86.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.308665", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/7764b4e974ede83a9f20def2e24482ea.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.309038", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/1cb2bec37aaf00eeab508a2124c17f1a.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.309424", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/865ea45d288895abb4e9f4458eed7390.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.309783", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/unknown/81dbca7a7b924b77ebddd2a5ba9a6c2b.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.310212", "level": "DEBUG", "event": "CACHE HIT: skipping 06_observability/traces/legal/1cb2bec37aaf00eeab508a2124c17f1a.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.310508", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.310892", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/README.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.311459", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/01_data_pipeline_automation.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.312023", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.312126", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.312651", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/logic/cleaner.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.313149", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/prompts/student_lab_notes.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.313642", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/data/sample_data.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.314067", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/data/corporate_expenses.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.314496", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/data/flagged_expenses.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.314886", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/data/dirty_data.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.324981", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/assets/diagrams/session_01_hybrid_audit.png", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.325935", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/assets/diagrams/test_nano_banana.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.326597", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/assets/diagrams/generate_visuals.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.327166", "level": "DEBUG", "event": "CACHE HIT: skipping 01_data_pipeline_automation/set_ai_for_cyber-security/assets/slides/visual_manifest.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.327268", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.327309", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.327845", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/03_multi_agent_systems.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.328228", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.328559", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/README.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.329154", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/03_finance_swarm.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.331865", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.332450", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/success.svg", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.332575", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.332968", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/swarm.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.333320", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/audit_flow.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.333653", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/audit_flow_mock.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.334106", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/audit_committee.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.334216", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.334256", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.335993", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/genkit_audit/package-lock.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.337973", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/genkit_audit/package.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.344679", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/genkit_audit/tsconfig.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.350321", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/genkit_audit/src/index.ts", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.353783", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.353861", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.354589", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/genkit_audit_py/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.355130", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/logic/genkit_audit_py/main.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.355726", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/data/sample_data.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.356257", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/data/committee_report.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.356952", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/data/genkit_committee_report.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.358683", "level": "DEBUG", "event": "CACHE HIT: skipping 03_multi_agent_systems/set_ai_for_cyber-security/assets/diagrams/session_03_agent_network.png", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.368362", "level": "DEBUG", "event": "CACHE HIT: skipping 08_grand_capstone/README.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.369025", "level": "DEBUG", "event": "CACHE HIT: skipping 08_grand_capstone/08_grand_capstone.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.369713", "level": "DEBUG", "event": "CACHE HIT: skipping 08_grand_capstone/set_ai_for_cyber-security/logic/dashboard.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.370097", "level": "DEBUG", "event": "CACHE HIT: skipping 07_sovereign_security/README.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.370366", "level": "DEBUG", "event": "CACHE HIT: skipping 07_sovereign_security/07_sovereign_security.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.370918", "level": "DEBUG", "event": "CACHE HIT: skipping 07_sovereign_security/set_ai_for_cyber-security/logic/pii_scrubber.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.371005", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.371377", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.371659", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/README.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.372098", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/04_sovereign_knowledge_rag.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.372662", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/lab_notes.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.373165", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.373542", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/04_finance_rag.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.373978", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/manifest.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.374077", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.374525", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/logic/ingest_and_query.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.374876", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/logic/api.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.375273", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/logic/vault_manager.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.375625", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/logic/vault_builder.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.376231", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/db/index.faiss", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.376696", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/db/index.pkl", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.377123", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/travel_policy.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.377547", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/sample_data.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.377989", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/corporate_policy_2026.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.381186", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/chroma.sqlite3", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.383241", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/1ee1b740-5a32-4bd2-9562-9caab3a7450a/data_level0.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.383703", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/1ee1b740-5a32-4bd2-9562-9caab3a7450a/length.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.384019", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/1ee1b740-5a32-4bd2-9562-9caab3a7450a/link_lists.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.384451", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/1ee1b740-5a32-4bd2-9562-9caab3a7450a/header.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.385908", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/dcc6e591-3349-4af8-80b7-106bac12ce3b/data_level0.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.386355", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/dcc6e591-3349-4af8-80b7-106bac12ce3b/length.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.386679", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/dcc6e591-3349-4af8-80b7-106bac12ce3b/link_lists.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.387072", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/data/chroma_db/dcc6e591-3349-4af8-80b7-106bac12ce3b/header.bin", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.388808", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/assets/diagrams/session_04_local_vault.png", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.389312", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/assets/data/corporate_policy.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.389859", "level": "DEBUG", "event": "CACHE HIT: skipping 04_sovereign_knowledge_rag/set_ai_for_cyber-security/assets/data/corporate_policy.pdf", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.390299", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/generate_base_guides.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.390643", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_06_observability.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.391257", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_d_edtech/workflow_session_01.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.391643", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_d_edtech/01_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.392089", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_b_healthcare/workflow_session_01.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.392460", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_b_healthcare/01_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.392804", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_a_finance/workflow_session_01.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.393098", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_a_finance/01_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.393435", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_c_supply_chain/workflow_session_01.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.393723", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_c_supply_chain/01_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.394111", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_e_legal/workflow_session_01.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.394525", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_01/set_e_legal/01_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.395034", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_d_edtech/03_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.395510", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_d_edtech/workflow_session_03.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.395834", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_b_healthcare/03_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.396271", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_b_healthcare/workflow_session_03.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.396992", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_a_finance/workflow_session_03.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.397413", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_a_finance/03_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.397704", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_c_supply_chain/03_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.397954", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_c_supply_chain/workflow_session_03.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.398319", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_e_legal/workflow_session_03.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.398559", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_03/set_e_legal/03_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.398909", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_04/set_d_edtech/04_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.399522", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_04/set_b_healthcare/04_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.399885", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_04/set_a_finance/04_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.400224", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_04/set_c_supply_chain/04_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.400498", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_04/set_e_legal/04_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.400887", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_d_edtech/workflow_session_05.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.401124", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_d_edtech/05_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.401392", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_b_healthcare/workflow_session_05.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.401623", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_b_healthcare/05_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.401886", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_a_finance/workflow_session_05.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.402123", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_a_finance/05_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.402383", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_c_supply_chain/05_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.402614", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_c_supply_chain/workflow_session_05.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.402885", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_e_legal/workflow_session_05.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.403123", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_05/set_e_legal/05_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.403533", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_02/set_d_edtech/02_edtech_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.403920", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_02/set_b_healthcare/02_healthcare_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.404254", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_02/set_a_finance/02_finance_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.404605", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_02/set_c_supply_chain/02_supply_chain_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.404928", "level": "DEBUG", "event": "CACHE HIT: skipping 00_base_track_creators/session_02/set_e_legal/02_legal_nocode.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.405026", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.405418", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/02_executive_narrative_engine.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.405797", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/README.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.406289", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/set_ai_for_cyber-security/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.406389", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.406826", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/set_ai_for_cyber-security/logic/narrative_gen.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.407244", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/set_ai_for_cyber-security/data/executive_memo.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.407664", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/set_ai_for_cyber-security/data/sample_data.csv", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.417801", "level": "DEBUG", "event": "CACHE HIT: skipping 02_executive_narrative_engine/set_ai_for_cyber-security/assets/diagrams/session_02_boardroom_bridge.png", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.418477", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/manifest.json", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.418803", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/05_advanced_ui_lobechat.md", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.419370", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/proof/lobby_test.svg", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.419454", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.419871", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/logic/requirements.txt", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.420287", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/logic/multi_domain_api.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.420800", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/set_ai_for_cyber-security/docker-compose.yml", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.421154", "level": "DEBUG", "event": "CACHE HIT: skipping 05_advanced_ui_lobechat/set_ai_for_cyber-security/check_ui.py", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.421238", "level": "INFO", "event": "Mission Successful: AI for Cyber-Security build complete.", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.421277", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.422509", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.423008", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
-{"timestamp": "2026-03-14T11:05:46.423048", "level": "INFO", "event": "Pass 1 complete. 0 files queued for LLM refinement.", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.041791", "level": "INFO", "event": "Warm build: loading cached context, skipping data synthesis", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.042512", "level": "INFO", "event": "Incremental build: cache active for AI for Cyber-Security", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.042562", "level": "INFO", "event": "Mission Start: Compiling AI for Cyber-Security to dist/ai_for_cyber-security", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.042707", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.046398", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.068646", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.069761", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.071150", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.072744", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.075807", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.105931", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.106347", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.106406", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.107743", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.109525", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.110919", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.112839", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.117200", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.117249", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.140298", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.140356", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.145766", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.151401", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.152090", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.155085", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.155763", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.157225", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.159044", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.160622", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.162069", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.164377", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.165567", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.174863", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.198880", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.200118", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.201065", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.202068", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.204449", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.228915", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.230084", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.235058", "level": "INFO", "event": "Mission Successful: AI for Cyber-Security build complete.", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.235105", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.235944", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.236486", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
-{"timestamp": "2026-03-14T12:05:32.236535", "level": "INFO", "event": "Pass 1 complete. 22 files queued for LLM refinement.", "metadata": {}}
+{"timestamp": "2026-03-14T20:12:07.319051", "level": "INFO", "event": "Turbo Mode (Gemini 2.0 Flash via REST) activated.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:06.330875", "level": "INFO", "event": "Turbo Mode (Gemini 2.0 Flash via REST) activated.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:06.331147", "level": "INFO", "event": "Force rebuild: cache cleared", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:06.331440", "level": "INFO", "event": "Generating DNA context for AI for Healthcare via cloud...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:06.331491", "level": "DEBUG", "event": "Using model: gemini-2.0-flash-lite for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:07.936855", "level": "WARNING", "event": "Using fallback context defaults.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:07.937098", "level": "INFO", "event": "Loading persona from _factory/manifests/healthcare_doctor_persona.yaml", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:07.939579", "level": "INFO", "event": "Researching tools via SearXNG/Tavily + LLM...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:11.247629", "level": "DEBUG", "event": "Using model: gemini-2.0-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:11.606475", "level": "INFO", "event": "Planning dynamic sessions...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:11.606734", "level": "DEBUG", "event": "Using model: gemini-2.0-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:11.978198", "level": "INFO", "event": "Initiating data synthesis agent for AI for Healthcare...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.356249", "level": "INFO", "event": "Data synthesis agent completed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.356914", "level": "INFO", "event": "Incremental build: cache active for AI for Healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.356968", "level": "INFO", "event": "Mission Start: Compiling AI for Healthcare to dist/ai_for_healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.357152", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.362576", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.391768", "level": "INFO", "event": "Queued for refinement: session_06_observability.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.394302", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.396815", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.398750", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.400573", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.402774", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.404331", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.406755", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.409261", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.411142", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.412962", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.414955", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.416290", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.417557", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.418740", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.419902", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.421338", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.423352", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.425194", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.426910", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.428489", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.430449", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.431756", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.433160", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.434410", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.435433", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.435546", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.436683", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.438143", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.439488", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.442638", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.471501", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.471641", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.471684", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.473781", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.475933", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.477752", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.479456", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.483693", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.483743", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.505862", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.505927", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.511777", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.517113", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.517934", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.520675", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.521621", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.522917", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.525002", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.526213", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.527649", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.530113", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.531062", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.540122", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.564162", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.565816", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.567159", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.568066", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.571022", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.595231", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.596297", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.601295", "level": "INFO", "event": "Mission Successful: AI for Healthcare build complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.601352", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.602098", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.602441", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.602483", "level": "INFO", "event": "Pass 1 complete. 48 files queued for LLM refinement.", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:12.602576", "level": "INFO", "event": "Pass 2: draining queue (48 jobs) with 3 workers...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:48.233155", "level": "INFO", "event": "Pass 2 complete. Budget: {'used': 49452, 'total': 150000, 'remaining': 100548, 'deferred': False} | Queue: {'pending': 0, 'done': 0, 'failed': 0, 'in_progress': 0, 'total': 0}", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:48.234109", "level": "INFO", "event": "Model usage stats: {'json_context': 1, 'general': 2, 'data_synth': 1, 'md_refine': 1}", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:48.234457", "level": "INFO", "event": "Build cost: $0.0000 | Tokens: 0 | Calls: 0", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:48.234511", "level": "INFO", "event": "Running Forensic Documentarian for AI for Healthcare...", "metadata": {}}
+{"timestamp": "2026-03-14T20:22:51.686995", "level": "INFO", "event": "Lab execution and documentation sync complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:21.041062", "level": "INFO", "event": "Turbo Mode (Gemini 2.0 Flash via REST) activated.", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:21.041267", "level": "INFO", "event": "Force rebuild: cache cleared", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:21.041435", "level": "INFO", "event": "Generating DNA context for AI for Healthcare via cloud...", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:21.041494", "level": "DEBUG", "event": "Using model: gemini-2.5-flash-lite for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:22.567297", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:22.567664", "level": "INFO", "event": "Loading persona from _factory/manifests/healthcare_doctor_persona.yaml", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:22.569727", "level": "INFO", "event": "Researching tools via SearXNG/Tavily + LLM...", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:26.654387", "level": "DEBUG", "event": "Using model: gemini-2.5-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:45.852544", "level": "INFO", "event": "Planning dynamic sessions...", "metadata": {}}
+{"timestamp": "2026-03-14T20:24:45.853428", "level": "DEBUG", "event": "Using model: gemini-2.5-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.037790", "level": "INFO", "event": "Initiating data synthesis agent for AI for Healthcare...", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.412230", "level": "INFO", "event": "Data synthesis agent completed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.412638", "level": "INFO", "event": "Incremental build: cache active for AI for Healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.412696", "level": "INFO", "event": "Mission Start: Compiling AI for Healthcare to dist/ai_for_healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.412903", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.418179", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.443328", "level": "INFO", "event": "Queued for refinement: session_06_observability.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.445420", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.447601", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.449947", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.451916", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.453911", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.455401", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.457516", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.459836", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.461420", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.463161", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.465101", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.466460", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.467859", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.469122", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.470662", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.471963", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.473830", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.475941", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.477837", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.479899", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.482039", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.483344", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.484634", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.485945", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.487216", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.487316", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.488442", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.489887", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.491046", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.494032", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.522978", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.523085", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.523119", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.524546", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.526771", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.528557", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.530423", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.535021", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.535071", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.556791", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.556845", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.562712", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.568061", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.568886", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.571661", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.572540", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.573699", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.575614", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.576881", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.578399", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.581338", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.582424", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.592212", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.613248", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.614701", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.615866", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.616807", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.619290", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.642746", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.643923", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.648951", "level": "INFO", "event": "Mission Successful: AI for Healthcare build complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.649004", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.649722", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.650042", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.650079", "level": "INFO", "event": "Pass 1 complete. 48 files queued for LLM refinement.", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:05.650169", "level": "INFO", "event": "Pass 2: draining queue (48 jobs) with 3 workers...", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:44.470872", "level": "INFO", "event": "Pass 2 complete. Budget: {'used': 49452, 'total': 150000, 'remaining': 100548, 'deferred': False} | Queue: {'pending': 0, 'done': 0, 'failed': 0, 'in_progress': 0, 'total': 0}", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:44.471671", "level": "INFO", "event": "Model usage stats: {'json_context': 1, 'general': 2, 'data_synth': 1, 'md_refine': 1}", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:44.472034", "level": "INFO", "event": "Build cost: $0.0009 | Tokens: 1919 | Calls: 2", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:44.472083", "level": "INFO", "event": "Running Forensic Documentarian for AI for Healthcare...", "metadata": {}}
+{"timestamp": "2026-03-14T20:25:46.259036", "level": "INFO", "event": "Lab execution and documentation sync complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:16.718470", "level": "INFO", "event": "Turbo Mode (Gemini 2.0 Flash via REST) activated.", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:16.718669", "level": "INFO", "event": "Force rebuild: cache cleared", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:16.719690", "level": "INFO", "event": "Generating DNA context for AI for Healthcare via cloud...", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:16.719756", "level": "DEBUG", "event": "Using model: gemini-2.5-flash-lite for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:18.362873", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:18.366370", "level": "INFO", "event": "Loading persona from _factory/manifests/healthcare_doctor_persona.yaml", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:18.385224", "level": "INFO", "event": "Researching tools via SearXNG/Tavily + LLM...", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:32.809964", "level": "DEBUG", "event": "Using model: gemini-2.5-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:45.921394", "level": "INFO", "event": "Planning dynamic sessions...", "metadata": {}}
+{"timestamp": "2026-03-14T20:29:45.921561", "level": "DEBUG", "event": "Using model: gemini-2.5-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:04.646851", "level": "INFO", "event": "Initiating data synthesis agent for AI for Healthcare...", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.850874", "level": "INFO", "event": "Data synthesis agent completed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.851886", "level": "INFO", "event": "Incremental build: cache active for AI for Healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.851958", "level": "INFO", "event": "Mission Start: Compiling AI for Healthcare to dist/ai_for_healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.852227", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.861773", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.889988", "level": "INFO", "event": "Queued for refinement: session_06_observability.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.892546", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.894968", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.897415", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.899933", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.902101", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.905118", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.908106", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.910795", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.913693", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.915991", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.919890", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.921677", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.923203", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.924621", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.925875", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.927282", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.930003", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.932626", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.935110", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.942472", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.946840", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.948511", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.950053", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.951497", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.952632", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.952784", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.954808", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.959568", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.961348", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.965249", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.998304", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.998448", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:22.998496", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.000123", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.002934", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.004947", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.006888", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.011796", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.011867", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.037552", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.037621", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.043995", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.050711", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.051718", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.054728", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.055631", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.056921", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.059327", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.061487", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.063245", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.066246", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.067530", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.077707", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.101312", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.103364", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.104953", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.105995", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.108713", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.134377", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.135624", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.141070", "level": "INFO", "event": "Mission Successful: AI for Healthcare build complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.141137", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.141946", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.142301", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.142339", "level": "INFO", "event": "Pass 1 complete. 48 files queued for LLM refinement.", "metadata": {}}
+{"timestamp": "2026-03-14T20:30:23.142460", "level": "INFO", "event": "Pass 2: draining queue (48 jobs) with 3 workers...", "metadata": {}}
+{"timestamp": "2026-03-14T20:31:40.539910", "level": "INFO", "event": "Pass 2 complete. Budget: {'used': 49452, 'total': 150000, 'remaining': 100548, 'deferred': False} | Queue: {'pending': 0, 'done': 0, 'failed': 0, 'in_progress': 0, 'total': 0}", "metadata": {}}
+{"timestamp": "2026-03-14T20:31:40.649291", "level": "INFO", "event": "Model usage stats: {'json_context': 1, 'general': 2, 'data_synth': 1, 'md_refine': 1}", "metadata": {}}
+{"timestamp": "2026-03-14T20:31:40.687250", "level": "INFO", "event": "Build cost: $0.0004 | Tokens: 1241 | Calls: 2", "metadata": {}}
+{"timestamp": "2026-03-14T20:31:40.687401", "level": "INFO", "event": "Running Forensic Documentarian for AI for Healthcare...", "metadata": {}}
+{"timestamp": "2026-03-14T20:31:54.589222", "level": "INFO", "event": "Lab execution and documentation sync complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:43:22.854131", "level": "INFO", "event": "Turbo Mode (Gemini 2.0 Flash via REST) activated.", "metadata": {}}
+{"timestamp": "2026-03-14T20:43:22.855230", "level": "INFO", "event": "Pass 2: draining queue (2 jobs) with 3 workers...", "metadata": {}}
+{"timestamp": "2026-03-14T20:43:23.164157", "level": "INFO", "event": "Pass 2 complete. Budget: {'used': 1508, 'total': 150000, 'remaining': 148492, 'deferred': False} | Queue: {'pending': 0, 'done': 0, 'failed': 0, 'in_progress': 0, 'total': 0}", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:06.635034", "level": "INFO", "event": "Turbo Mode (Gemini 2.0 Flash via REST) activated.", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:06.635212", "level": "INFO", "event": "Generating DNA context for AI for Healthcare via cloud...", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:06.635265", "level": "DEBUG", "event": "Using model: gemini-2.5-flash-lite for task: json_context", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:09.061748", "level": "INFO", "event": "DNA context generated successfully.", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:09.062471", "level": "INFO", "event": "Loading persona from _factory/manifests/healthcare_doctor_persona.yaml", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:09.068375", "level": "INFO", "event": "Tool memory hit (fresh): 3 tools from cache", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:09.068684", "level": "INFO", "event": "Planning dynamic sessions...", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:09.068905", "level": "DEBUG", "event": "Using model: gemini-2.5-flash for task: general", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.439111", "level": "INFO", "event": "Incremental build: cache active for AI for Healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.439903", "level": "INFO", "event": "Mission Start: Compiling AI for Healthcare to dist/ai_for_healthcare", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.440756", "level": "DEBUG", "event": "Skipping technical dir: .devcontainer", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.453775", "level": "INFO", "event": "Queued for refinement: 06_sovereign_tracing.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.498587", "level": "INFO", "event": "Queued for refinement: session_06_observability.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.501945", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.504761", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.507621", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.510349", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.512935", "level": "INFO", "event": "Queued for refinement: 01_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.514527", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.517214", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.519639", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.521854", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.523899", "level": "INFO", "event": "Queued for refinement: 03_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.526025", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.527681", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.529466", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.530712", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.531819", "level": "INFO", "event": "Queued for refinement: 04_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.533041", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.534967", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.537118", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.538819", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.540916", "level": "INFO", "event": "Queued for refinement: 05_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.542727", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.543998", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.545497", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.546692", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.547874", "level": "INFO", "event": "Queued for refinement: 02_lab_guide.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.547976", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.550460", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.552216", "level": "INFO", "event": "Queued for refinement: 01_data_pipeline_automation.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.553827", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.557639", "level": "INFO", "event": "Queued for refinement: student_lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.586790", "level": "INFO", "event": "Queued for refinement: visual_manifest.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.586910", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.586950", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.588449", "level": "INFO", "event": "Queued for refinement: 03_multi_agent_systems.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.590660", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.593142", "level": "INFO", "event": "Queued for refinement: 03_finance_swarm.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.594957", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.599249", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.599295", "level": "DEBUG", "event": "Skipping technical dir: node_modules", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.621139", "level": "DEBUG", "event": "Skipping technical dir: .genkit", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.621195", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.627164", "level": "INFO", "event": "Queued for refinement: committee_report.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.632617", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.633482", "level": "INFO", "event": "Queued for refinement: 08_grand_capstone.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.636155", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.636964", "level": "INFO", "event": "Queued for refinement: 07_sovereign_security.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.638446", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.640649", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.641965", "level": "INFO", "event": "Queued for refinement: 04_sovereign_knowledge_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.643433", "level": "INFO", "event": "Queued for refinement: lab_notes.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.645933", "level": "INFO", "event": "Queued for refinement: 04_finance_rag.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.646950", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.656504", "level": "INFO", "event": "Queued for refinement: corporate_policy_2026.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.678691", "level": "DEBUG", "event": "Skipping technical dir: .venv", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.680361", "level": "INFO", "event": "Queued for refinement: 02_executive_narrative_engine.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.681726", "level": "INFO", "event": "Queued for refinement: README.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.682657", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.685165", "level": "INFO", "event": "Queued for refinement: executive_memo.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.708520", "level": "INFO", "event": "Queued for refinement: 05_advanced_ui_lobechat.md", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.709662", "level": "DEBUG", "event": "Skipping technical dir: __pycache__", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.714806", "level": "INFO", "event": "Mission Successful: AI for Healthcare build complete.", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.714858", "level": "INFO", "event": "Generating Factory Manual (README)...", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.715584", "level": "INFO", "event": "Generating Portable Guardian...", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.716719", "level": "INFO", "event": "Cache saved: 139 entries indexed.", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.716793", "level": "INFO", "event": "Pass 1 complete. 48 files queued for LLM refinement.", "metadata": {}}
+{"timestamp": "2026-03-14T20:44:29.716974", "level": "INFO", "event": "Pass 2: draining queue (48 jobs) with 3 workers...", "metadata": {}}
+{"timestamp": "2026-03-14T20:45:26.375630", "level": "INFO", "event": "Pass 2 complete. Budget: {'used': 49452, 'total': 150000, 'remaining': 100548, 'deferred': False} | Queue: {'pending': 0, 'done': 0, 'failed': 0, 'in_progress': 0, 'total': 0}", "metadata": {}}

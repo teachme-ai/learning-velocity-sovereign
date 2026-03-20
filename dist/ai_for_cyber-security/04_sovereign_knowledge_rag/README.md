@@ -1,14 +1,17 @@
 # Session 04: Sovereign Knowledge RAG
 
 ## Overview
-This session explores the architecture of **Retrieval-Augmented Generation (RAG)** within a sovereign enterprise context. We focus on converting unstructured documents into searchable vector embeddings and implementing a local RAG pipeline that ensures data never leaves the corporate perimeter while maintaining high factual accuracy.
+In the realm of AI for Cyber-Security, Retrieval-Augmented Generation (RAG) is a game-changer for incident response and threat hunting. Imagine having a digital equivalent of a forensics lab where you can query unstructured log files, network captures, or other sensitive data to extract relevant insights without compromising on security.
 
+In this session, we'll delve into the architecture of RAG within a sovereign enterprise context. We'll focus on converting unstructured documents such as incident reports, system logs, or security dashboards into searchable vector embeddings using techniques like BERT and distilBERT. This allows us to build a local RAG pipeline that can analyze sensitive data without ever sending it out the corporate network.
+
+Our goal is to strike a balance between high factual accuracy and operational efficiency. We'll explore trade-offs in model training, inference time, and data processing to ensure that our RAG pipeline meets the demands of real-world security operations.
 ## Learning Outcomes
 - [ ] **LO1**: Understand Vector Embeddings and Semantic Search.
 - [ ] **LO2**: Build a local RAG pipeline using ChromaDB or Qdrant.
 - [ ] **LO3**: Mitigate hallucinations through "Groundedness" checks.
 
-## [INTEGRATOR] Lab
+## [BUILDER] Lab
 
 ### The Lesson: Semantic vs. Keyword Search
 Traditional **Keyword Search** is like looking for a needle in a haystack by matching colors. If you search for *"money for a hotel"*, the computer only looks for those exact words. If the policy uses the term *"Travel Reimbursement"*, a keyword search will fail.

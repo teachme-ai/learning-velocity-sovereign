@@ -1,55 +1,32 @@
-Certainly! Below is a set of CSV rows that starts with the "id" row, including intentional data and format and spelling errors:
-
-```csv
-id, date, category, value, notes, status
-1, 2023-01-01, security, 100, null, inactive
-2, 2023-01-01, threat, 200, null, inactive
-3, 2023-01-02, malware, 300, null, inactive
-4, 2023-01-02, virus, 400, null, inactive
-5, 2023-01-03, ransomware, 500, null, inactive
-6, 2023-01-03, ransomware, 500, null, inactive
-7, 2023-01-04, malware, 300, null, inactive
-8, 2023-01-04, virus, 400, null, inactive
-9, 2023-01-05, phishing, 200, null, inactive
-10, 2023-01-05, phishing, 200, null, inactive
-11, 2023-01-06, ransomware, 500, null, inactive
-12, 2023-01-06, ransomware, 500, null, inactive
-13, 2023-01-07, phishing, 200, null, inactive
-14, 2023-01-07, phishing, 200, null, inactive
-15, 2023-01-08, ransomware, 500, null, inactive
-16, 2023-01-08, ransomware, 500, null, inactive
-17, 2023-01-09, malware, 300, null, inactive
-18, 2023-01-09, malware, 300, null, inactive
-19, 2023-01-10, ransomware, 500, null, inactive
-20, 2023-01-10, ransomware, 500, null, inactive
-21, 2023-01-11, malware, 300, null, inactive
-22, 2023-01-11, malware, 300, null, inactive
-23, 2023-01-12, malware, 300, null, inactive
-24, 2023-01-12, malware, 300, null, inactive
-25, 2023-01-13, malware, 300, null, inactive
-26, 2023-01-13, malware, 300, null, inactive
-27, 2023-01-14, malware, 300, null, inactive
-28, 2023-01-14, malware, 300, null, inactive
-29, 2023-01-15, malware, 300, null, inactive
-30, 2023-01-15, malware, 300, null, inactive
-31, 2023-01-16, malware, 300, null, inactive
-32, 2023-01-16, malware, 300, null, inactive
-33, 2023-01-17, malware, 300, null, inactive
-34, 2023-01-17, malware, 300, null, inactive
-35, 2023-01-18, malware, 300, null, inactive
-36, 2023-01-18, malware, 300, null, inactive
-37, 2023-01-19, malware, 300, null, inactive
-38, 2023-01-19, malware, 300, null, inactive
-39, 2023-01-20, malware, 300, null, inactive
-40, 2023-01-20, malware, 300, null, inactive
-41, 2023-01-21, malware, 300, null, inactive
-42, 2023-01-21, malware, 300, null, inactive
-43, 2023-01-22, malware, 300, null, inactive
-44, 2023-01-22, malware, 300, null, inactive
-45, 2023-01-23, malware, 300, null, inactive
-46, 2023-01-23, malware, 300, null, inactive
-47, 2023-01-24, malware, 300, null, inactive
-48, 2023-01-24, malware, 300, null, inactive
-49, 2023-01-25, malware, 300, null, inactive
-50, 2023-01-25, malware, 300, null, inactive
+id,date,category,value,notes,status
+1,null,"AI",null,null,null,null,
+2,null,"Cyber-Security",null,null,null,null,
+3,null,"Machine-Learning",null,null,null,null,
+4,null,"NLP",null,null,null,null,
+5,null,"Registries","Not Found",null,null,null,
+6,null,"Security-Data-Finding",null,null,null,null,
+7,null,"Threat-Imitation",null,null,null,null,
+8,null,"Malware-Detection","Not Found",null,null,null,
+9,null,"Attack-Vector-Identification","Not Found",null,null,null,
+10,null,"Anomaly-Detection","Not Found",null,null,null,
+11,null,"Risk-Assessment","Not Found",null,null,null,
+12,null,"Predictive-Modeling","Not Found",null,null,null,
+13,null,"Machine-Learning-Models","Not Found",null,null,null,
+14,null,"Deep-Learning-AI","Not Found",null,null,null,
+15,null,"Pattern-Recognition","Not Found",null,null,null,
+16,null,"Anomaly-Detection","Not Found",null,null,null,
+17,null,"Predictive-Modeling","Not Found",null,null,null,
+18,null,"Risk-Assessment","Not Found",null,null,null,
+19,null,"Cyber-Security-Impact","Not Found",null,null,null,
+20,null,"Security-Alerts","Not Found",null,null,null,
+21,null,"Intrusion-Detection","Not Found",null,null,null,
+22,null,"Anomaly-Signals","Not Found",null,null,null,
+23,null,"Predictive-Modeling","Not Found",null,null,null,
+24,null,"Risk-Assessment","Not Found",null,null,null,
+25,null,"Predictive-Models","Not Found",null,null,null,
+26,null,"Security-Privacy-Awareness","Not Found",null,null,null,
+27,null,"Data-Exposure","Not Found",null,null,null,
+28,null,"Anomaly-Detection","Not Found",null,null,null,
+29,null,"Risk-Assessment","Not Found",null,null,null,
+30,null,"Predictive-Models","Not Found",null,null,null
 ```

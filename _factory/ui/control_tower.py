@@ -63,7 +63,7 @@ with tab1:
         industry = selected_course["industry"]
         default_use_cases = selected_course.get("use_cases", [])
         default_sessions = selected_course.get("default_sessions", list(range(1, 9)))
-        default_tracks = selected_course.get("default_tracks", ["base", "integrated", "architect"])
+        default_tracks = selected_course.get("default_tracks", ["navigator", "builder", "architect"])
         default_tone = selected_course.get("tone", "Practical & Applied")
         default_compliance = selected_course.get("compliance", ["None"])[0] if selected_course.get("compliance") else "None"
         default_region = selected_course.get("region", "Global")
@@ -72,7 +72,7 @@ with tab1:
         industry = st.text_input("Custom Industry Name", "AI for ...")
         use_cases = st.text_area("Use Cases (one per line)", "Use Case 1\nUse Case 2").splitlines()
         default_sessions = list(range(1, 9))
-        default_tracks = ["base", "integrated", "architect"]
+        default_tracks = ["navigator", "builder", "architect"]
         default_tone = "Practical & Applied"
         default_compliance = "None"
         default_region = "Global"
@@ -82,11 +82,11 @@ with tab1:
     # ── Step 2: WHO ───────────────────────────────────────────────────────────
     st.markdown("### Step 2 — WHO: Audience")
     AUDIENCE_TRACK_MAP = {
-        "Executive / C-Suite":   ["base"],
-        "Business Analyst":      ["base", "integrated"],
-        "Developer / Engineer":  ["base", "integrated", "architect"],
-        "Data Scientist":        ["integrated", "architect"],
-        "Product Manager":       ["base", "integrated"],
+        "Executive / C-Suite":   ["navigator"],
+        "Business Analyst":      ["navigator", "builder"],
+        "Developer / Engineer":  ["navigator", "builder", "architect"],
+        "Data Scientist":        ["builder", "architect"],
+        "Product Manager":       ["navigator", "builder"],
     }
     audience = st.radio(
         "Select audience persona",

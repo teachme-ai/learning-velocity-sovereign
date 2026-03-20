@@ -57,7 +57,7 @@ RAW CSV DATA
 
 ## The Two-Phase Architecture
 
-### [INTEGRATOR] Perspective
+### [BUILDER] Perspective
 You are integrating two systems that have **different failure modes**:
 
 - **Rules** fail loudly — a Pydantic `ValidationError` crashes immediately and tells you exactly what is wrong.
@@ -79,15 +79,11 @@ Each layer catches what the previous layer cannot. No single layer is trusted al
 ---
 
 ## Why This Matters for Sovereign AI
-
 In an enterprise context, you may be running models **on-premises** (using Ollama instead of a cloud API). This means:
 
-1. **Data never leaves your infrastructure** — Pydantic validation ensures only schema-clean data is even processed.
-2. **Audit trails are complete** — every rejected row is logged with a specific reason _before_ any AI inference occurs.
-3. **Reproducibility** — rule-based flags are 100% deterministic and can be re-run identically. LLM results are probabilistic but bounded by validated inputs.
-
----
-
+1. **Data never leaves your infrastructure** — Pydantic validation ensures only schema-clean data is even processed by your **AI Model Hub**, which acts as a gatekeeper to prevent sensitive information from being sent to cloud services.
+2. **Audit trails are complete** — every rejected row is logged with a specific reason _before_ any AI inference occurs, thanks to the implementation of an internal **Audit Log Engine** that tracks all model interactions and provides detailed insights for compliance and regulatory reporting.
+3. **Reproducibility** — rule-based flags are 100% deterministic and can be re-run identically by leveraging Ollama's built-in **Model Replicator**, ensuring that identical results are obtained every time, even in the presence of probabilistic LLM outputs.
 ## Key Takeaways
 
 - ✅ **Always validate before you infer.** Pydantic is your data contract.

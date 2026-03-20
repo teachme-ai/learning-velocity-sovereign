@@ -1,0 +1,23 @@
+# Global Corporate Travel & Expense Policy
+
+## 1. General Provisions
+All employees are required to act responsibly and professionally when incurring and submitting expenses.
+
+## 2. Air Travel
+- Domestic flights must be economy class.
+- International flights exceeding 8 hours may be booked in business class, subject to Senior VP approval.
+- All international travel requires VP approval prior to booking.
+
+## 3. Lodging
+- Standard hotel room limits are $250 per night.
+- In high-cost designated cities (e.g., New York, London, Tokyo), the limit is increased to $400 per night.
+
+## 4. Meals and Entertainment
+- Meal expenses cannot exceed $50 per day for domestic travel.
+- Meal expenses for international travel cannot exceed $75 per day.
+- Alcohol is generally not a reimbursable expense unless as part of an approved client entertainment dinner (limit 2 drinks per person).
+
+## 5. Technology and Equipment
+- IT hardware (laptops, phones) must be procured through the central IT catalog.
+- Software subscriptions exceeding $50/month require IT and Manager approval.
+- Cloud computing resources (AWS, GCP, Azure) require explicit sign-off from the Director of Engineering if exceeding $500/month.

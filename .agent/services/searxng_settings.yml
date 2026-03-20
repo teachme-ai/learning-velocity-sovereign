@@ -1,0 +1,38 @@
+use_default_settings: true
+
+search:
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "factory-local-dev-key"
+  limiter: false
+  request_timeout: 15
+
+general:
+  instance_name: "Factory Search"
+
+engines:
+  - name: duckduckgo
+    disabled: false
+  - name: brave
+    disabled: false
+  - name: qwant
+    disabled: false
+  - name: startpage
+    disabled: false
+  - name: mojeek
+    disabled: false
+  - name: wikipedia
+    disabled: false
+  - name: wikidata
+    disabled: false
+  - name: github
+    disabled: false
+  - name: arxiv
+    disabled: false
+
+outgoing:
+  request_timeout: 10
+  useragent_suffix: ""

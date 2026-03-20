@@ -1,0 +1,16 @@
+# Mock TeachMeAI Learner Persona — Low-Code Business Analyst
+# Simulates Intake_v2 output for Plan 09 testing
+
+topPriorities:
+  - name: "Automate repetitive reporting workflows"
+    portfolioArtifact: "Automated Weekly Report Pipeline"
+  - name: "Build customer-facing dashboards without engineering help"
+    portfolioArtifact: "Self-Service Analytics Dashboard"
+  - name: "Use AI to summarize meeting notes and action items"
+    portfolioArtifact: "Meeting Intelligence Agent"
+
+marketMaturityScore: 38
+decisionStyle: "Collaborative"
+uncertaintyHandling: "Risk-Averse"
+cognitiveLoadTolerance: "Medium"
+socialEntanglement: "High — prefers team-based learning"

@@ -34,7 +34,7 @@ If the Reporter agent produces an anomaly (hallucination), the Trace JSON is you
 
 ---
 
-## 🛡️ [INTEGRATOR] Codespace Guardian Quality Check
+## 🛡️ [BUILDER] Codespace Guardian Quality Check
 
 The Codespace Guardian (`verify_env.py`) has been upgraded. It no longer just checks if the program *runs*; it validates the **Trace Quality**. It explicitly reads the resulting trace JSON and confirms mathematically that all 3 agents (Analyst, Auditor, Reporter) successfully executed a generation span.
 

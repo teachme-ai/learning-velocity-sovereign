@@ -76,12 +76,12 @@ This represents the 'Executive Narrative' tier constructed entirely via No-Code 
 """
 
 for i in range(1, 6):
-    os.makedirs(f"00_base_track_creators/session_{i:02d}", exist_ok=True)
+    os.makedirs(f"track_1_navigator/session_{i:02d}", exist_ok=True)
 
 for key, (name, label) in domains.items():
-    with open(f"00_base_track_creators/session_01/{key}_base_pipeline.md", "w") as f:
+    with open(f"track_1_navigator/session_01/{key}_lab_guide.md", "w") as f:
         f.write(session_1_template.format(domain_name=name, domain_label=label, domain_key=key))
-    with open(f"00_base_track_creators/session_02/{key}_base_narrative.md", "w") as f:
+    with open(f"track_1_navigator/session_02/{key}_lab_guide.md", "w") as f:
         f.write(session_2_template.format(domain_name=name, domain_label=label, domain_key=key))
 
 print("Created Base Track directories and 10 markdown guides.")

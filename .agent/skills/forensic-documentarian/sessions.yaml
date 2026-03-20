@@ -11,32 +11,32 @@ sessions:
     script: ["python3", "dist/{slug}/01_data_pipeline_automation/set_{slug}/logic/cleaner.py"]
     markdown: "dist/{slug}/01_data_pipeline_automation/01_data_pipeline_automation.md"
     output_dir: "dist/{slug}/assets/proof/session_01"
-    proof_heading: "## 📈 [INTEGRATOR] Proof of Work"
+    proof_heading: "## 📈 [BUILDER] Proof of Work"
 
   "02":
     name: "Session 02: Executive Narrative Engine"
     script: ["python3", "dist/{slug}/02_executive_narrative_engine/set_{slug}/logic/narrative_gen.py"]
     markdown: "dist/{slug}/02_executive_narrative_engine/02_executive_narrative_engine.md"
     output_dir: "dist/{slug}/assets/proof/session_02"
-    proof_heading: "## 📈 [INTEGRATOR] Proof of Work"
+    proof_heading: "## 📈 [BUILDER] Proof of Work"
 
   "03":
     name: "Session 03: Multi-Agent Swarm"
     script: ["python3", "dist/{slug}/03_multi_agent_systems/set_{slug}/logic/swarm.py"]
     markdown: "dist/{slug}/03_multi_agent_systems/03_multi_agent_systems.md"
     output_dir: "dist/{slug}/assets/proof/session_03"
-    proof_heading: "## 📈 [INTEGRATOR] Proof of Work"
+    proof_heading: "## 📈 [BUILDER] Proof of Work"
 
   "04":
     name: "Session 04: Sovereign Knowledge RAG"
     script: ["python3", "dist/{slug}/04_sovereign_knowledge_rag/set_{slug}/logic/ingest_and_query.py"]
     markdown: "dist/{slug}/04_sovereign_knowledge_rag/04_sovereign_knowledge_rag.md"
     output_dir: "dist/{slug}/assets/proof/session_04"
-    proof_heading: "## 📈 [INTEGRATOR] Proof of Work"
+    proof_heading: "## 📈 [BUILDER] Proof of Work"
 
   "07":
     name: "Session 07: Sovereign Security"
     script: ["python3", "dist/{slug}/07_sovereign_security/set_{slug}/logic/pii_scrubber.py"]
     markdown: "dist/{slug}/07_sovereign_security/07_sovereign_security.md"
     output_dir: "dist/{slug}/assets/proof/session_07"
-    proof_heading: "## 📈 [INTEGRATOR] Proof of Work"
+    proof_heading: "## 📈 [BUILDER] Proof of Work"

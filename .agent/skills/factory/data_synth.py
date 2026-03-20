@@ -1,25 +1,33 @@
 import os
 import sys
-import ollama
+import json
+import requests
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
+
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 def call_llm(prompt):
-    """Use Gemini if API key available, otherwise fall back to Ollama."""
+    """Use Gemini REST if API key available, otherwise fall back to Ollama."""
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if api_key:
+    model = os.environ.get("SYNTH_MODEL", "gemini-2.5-flash-lite")
+    if api_key and not model.startswith("llama") and not model.startswith("qwen"):
         try:
-            from google import genai
-            client = genai.Client(api_key=api_key)
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt
-            )
+            url = GEMINI_API_URL.format(model=model) + f"?key={api_key}"
+            payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.7, "maxOutputTokens": 4096}}
+            resp = requests.post(url, json=payload, timeout=90)
+            resp.raise_for_status()
             print("   → Using Gemini (cloud)")
-            return response.text
+            return resp.json()["candidates"][0]["content"]["parts"][0]["text"]
         except Exception as e:
-            print(f"   → Gemini failed ({e}), falling back to Ollama")
-
+            print(f"   → Gemini REST failed ({e}), falling back to Ollama")
     print("   → Using Ollama (local)")
-    model = os.environ.get("SYNTH_MODEL", "qwen2.5:0.5b")
+    if ollama is None:
+        print("   → Ollama not available")
+        return ""
     response = ollama.chat(model=model, messages=[{'role': 'user', 'content': prompt}])
     return response['message']['content']
 

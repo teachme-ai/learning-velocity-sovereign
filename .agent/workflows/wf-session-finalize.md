@@ -16,7 +16,7 @@ Requires one input:
 
 1. **Lab Manual Formatting Checklist**
    - Verify that the lab manual(s) for the new session strictly follow the Two-Track format.
-   - Ensure `## [INTEGRATOR]` and `## [ARCHITECT]` headers exist.
+   - Ensure `## [BUILDER]` and `## [ARCHITECT]` headers exist.
    - Using the `multi_replace_file_content` tool, fix any formatting deviations before proceeding.
 
 2. **Forensic Documentation (SVG Generation)**

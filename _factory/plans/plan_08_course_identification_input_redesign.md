@@ -1,6 +1,6 @@
 # Plan 08 — Course Identification & Input System Redesign
 
-**Status:** Ready for execution by Amazon Q
+**Status:** ✅ COMPLETE
 **Scope:** 5 files to modify, 1 file already created
 **Dependencies:** Plans 01–07 remain valid; this is additive only
 
@@ -11,10 +11,10 @@
 | # | File | Action | Status |
 |---|---|---|---|
 | 1 | `_factory/catalog/courses.yaml` | CREATE | ✅ DONE |
-| 2 | `_factory/ui/control_tower.py` | MODIFY | ⏳ Pending |
-| 3 | `_factory/core/compiler.py` | MODIFY | ⏳ Pending |
-| 4 | `_factory/core/manifest_validator.py` | CREATE | ⏳ Pending |
-| 5 | `.agent/skills/factory/context_refiner.py` | MODIFY | ⏳ Pending |
+| 2 | `_factory/ui/control_tower.py` | MODIFY | ✅ DONE |
+| 3 | `_factory/core/compiler.py` | MODIFY | ✅ DONE |
+| 4 | `_factory/core/manifest_validator.py` | CREATE | ✅ DONE |
+| 5 | `.agent/skills/factory/context_refiner.py` | MODIFY | ✅ DONE |
 
 ---
 
@@ -54,7 +54,7 @@ Courses covered:
 
 ---
 
-## File 2 — `_factory/ui/control_tower.py` ⏳ PENDING
+## File 2 — `_factory/ui/control_tower.py` ✅ DONE
 
 **Path:** `_factory/ui/control_tower.py`
 **Action:** Full rewrite of `tab1` and sidebar; keep `tab2`, `tab3`, sidebar Guardian section intact.
@@ -294,7 +294,7 @@ with tab1:
 
 ---
 
-## File 3 — `_factory/core/compiler.py` ⏳ PENDING
+## File 3 — `_factory/core/compiler.py` ✅ DONE
 
 **Path:** `_factory/core/compiler.py`
 
@@ -414,7 +414,7 @@ with tab1:
 
 ---
 
-## File 4 — `_factory/core/manifest_validator.py` ⏳ PENDING (NEW FILE)
+## File 4 — `_factory/core/manifest_validator.py` ✅ DONE
 
 **Path:** `_factory/core/manifest_validator.py`
 **Action:** Create new file
@@ -509,7 +509,7 @@ After the manifest is loaded in `compiler.py` `__init__` (after line 45), add:
 
 ---
 
-## File 5 — `.agent/skills/factory/context_refiner.py` ⏳ PENDING
+## File 5 — `.agent/skills/factory/context_refiner.py` ✅ DONE
 
 **Path:** `.agent/skills/factory/context_refiner.py`
 

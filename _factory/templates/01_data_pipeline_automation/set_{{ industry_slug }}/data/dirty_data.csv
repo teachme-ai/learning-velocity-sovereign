@@ -1,55 +1,76 @@
-Certainly! Below is a set of CSV rows that starts with the "id" row, including intentional data and format and spelling errors:
-
-```csv
-id, date, category, value, notes, status
-1, 2023-01-01, security, 100, null, inactive
-2, 2023-01-01, threat, 200, null, inactive
-3, 2023-01-02, malware, 300, null, inactive
-4, 2023-01-02, virus, 400, null, inactive
-5, 2023-01-03, ransomware, 500, null, inactive
-6, 2023-01-03, ransomware, 500, null, inactive
-7, 2023-01-04, malware, 300, null, inactive
-8, 2023-01-04, virus, 400, null, inactive
-9, 2023-01-05, phishing, 200, null, inactive
-10, 2023-01-05, phishing, 200, null, inactive
-11, 2023-01-06, ransomware, 500, null, inactive
-12, 2023-01-06, ransomware, 500, null, inactive
-13, 2023-01-07, phishing, 200, null, inactive
-14, 2023-01-07, phishing, 200, null, inactive
-15, 2023-01-08, ransomware, 500, null, inactive
-16, 2023-01-08, ransomware, 500, null, inactive
-17, 2023-01-09, malware, 300, null, inactive
-18, 2023-01-09, malware, 300, null, inactive
-19, 2023-01-10, ransomware, 500, null, inactive
-20, 2023-01-10, ransomware, 500, null, inactive
-21, 2023-01-11, malware, 300, null, inactive
-22, 2023-01-11, malware, 300, null, inactive
-23, 2023-01-12, malware, 300, null, inactive
-24, 2023-01-12, malware, 300, null, inactive
-25, 2023-01-13, malware, 300, null, inactive
-26, 2023-01-13, malware, 300, null, inactive
-27, 2023-01-14, malware, 300, null, inactive
-28, 2023-01-14, malware, 300, null, inactive
-29, 2023-01-15, malware, 300, null, inactive
-30, 2023-01-15, malware, 300, null, inactive
-31, 2023-01-16, malware, 300, null, inactive
-32, 2023-01-16, malware, 300, null, inactive
-33, 2023-01-17, malware, 300, null, inactive
-34, 2023-01-17, malware, 300, null, inactive
-35, 2023-01-18, malware, 300, null, inactive
-36, 2023-01-18, malware, 300, null, inactive
-37, 2023-01-19, malware, 300, null, inactive
-38, 2023-01-19, malware, 300, null, inactive
-39, 2023-01-20, malware, 300, null, inactive
-40, 2023-01-20, malware, 300, null, inactive
-41, 2023-01-21, malware, 300, null, inactive
-42, 2023-01-21, malware, 300, null, inactive
-43, 2023-01-22, malware, 300, null, inactive
-44, 2023-01-22, malware, 300, null, inactive
-45, 2023-01-23, malware, 300, null, inactive
-46, 2023-01-23, malware, 300, null, inactive
-47, 2023-01-24, malware, 300, null, inactive
-48, 2023-01-24, malware, 300, null, inactive
-49, 2023-01-25, malware, 300, null, inactive
-50, 2023-01-25, malware, 300, null, inactive
-```
+patient_id,admission_date,diagnosis_code,procedure_type,imaging_type,readmission_flag,treatment_plan,cost_usd,insurance_status,discharge_date
+P001,2023-01-15,I10,Angioplasty,MRI,0,Medication and Lifestyle Changes,15000,Private,2023-01-20
+P002,2023-02-20,J45.909,Bronchodilator Therapy,X-ray,1,Inhaled Corticosteroids,5000,Medicare,2023-02-25
+P003,2023-03-10,E11.9,Insulin Therapy,CT Scan,0,Dietary Adjustments,7500,Medicaid,2023-03-15
+P004,2023-04-05,N18.3,Dialysis,Ultrasound,0,Fluid Restriction,25000,Private,2023-04-12
+P005,2023-05-18,C34.90,Chemotherapy,PET Scan,0,Radiation Therapy,50000,Private,2023-05-28
+P006,2023-06-22,F32.9,Antidepressants,EEG,0,Psychotherapy,4000,Medicare,2023-06-27
+P007,2023-07-01,M54.5,Physical Therapy,X-ray,0,Pain Management,3000,Medicaid,2023-07-05
+P008,2023-08-14,G40.909,Anti-epileptic Drugs,MRI,0,Seizure Monitoring,6000,Private,2023-08-19
+P009,2023-09-03,K21.9,PPI Medication,Endoscopy,0,Lifestyle Changes,3500,Medicare,2023-09-07
+P010,2023-10-11,H35.359,Laser Photocoagulation,OCT Scan,0,Anti-VEGF Injections,8000,Private,2023-10-16
+P011,2023-11-01,Z00.00,Routine Check-up,None,0,Observation,500,Private,2023-11-01
+P012,2023-12-05,A09,Antibiotics,None,0,Rest and Fluids,1000,Medicaid,2023-12-08
+P013,2024-01-20,I10,Hypertension Management,ECG,0,Diuretics,4500,Medicare,2024-01-25
+P014,2024-02-15,J44.9,COPD Exacerbation,Chest X-ray,1,Bronchodilators and Steroids,6000,Private,2024-02-20
+P015,2024-03-01,E11.65,Diabetic Foot Ulcer,MRI,0,Wound Care,9000,Medicaid,2024-03-07
+P016,2024-04-10,N39.0,Urinary Tract Infection,Urinalysis,0,Antibiotics,1500,Private,2024-04-13
+P017,2024-05-25,C50.919,Mastectomy,Mammogram,0,Chemotherapy,60000,Private,2024-06-05
+P018,2024-06-18,F41.1,Anxiety Disorder,None,0,Therapy and Medication,3000,Medicare,2024-06-22
+P019,2024-07-07,M16.10,Total Hip Replacement,X-ray,0,Rehabilitation,30000,Private,2024-07-15
+P020,2024-08-20,G30.9,Alzheimer's Disease,PET Scan,0,Supportive Care,18000,Medicare,2024-08-25
+P021,2024-09-01,K02.9,Dental Caries,None,0,Filling,500,Medicaid,2024-09-01
+P022,2024-10-15,H66.90,Otitis Media,None,0,Antibiotics,1000,Private,2024-10-18
+P023,2024-11-01,I50.9,Heart Failure,Echocardiogram,1,Diuretics and ACE Inhibitors,12000,Medicare,2024-11-08
+P024,2024-12-10,J06.9,Upper Respiratory Infection,None,0,Rest and Fluids,800,Medicaid,2024-12-12
+P025,2025-01-05,E66.9,Obesity Management,None,0,Diet and Exercise,2000,Private,2025-01-08
+P026,2025-02-18,M06.9,Rheumatoid Arthritis,MRI,0,DMARDs,7000,Medicare,2025-02-23
+P027,2025-03-20,C77.0,Metastatic Cancer,CT Scan,0,Palliative Care,40000,Private,2025-03-28
+P028,2025-04-01,F03,Unspecified Dementia,EEG,0,Cognitive Stimulation,5000,Medicaid,2025-04-05
+P029,2025-05-15,M25.50,Joint Pain,X-ray,0,Pain Relievers,2500,Medicare,2025-05-18
+P030,2025-06-22,G47.30,Sleep Apnea,Polysomnography,0,CPAP Machine,3000,Private,2025-06-25
+P031,2025-07-10,K76.0,Fatty Liver Disease,Ultrasound,0,Lifestyle Changes,1500,Medicaid,2025-07-12
+P032,2025-08-01,H40.10,Glaucoma,Ophthalmoscopy,0,Eye Drops,3000,Private,2025-08-04
+P033,2025-09-15,I25.10,Coronary Artery Disease,Angiogram,1,Stent Placement,20000,Medicare,2025-09-20
+P034,2025-10-05,J02.9,Streptococcal Pharyngitis,None,0,Antibiotics,700,Medicaid,2025-10-07
+P035,2025-11-20,E78.5,Hyperlipidemia,Blood Test,0,Statins,2000,Private,2025-11-23
+P036,2025-12-01,M15.0,Osteoarthritis,X-ray,0,Physical Therapy,4000,Medicare,2025-12-05
+P037,2026-01-10,C61,Prostate Cancer,MRI,0,Radiation Therapy,35000,Private,2026-01-18
+P038,2026-02-05,F43.1,Post-Traumatic Stress Disorder,None,0,Therapy,3500,Medicare,2026-02-09
+P039,2026-03-01,G56.00,Carpal Tunnel Syndrome,EMG,0,Wrist Splint,1500,Medicaid,2026-03-04
+P040,2026-04-15,K80.00,Gallstones,Ultrasound,0,Cholecystectomy,10000,Private,2026-04-20
+P041,2026-05-01,H02.8,Dry Eye Syndrome,None,0,Artificial Tears,800,Medicare,2026-05-03
+P042,2026-06-18,I63.40,Ischemic Stroke,CT Scan,1,Rehabilitation,22000,Private,2026-06-25
+P043,2026-07-01,J18.9,Pneumonia,Chest X-ray,0,Antibiotics and Oxygen,5500,Medicaid,2026-07-06
+P044,2026-08-10,E78.2,Mixed Hyperlipidemia,Blood Test,0,Lifestyle Changes,1800,Medicare,2026-08-12
+P045,2026-09-20,M17.10,Knee Osteoarthritis,X-ray,0,Injections,4000,Private,2026-09-23
+P046,2026-10-05,C67.9,Bladder Cancer,Cystoscopy,0,Surgery,30000,Private,2026-10-12
+P047,2026-11-01,F33.1,Bipolar Disorder,None,0,Mood Stabilizers,6000,Medicare,2026-11-06
+P048,2026-12-15,G44.89,Headache,MRI,0,Pain Management,3000,Medicaid,2026-12-18
+P049,2027-01-01,K35.80,Appendicitis,CT Scan,0,Appendectomy,12000,Private,2027-01-05
+P050,2027-02-10,H72.9,Middle Ear Infection,None,0,Antibiotics,900,Medicare,2027-02-13
+P051,2023-01-15,I10,Angioplasty,MRI,0,Medication and Lifestyle Changes,15000,Private,2023-01-20
+P052,2023-02-20,J45.909,Bronchodilator Therapy,X-ray,1,Inhaled Corticosteroids,5000,Medicare,2023-02-25
+P053,2023-03-10,E11.9,Insulin Therapy,CT Scan,0,Dietary Adjustments,7500,Medicaid,2023-03-15
+P054,2023-04-05,N18.3,Dialysis,Ultrasound,0,Fluid Restriction,25000,Private,2023-04-12
+P055,2023-05-18,C34.90,Chemotherapy,PET Scan,0,Radiation Therapy,50000,Private,2023-05-28
+P056,2023-06-22,F32.9,Antidepressants,EEG,0,Psychotherapy,4000,Medicare,2023-06-27
+P057,2023-07-01,M54.5,Physical Therapy,X-ray,0,Pain Management,3000,Medicaid,2023-07-05
+P058,2023-08-14,G40.909,Anti-epileptic Drugs,MRI,0,Seizure Monitoring,6000,Private,2023-08-19
+P059,2023-09-03,K21.9,PPI Medication,Endoscopy,0,Lifestyle Changes,3500,Medicare,2023-09-07
+P060,2023-10-11,H35.359,Laser Photocoagulation,OCT Scan,0,Anti-VEGF Injections,8000,Private,2023-10-16
+P061,2023-11-01,Z00.00,Routine Check-up,None,0,Observation,500,Private,2023-11-01
+P062,2023-12-05,A09,Antibiotics,None,0,Rest and Fluids,1000,Medicaid,2023-12-08
+P063,2024-01-20,I10,Hypertension Management,ECG,0,Diuretics,4500,Medicare,2024-01-25
+P064,2024-02-15,J44.9,COPD Exacerbation,Chest X-ray,1,Bronchodilators and Steroids,6000,Private,2024-02-20
+P065,2024-03-01,E11.65,Diabetic Foot Ulcer,MRI,0,Wound Care,9000,Medicaid,2024-03-07
+P066,2024-04-10,N39.0,Urinary Tract Infection,Urinalysis,0,Antibiotics,1500,Private,2024-04-13
+P067,2024-05-25,C50.919,Mastectomy,Mammogram,0,Chemotherapy,60000,Private,2024-06-05
+P068,2024-06-18,F41.1,Anxiety Disorder,None,0,Therapy and Medication,3000,Medicare,2024-06-22
+P069,2024-07-07,M16.10,Total Hip Replacement,X-ray,0,Rehabilitation,30000,Private,2024-07-15
+P070,2024-08-20,G30.9,Alzheimer's Disease,PET Scan,0,Supportive Care,18000,Medicare,2024-08-25
+P071,2024-09-01,K02.9,Dental Caries,None,0,Filling,500,Medicaid,2024-09-01
+P072,2024-10-15,H66.90,Otitis Media,None,0,Antibiotics,1000,Private,2024-10-18
+P073,2024-11-01,I50.9,Heart Failure,Echocardiogram,1,Diuretics and ACE Inhibitors,12000,Medicare,2024-11-08
+P074,2024-12-10,J06.9,Upper Respiratory Infection,None,0,Rest and Fluids,800,Medicaid,2024-12-12
+P075,2025-01-05,E66.9,Obesity Management,None,0,Diet and Exercise,2000,Private

@@ -1,7 +1,7 @@
 industry: "AI in Retail & E-commerce"
 tracks:
-  - base
-  - integrated
+  - navigator
+  - builder
   - architect
 use_cases:
   - "Personalized Recommendation Engine"

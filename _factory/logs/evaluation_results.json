@@ -1,0 +1,98 @@
+{
+  "local": {
+    "industry_fidelity": {
+      "score": 100,
+      "healthcare_terms": 1033,
+      "generic_terms": 36,
+      "total_words": 18610,
+      "density_per_1k": 55.51
+    },
+    "handson_ratio": {
+      "score": 33.2,
+      "handson_lines": 510,
+      "total_lines": 1921,
+      "ratio": 26.5,
+      "code_blocks": 61,
+      "cli_commands": 35,
+      "step_markers": 135
+    },
+    "executable_practicality": {
+      "score": 100,
+      "dependency_refs": 31,
+      "codespace_refs": 139,
+      "platform_config_refs": 85,
+      "complete_setup_flow": true
+    },
+    "track_differentiation": {
+      "score": 66.7,
+      "navigator_signals": 85,
+      "builder_signals": 2,
+      "architect_signals": 0
+    },
+    "structural_completeness": {
+      "score": 90.0,
+      "sessions_found": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "session_count": 8,
+      "total_md_files": 49,
+      "truncated_files": 2
+    },
+    "weighted_total": 74.0
+  },
+  "cloud": {
+    "industry_fidelity": {
+      "score": 100,
+      "healthcare_terms": 3299,
+      "generic_terms": 36,
+      "total_words": 29336,
+      "density_per_1k": 112.46
+    },
+    "handson_ratio": {
+      "score": 36.0,
+      "handson_lines": 568,
+      "total_lines": 1973,
+      "ratio": 28.8,
+      "code_blocks": 61,
+      "cli_commands": 35,
+      "step_markers": 135
+    },
+    "executable_practicality": {
+      "score": 100,
+      "dependency_refs": 31,
+      "codespace_refs": 487,
+      "platform_config_refs": 85,
+      "complete_setup_flow": true
+    },
+    "track_differentiation": {
+      "score": 66.7,
+      "navigator_signals": 85,
+      "builder_signals": 2,
+      "architect_signals": 0
+    },
+    "structural_completeness": {
+      "score": 90.0,
+      "sessions_found": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "session_count": 8,
+      "total_md_files": 49,
+      "truncated_files": 2
+    },
+    "weighted_total": 74.8
+  }
+}

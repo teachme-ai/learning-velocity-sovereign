@@ -1,0 +1,24 @@
+# Plan 09 Test Manifest — Low-Code Business Analyst
+# Tests: persona loading, tool research, dynamic session planning
+
+industry: "AI for Retail & E-Commerce"
+
+tracks:
+  - navigator
+  - builder
+
+audience: "Business Analyst"
+
+use_cases:
+  - "Personalization & Recommendation Engines"
+  - "Customer Churn Prediction"
+  - "Dynamic Pricing Automation"
+
+sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+
+tone: "Conversational & Accessible"
+compliance_framework: "GDPR"
+region: "EU"
+
+# Plan 09 — points to the learner persona file
+persona_source: "_factory/manifests/test_plan09_persona.yaml"

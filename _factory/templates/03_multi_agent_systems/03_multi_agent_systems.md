@@ -49,7 +49,7 @@ Confirm that the deliberation was processed and the quality gate was passed.
 
 ---
 
-## 📈 [INTEGRATOR] Proof of Work
+## 📈 [BUILDER] Proof of Work
 **Focus**: *Flow and Orchestration.*
 
 Successful committee orchestration results in a tiered deliberation. Below is your target terminal proof:

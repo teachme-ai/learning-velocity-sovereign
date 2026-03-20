@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "command-runner": {
+      "command": "node",
+      "args": [
+        "/Users/khalidirfan/projects/Ai Bootcamps/.agent_tools/command-runner-mcp/dist/index.js"
+      ]
+    },
+    "tavily": {
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=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"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Healthcare Comparison Manifest
+# Learner: Early-career Doctor with good digital skills (TeachMeAI Row 100)
+# Purpose: Compare Local (Ollama) vs Cloud (Gemini) output quality
+
+industry: "AI for Healthcare"
+
+tracks:
+  - navigator
+  - builder
+  - architect
+
+audience: "Developer / Engineer"
+
+use_cases:
+  - "AI-Powered Diagnostic Support (Radiology/Imaging)"
+  - "Predictive Patient Readmission Modeling"
+  - "Automated Prior Authorization via NLP"
+  - "Personalized Treatment Recommendations"
+
+sessions: [1, 2, 3, 4, 5, 6, 7, 8]
+
+tone: "Practical & Applied"
+compliance_framework: "HIPAA"
+region: "Global"
+
+persona_source: "_factory/manifests/healthcare_doctor_persona.yaml"
+
+concurrency: 3
+
+token_budget:
+  total_tokens: 150000
+  tokens_per_minute: 2000
+  defer_after_tokens: 150000
+
+data_schema:
+  columns:
+    - patient_id
+    - admission_date
+    - diagnosis_code
+    - procedure_type
+    - imaging_type
+    - readmission_flag
+    - treatment_plan
+    - cost_usd
+    - insurance_status
+    - discharge_date
+  dirty_rate: 0.15
+  row_count: 50

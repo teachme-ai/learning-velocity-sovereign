@@ -31,7 +31,7 @@ python3 logic/vault_manager.py
 
 ## 📜 Capture: Execution Evidence
 
-### [INTEGRATOR / ARCHITECT] Verified Output
+### [BUILDER / ARCHITECT] Verified Output
 ```text
 [1/3] Reading policy: corporate_policy_2026.md
 [2/3] Chunking text into semantically distinct units...

@@ -1,6 +1,6 @@
 # Session 04: Sovereign Knowledge RAG ({{ industry_name }})
 
-## [INTEGRATOR] Track
+## [BUILDER] Track
 
 ### Overview
 This lab builds a **fully local, sovereign RAG pipeline** using **Google Genkit** (Python), **ChromaDB** (vector store), and **Ollama** (embeddings + generation). The system ingests the Corporate Travel & Expense Policy, embeds it using `nomic-embed-text`, indexes it into ChromaDB, then uses a **Genkit-native Retriever** to retrieve relevant context and generate a grounded, cited answer using `llama3.2:1b`.
