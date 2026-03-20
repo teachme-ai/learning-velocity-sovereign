@@ -8,9 +8,12 @@ from datetime import datetime
 
 
 class CostTracker:
+    USD_TO_INR = 85.0
+
     PRICING = {
         "gemini-2.0-flash-lite": {"input": 0.10, "output": 0.40},
         "gemini-2.0-flash":      {"input": 0.10, "output": 0.40},
+        "gemini-2.5-flash-lite": {"input": 0.075, "output": 0.30},
         "gemini-2.5-flash":      {"input": 0.15, "output": 0.60},
         "gemini-2.5-pro":        {"input": 1.25, "output": 10.00},
     }
@@ -48,16 +51,20 @@ class CostTracker:
         for c in self.calls:
             t = c["task_type"]
             if t not in by_task:
-                by_task[t] = {"calls": 0, "input_tokens": 0, "output_tokens": 0, "cost": 0.0}
+                by_task[t] = {"calls": 0, "input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0}
             by_task[t]["calls"] += 1
             by_task[t]["input_tokens"] += c["input_tokens"]
             by_task[t]["output_tokens"] += c["output_tokens"]
-            by_task[t]["cost"] += c["cost"]
+            by_task[t]["cost_usd"] += c["cost"]
+        for t in by_task:
+            by_task[t]["cost_inr"] = round(by_task[t]["cost_usd"] * self.USD_TO_INR, 4)
+        total_usd = self.total_cost()
         return {
             "build_time": str(datetime.now() - self.start_time),
             "total_calls": len(self.calls),
             "total_tokens": self.total_tokens(),
-            "total_cost_usd": round(self.total_cost(), 6),
+            "total_cost_usd": round(total_usd, 6),
+            "total_cost_inr": round(total_usd * self.USD_TO_INR, 4),
             "by_task": by_task,
         }
 
